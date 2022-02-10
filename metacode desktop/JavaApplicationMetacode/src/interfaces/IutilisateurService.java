@@ -13,8 +13,12 @@ import model.Utilisateur;
  * @author admin
  */
 public interface IutilisateurService {
-    //add
+    //
     public void ajouterUtilisateur(Utilisateur u);
-    //affichage
+    //Afficher
     public List<Utilisateur> afficherUtilisateur();
+    //Supprimer
+    public void supprimerUtilisateur(int ID_UTILISATEUR);
+    //Modifier
+    public void modifierUtilisateur();
 }

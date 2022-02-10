@@ -12,8 +12,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+
 import model.Utilisateur;
 import util.MaConnexion;
 
@@ -55,6 +54,7 @@ public class UtilisateurService implements IutilisateurService {
             while(rs.next())
             {
                 utilisateurs.add(new Utilisateur(rs.getString(2),rs.getString(3),rs.getString(4),rs.getString(5),rs.getString(6),rs.getString(7),rs.getString(8),rs.getString(9),rs.getString(10),rs.getString(11),rs.getString(12),rs.getString(13),rs.getString(14)));
+                
             }
             
             
@@ -63,5 +63,30 @@ public class UtilisateurService implements IutilisateurService {
         }
         return utilisateurs;
     }
+
+    @Override
+    public void supprimerUtilisateur(int ID_UTILISATEUR) {
+         //request 
+        String req="DELETE FROM `utilisateur` WHERE ID_UTILISATEUR='"+ID_UTILISATEUR+"'";
+
+        try {
+            //insert
+            Statement st = cnx.createStatement();
+            st.executeUpdate(req);
+            System.out.println("Utilisateur Supprimer avec Succes");
+            
+        } catch (SQLException ex) {
+            ex.printStackTrace();
+        }
+    }
+
+    @Override
+    public void modifierUtilisateur() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+
+    
+ 
     
 }

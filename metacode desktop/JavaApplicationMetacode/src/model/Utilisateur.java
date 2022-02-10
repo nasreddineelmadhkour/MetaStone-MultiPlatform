@@ -10,14 +10,12 @@ package model;
  * @author admin
  */
 public class Utilisateur {
-
-    private String mtc,nom,prenom,date_naiss,
-            email,tel,adresse,nom_utilisateur,
-            mot_de_passe,sexe,photo_de_profil,
-            role,rank,id,id_consommateur;
+    private int ID_UTILISATEUR;
+    private String mtc,nom,prenom,date_naiss,email,tel,adresse,nom_utilisateur,
+            mot_de_passe,sexe,photo_de_profil,role,rank,id,id_consommateur;
    
-       //constructor
-
+       
+//constructor
     public Utilisateur(String nom, String prenom, String date_naiss,   String email, String tel, String adresse, String nom_utilisateur, String mot_de_passe, String sexe, String photo_de_profil,String mtc, String role, String rank) {
         this.mtc = mtc;
         this.nom = nom;
@@ -160,6 +158,14 @@ public class Utilisateur {
 
     public void setId_consommateur(String id_consommateur) {
         this.id_consommateur = id_consommateur;
+    }
+
+    public int getID_UTILISATEUR() {
+        return ID_UTILISATEUR;
+    }
+
+    public void setID_UTILISATEUR(int ID_UTILISATEUR) {
+        this.ID_UTILISATEUR = ID_UTILISATEUR;
     }
     
     

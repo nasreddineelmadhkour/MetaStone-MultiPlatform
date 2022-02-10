@@ -28,7 +28,8 @@ public class JavaApplicationMetacode {
        // Utilisateur u = new Utilisateur(1000,"El Madhkour","Nasreddine","1998/04/12","nasreddine@gmail.com","28000046","Sokra","nasr2022","123mdp","Homme","url","ADMIN","HERO");
         //insert 
        // us.ajouterUtilisateur(u);
-       System.out.println(us.afficherUtilisateur());
+       //System.out.println(us.afficherUtilisateur());
+       //us.supprimerUtilisateur();
     }
     
 }

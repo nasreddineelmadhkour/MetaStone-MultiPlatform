@@ -10,15 +10,15 @@ package model;
  * @author admin
  */
 public class Utilisateur {
-    int id,mtc,id_consommateur=0;
-    private String nom,prenom,date_naiss,
+
+    private String mtc,nom,prenom,date_naiss,
             email,tel,adresse,nom_utilisateur,
             mot_de_passe,sexe,photo_de_profil,
-            role,rank;
+            role,rank,id,id_consommateur;
    
        //constructor
 
-    public Utilisateur(int mtc, String nom, String prenom, String date_naiss, String email, String tel, String adresse, String nom_utilisateur, String mot_de_passe, String sexe, String photo_de_profil, String role, String rank) {
+    public Utilisateur(String nom, String prenom, String date_naiss,   String email, String tel, String adresse, String nom_utilisateur, String mot_de_passe, String sexe, String photo_de_profil,String mtc, String role, String rank) {
         this.mtc = mtc;
         this.nom = nom;
         this.prenom = prenom;
@@ -39,11 +39,14 @@ public class Utilisateur {
     
     }
 
-    public int getId() {
+
+
+
+    public String getId() {
         return id;
     }
 
-    public int getMtc() {
+    public String getMtc() {
         return mtc;
     }
 
@@ -95,15 +98,15 @@ public class Utilisateur {
         return rank;
     }
 
-    public int getId_consommateur() {
+    public String getId_consommateur() {
         return id_consommateur;
     }
 
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
     }
 
-    public void setMtc(int mtc) {
+    public void setMtc(String mtc) {
         this.mtc = mtc;
     }
 
@@ -155,7 +158,7 @@ public class Utilisateur {
         this.rank = rank;
     }
 
-    public void setId_consommateur(int id_consommateur) {
+    public void setId_consommateur(String id_consommateur) {
         this.id_consommateur = id_consommateur;
     }
     

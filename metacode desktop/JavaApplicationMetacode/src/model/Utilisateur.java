@@ -5,18 +5,22 @@
  */
 package model;
 
+import java.sql.Date;
+
+
 /**
  *
  * @author admin
  */
 public class Utilisateur {
     private int ID_UTILISATEUR;
-    private String mtc,nom,prenom,date_naiss,email,tel,adresse,nom_utilisateur,
+    private String date_naiss;
+    private String mtc,nom,prenom,email,tel,adresse,nom_utilisateur,
             mot_de_passe,sexe,photo_de_profil,role,rank,id,id_consommateur;
    
        
 //constructor
-    public Utilisateur(String nom, String prenom, String date_naiss,   String email, String tel, String adresse, String nom_utilisateur, String mot_de_passe, String sexe, String photo_de_profil,String mtc, String role, String rank) {
+    public Utilisateur(String nom, String prenom, String date_naiss,   String email, String tel, String adresse, String nom_utilisateur, String mot_de_passe, String sexe, String photo_de_profil,String mtc, String role, String rank,String id_consommateur) {
         this.mtc = mtc;
         this.nom = nom;
         this.prenom = prenom;
@@ -30,12 +34,48 @@ public class Utilisateur {
         this.photo_de_profil = photo_de_profil;
         this.role = role;
         this.rank = rank;
+        this.id_consommateur=id_consommateur;
     }
+    public Utilisateur(int ID_UTILISATEUR, String nom, String prenom, String date_naiss, String email, String tel, String adresse, String nom_utilisateur, String mot_de_passe, String sexe, String photo_de_profil,String mtc, String role, String rank, String id_consommateur) {
+        this.ID_UTILISATEUR = ID_UTILISATEUR;
+        this.mtc = mtc;
+        this.nom = nom;
+        this.prenom = prenom;
+        this.date_naiss = date_naiss;
+        this.email = email;
+        this.tel = tel;
+        this.adresse = adresse;
+        this.nom_utilisateur = nom_utilisateur;
+        this.mot_de_passe = mot_de_passe;
+        this.sexe = sexe;
+        this.photo_de_profil = photo_de_profil;
+        this.role = role;
+        this.rank = rank;
+        this.id_consommateur = id_consommateur;   
+    }
+
     //..
     public Utilisateur ()
     {
-    
+       mtc="";
+       nom="";
+       prenom="";
+       date_naiss="";
+       email="";
+       tel="";
+       adresse="";
+       nom_utilisateur="";
+       mot_de_passe="";
+       sexe="";
+       photo_de_profil="";
+       role="";
+       rank="";
+       id_consommateur="";
+       
+       
     }
+
+    
 
 
 
@@ -173,7 +213,7 @@ public class Utilisateur {
 
     @Override
     public String toString() {
-        return "Utilisateur{" + "id=" + id + ", mtc=" + mtc + ", nom=" + nom + ", prenom=" + prenom + ", date_naiss=" + date_naiss + ", email=" + email + ", tel=" + tel + ", adresse=" + adresse + ", nom_utilisateur=" + nom_utilisateur + ", mot_de_passe=" + mot_de_passe + ", sexe=" + sexe + ", photo_de_profil=" + photo_de_profil + ", role=" + role + ", rank=" + rank + ", id_consommateur=" + id_consommateur + '}';
+        return "Utilisateur{" + "id=" + ID_UTILISATEUR + ", mtc=" + mtc + ", nom=" + nom + ", prenom=" + prenom + ", date_naiss=" + date_naiss + ", email=" + email + ", tel=" + tel + ", adresse=" + adresse + ", nom_utilisateur=" + nom_utilisateur + ", mot_de_passe=" + mot_de_passe + ", sexe=" + sexe + ", photo_de_profil=" + photo_de_profil + ", role=" + role + ", rank=" + rank + ", id_consommateur=" + id_consommateur + '}';
     }
     
     

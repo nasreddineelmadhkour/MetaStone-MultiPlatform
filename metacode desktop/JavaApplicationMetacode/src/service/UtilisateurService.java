@@ -53,7 +53,7 @@ public class UtilisateurService implements IutilisateurService {
             ResultSet rs = st.executeQuery(req);
             while(rs.next())
             {
-                utilisateurs.add(new Utilisateur(rs.getString(2),rs.getString(3),rs.getString(4),rs.getString(5),rs.getString(6),rs.getString(7),rs.getString(8),rs.getString(9),rs.getString(10),rs.getString(11),rs.getString(12),rs.getString(13),rs.getString(14)));
+                utilisateurs.add(new Utilisateur(rs.getInt(1),rs.getString(2),rs.getString(3),rs.getString("Date_naiss"),rs.getString(5),rs.getString(6),rs.getString(7),rs.getString(8),rs.getString(9),rs.getString(10),rs.getString(11),rs.getString(12),rs.getString(13),rs.getString(14),rs.getString(15)));
                 
             }
             
@@ -81,8 +81,31 @@ public class UtilisateurService implements IutilisateurService {
     }
 
     @Override
-    public void modifierUtilisateur() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public void modifierUtilisateur(int ID_UTILISATEUR,Utilisateur u) {
+        
+         //request 
+         String req;
+         if(u.getNom()!="")
+         {
+         req="UPDATE `utilisateur` SET  `Nom`='"+u.getNom()+"' WHERE ID_utilisateur = "+ID_UTILISATEUR;
+
+        try {
+            //insert
+            Statement st = cnx.createStatement();
+            st.executeUpdate(req);
+            System.out.println("modifier de nom terminer avec Succes");
+            
+        } catch (SQLException ex) {
+            ex.printStackTrace();
+        }
+         
+         }
+         
+         
+         
+         
+         
+
     }
 
 

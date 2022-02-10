@@ -20,5 +20,5 @@ public interface IutilisateurService {
     //Supprimer
     public void supprimerUtilisateur(int ID_UTILISATEUR);
     //Modifier
-    public void modifierUtilisateur();
+    public void modifierUtilisateur(int ID_UTILISATEUR,Utilisateur u);
 }

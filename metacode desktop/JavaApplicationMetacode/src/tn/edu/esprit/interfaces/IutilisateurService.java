@@ -3,10 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package interfaces;
+package tn.edu.esprit.interfaces;
 
 import java.util.List;
-import model.Utilisateur;
+import tn.edu.esprit.model.Utilisateur;
 
 /**
  *

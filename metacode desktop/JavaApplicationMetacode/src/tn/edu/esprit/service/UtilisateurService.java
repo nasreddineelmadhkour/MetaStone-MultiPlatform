@@ -3,18 +3,19 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package service;
+package tn.edu.esprit.service;
 
-import interfaces.IutilisateurService;
+import tn.edu.esprit.interfaces.IutilisateurService;
 import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
-import model.Utilisateur;
-import util.MaConnexion;
+import tn.edu.esprit.model.Utilisateur;
+import tn.edu.esprit.util.MaConnexion;
 
 /**
  *
@@ -27,12 +28,26 @@ public class UtilisateurService implements IutilisateurService {
     public void ajouterUtilisateur(Utilisateur u) {
         //request 
         String req="INSERT INTO `utilisateur`(`Nom`, `Prenom`, `Date_naiss`, `email`, `Tel`, `Adresse`, `Nom_utilisateur`, `Mot_de_passe`, `Sexe`, `Photo_de_profil`, `MTC`, `Role`, `Rank`, `Id_consommateur`) "
-                + "VALUES ('"+u.getNom()+"','"+u.getPrenom()+"','"+u.getDate_naiss()+"','"+u.getEmail()+"',"+u.getTel()+",'"+u.getAdresse()+"','"+u.getNom_utilisateur()+"','"+u.getMot_de_passe()+"','"+u.getSexe()+"','"+u.getPhoto_de_profil()+"',"+u.getMtc()+",'"+u.getRole()+"','"+u.getRank()+"',"+u.getId_consommateur()+")";
+                + "VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
 
         try {
-            //insert
-            Statement st = cnx.createStatement();
-            st.executeUpdate(req);
+            PreparedStatement pst =cnx.prepareStatement(req);
+            pst.setString(1,u.getNom());
+            pst.setString(2,u.getPrenom());
+            pst.setString(3,u.getDate_naiss());
+            pst.setString(4,u.getEmail());
+            pst.setString(5,u.getTel());
+            pst.setString(6,u.getAdresse());
+            pst.setString(7,u.getNom_utilisateur());
+            pst.setString(8,u.getMot_de_passe());
+            pst.setString(9,u.getSexe());
+            pst.setString(10,u.getPhoto_de_profil());
+            pst.setString(11,u.getMtc());
+            pst.setString(12,u.getRole());
+            pst.setString(13,u.getRank());
+            pst.setString(14,u.getId_consommateur());
+                         
+            pst.executeUpdate();
             System.out.println("Utilisateur ajouter avec Succes");
             
         } catch (SQLException ex) {
@@ -67,12 +82,14 @@ public class UtilisateurService implements IutilisateurService {
     @Override
     public void supprimerUtilisateur(int ID_UTILISATEUR) {
          //request 
-        String req="DELETE FROM `utilisateur` WHERE ID_UTILISATEUR='"+ID_UTILISATEUR+"'";
+        String req="DELETE FROM `utilisateur` WHERE ID_UTILISATEUR=?";
 
         try {
-            //insert
-            Statement st = cnx.createStatement();
-            st.executeUpdate(req);
+            PreparedStatement pst =cnx.prepareStatement(req);
+            pst.setInt(1,ID_UTILISATEUR);            
+            pst.executeUpdate();
+            
+        
             System.out.println("Utilisateur Supprimer avec Succes");
             
         } catch (SQLException ex) {

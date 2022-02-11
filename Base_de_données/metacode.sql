@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le : jeu. 10 fév. 2022 à 01:09
+-- Généré le : sam. 12 fév. 2022 à 00:53
 -- Version du serveur :  10.4.17-MariaDB
 -- Version de PHP : 7.4.15
 
@@ -219,7 +219,7 @@ CREATE TABLE `tournoi` (
 CREATE TABLE `utilisateur` (
   `ID_utilisateur` int(11) NOT NULL,
   `Nom` varchar(255) NOT NULL,
-  `Prénom` varchar(255) NOT NULL,
+  `Prenom` varchar(255) NOT NULL,
   `Date_naiss` date NOT NULL,
   `email` varchar(255) NOT NULL,
   `Tel` int(14) NOT NULL,
@@ -229,7 +229,7 @@ CREATE TABLE `utilisateur` (
   `Sexe` varchar(255) NOT NULL,
   `Photo_de_profil` varchar(80) NOT NULL,
   `MTC` int(11) NOT NULL,
-  `Rôle` varchar(255) NOT NULL,
+  `Role` varchar(255) NOT NULL,
   `Rank` varchar(255) NOT NULL,
   `Id_consommateur` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -238,8 +238,9 @@ CREATE TABLE `utilisateur` (
 -- Déchargement des données de la table `utilisateur`
 --
 
-INSERT INTO `utilisateur` (`ID_utilisateur`, `Nom`, `Prénom`, `Date_naiss`, `email`, `Tel`, `Adresse`, `Nom_utilisateur`, `Mot_de_passe`, `Sexe`, `Photo_de_profil`, `MTC`, `Rôle`, `Rank`, `Id_consommateur`) VALUES
-(1, 'nasr', 'madhkour', '1998-04-12', 'nad@dd', 15545, 'daz', 'daz', 'daz', 'Homme', 'dzad', 544, 'ADMIN', 'Hero', 0);
+INSERT INTO `utilisateur` (`ID_utilisateur`, `Nom`, `Prenom`, `Date_naiss`, `email`, `Tel`, `Adresse`, `Nom_utilisateur`, `Mot_de_passe`, `Sexe`, `Photo_de_profil`, `MTC`, `Role`, `Rank`, `Id_consommateur`) VALUES
+(3, 'El Madkhour', 'Nasreddine', '1998-04-14', 'nasreddine@gmail.com', 28000046, 'Sokra', 'nasr2022', '123mdp', 'Homme', 'url', 1000, 'ADMIN', 'HERO', 0),
+(9, 'El daa', 'hahaha', '1998-04-28', 'nasreddidazne@d.com', 28000046, 'dsa', 'dz', 'aze', 'Homme', 'url', 1000, 'ADMIN', 'HERO', 0);
 
 --
 -- Index pour les tables déchargées
@@ -377,7 +378,7 @@ ALTER TABLE `commentaire`
 -- AUTO_INCREMENT pour la table `demande`
 --
 ALTER TABLE `demande`
-  MODIFY `Id_demande` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `Id_demande` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT pour la table `evénement`
@@ -431,7 +432,7 @@ ALTER TABLE `tournoi`
 -- AUTO_INCREMENT pour la table `utilisateur`
 --
 ALTER TABLE `utilisateur`
-  MODIFY `ID_utilisateur` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `ID_utilisateur` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- Contraintes pour les tables déchargées

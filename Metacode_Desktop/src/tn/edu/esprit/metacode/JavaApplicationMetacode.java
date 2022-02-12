@@ -6,6 +6,7 @@
 package tn.edu.esprit.metacode;
 
 import tn.edu.esprit.model.Utilisateur;
+import tn.edu.esprit.service.DemandeService;
 import tn.edu.esprit.service.UtilisateurService;
 
 
@@ -20,19 +21,30 @@ public class JavaApplicationMetacode {
      */
     public static void main(String[] args) {        
         
-        //service
-        UtilisateurService us= new UtilisateurService();
-        //utilisateur     public Utilisateur(String nom, String prenom, String date_naiss,   String email, String tel, String adresse, String nom_utilisateur, String mot_de_passe, String sexe, String photo_de_profil,String mtc, String role, String rank) {
         
+        
+        // ************ Ajouter Utilisateur ************* 
+        UtilisateurService us= new UtilisateurService();
         Utilisateur u = new Utilisateur("El daa","hahaha","1998-04-28","nasreddidazne@d.com","28000046","dsa","dz","aze","Homme","url","1000","ADMIN","HERO","0");
-        //insert 
         //us.ajouterUtilisateur(u);
-       //System.out.println(us.afficherUtilisateur());
+        
+        // ************** Affichage Utilisateur **************
+        System.out.println("\n ********* Affichage Utilisateur ********** \n");
+        System.out.println(us.afficherUtilisateur());
+        
+       // *************** Supprimer Utilisateur *************
        //us.supprimerUtilisateur(8);
+       
+       // *********** Modifier Utilisateur ****************
        //Utilisateur u2 = new Utilisateur();
        //u2.setNom("El Madkhour");
        //us.modifierUtilisateur(3,u2);
        
+       
+       // **************** Affichage Demande ***************
+       DemandeService ds= new DemandeService();
+       System.out.println("\n ********* Affichage Demande ********** \n");
+       System.out.println(ds.afficherDemande());
     }
     
 }

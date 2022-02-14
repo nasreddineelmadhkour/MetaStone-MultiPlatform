@@ -28,9 +28,13 @@ public class Demande {
     
     public Demande() 
     {
-        
+        ID_DEMANDE=0;ID_UTILISATEUR=0;
+        type="";description="";
     }
 
+    
+    
+    
     public int getId_demande() {
         return ID_DEMANDE;
     }

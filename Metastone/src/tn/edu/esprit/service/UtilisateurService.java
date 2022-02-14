@@ -100,32 +100,31 @@ public class UtilisateurService implements IutilisateurService {
     @Override
     public void modifierUtilisateur(int ID_UTILISATEUR,Utilisateur u) {
         
-         //request 
-         String req;
-         if(u.getNom()!="")
-         {
-         req="UPDATE `utilisateur` SET  `Nom`=? ,`Prenom`=?,`Date_naiss`=?,`email`=?,`Tel`=?,`Adresse`=?,`Mot_de_passe`=?,`Sexe`=?,`Photo_de_profil`=? WHERE ID_utilisateur =?";
+        //request 
+        String req="UPDATE `utilisateur` SET `Nom`=?, `Prenom`=? , `Date_naiss` = ?, "
+                + "`email` =?, `Tel`=?, `Adresse`=?,`Mot_de_passe`=?, `Sexe`=?, "
+                + "`Photo_de_profil`=? WHERE `ID_utilisateur`=?";
 
-        try 
-        {
+        try {
             PreparedStatement pst =cnx.prepareStatement(req);
             pst.setString(1,u.getNom());
-            pst.setString(2,u.getPrenom());  
+            pst.setString(2,u.getPrenom());
             pst.setString(3,u.getDate_naiss());
             pst.setString(4,u.getEmail());
-            pst.setString(5,u.getAdresse());
-            pst.setString(6,u.getMot_de_passe());
-            pst.setString(7,u.getSexe());
-            pst.setString(8,u.getPhoto_de_profil());  
-            pst.setInt(9,ID_UTILISATEUR);
-            System.out.println("modifier de nom terminer avec Succes");
-        } 
-        catch (SQLException ex) 
-        {
+            pst.setString(5,u.getTel());
+            pst.setString(6,u.getAdresse());
+            pst.setString(7,u.getMot_de_passe());
+            pst.setString(8,u.getSexe());
+            pst.setString(9,u.getPhoto_de_profil());
+            pst.setInt(10,ID_UTILISATEUR);
+            pst.executeUpdate();
+            System.out.println("Modification terminer avec Succes");
+            
+        } catch (SQLException ex) {
             ex.printStackTrace();
         }
          
-         }
+         
          
          
 

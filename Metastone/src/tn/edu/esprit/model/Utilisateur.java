@@ -18,7 +18,7 @@ public class Utilisateur {
    
        
 //constructor
-    public Utilisateur(String nom, String prenom, String date_naiss,   String email, String tel, String adresse, String nom_utilisateur, String mot_de_passe, String sexe, String photo_de_profil,String mtc, String role, String rank,String id_consommateur) {
+    public Utilisateur(String nom, String prenom, String date_naiss,String email,String tel,String adresse,String nom_utilisateur,String mot_de_passe,String sexe,String photo_de_profil,String mtc,String role, String rank,String id_consommateur) {
         this.mtc = mtc;
         this.nom = nom;
         this.prenom = prenom;

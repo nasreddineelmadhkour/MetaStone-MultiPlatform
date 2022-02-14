@@ -26,8 +26,7 @@ public class DemandeService implements IdemandeService{
     @Override
     public void ajouterDemande(Demande d) {
 //request 
-        String req="INSERT INTO `DEMANDE`(`Type`, `Description`, `ID_UTILISATEUR`) "
-                + "VALUES (?,?,?)";
+        String req="INSERT INTO `DEMANDE`(`Type`, `Description`, `ID_UTILISATEUR`) VALUES (?,?,?)";
 
         try {
             PreparedStatement pst =cnx.prepareStatement(req);
@@ -43,6 +42,8 @@ public class DemandeService implements IdemandeService{
             ex.printStackTrace();
         }    }
 
+    
+    
     @Override
     public List<Demande> afficherDemande() {
         //LIST
@@ -66,7 +67,7 @@ public class DemandeService implements IdemandeService{
         return demandes;    }
 
     @Override
-    public void supprimerUtilisateur(int ID_DEMANDE) {
+    public void supprimerDemande(int ID_DEMANDE) {
     //request 
         String req="DELETE FROM `DEMANDE` WHERE ID_DEMANDE=?";
 
@@ -83,8 +84,30 @@ public class DemandeService implements IdemandeService{
         }    }
 
     @Override
-    public void modifierUtilisateur(int ID_DEMANDE, Demande d) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public void modifierDemande(int ID_DEMANDE, Demande d) {
+        
+        //request 
+        String req;
+        
+        req="UPDATE `DEMANDE` SET  `DESCRIPTION`=? ,`TYPE`=? WHERE ID_DEMANDE =?";
+
+        try 
+        {
+            PreparedStatement pst =cnx.prepareStatement(req);
+            pst.setString(1,d.getDescription());
+            pst.setString(2,d.getType());  
+            pst.setInt(3,ID_DEMANDE);
+            
+            pst.executeUpdate();
+            
+            System.out.println("modification terminer avec Succes");
+        } 
+        catch (SQLException ex) 
+        {
+            ex.printStackTrace();
+        }
+         
+         
     }
     
 }

@@ -18,7 +18,7 @@ public interface IdemandeService {
     //Afficher
     public List<Demande> afficherDemande();
     //Supprimer
-    public void supprimerUtilisateur(int ID_DEMANDE);
+    public void supprimerDemande(int ID_DEMANDE);
     //Modifier
-    public void modifierUtilisateur(int ID_DEMANDE,Demande d);
+    public void modifierDemande(int ID_DEMANDE,Demande d);
 }

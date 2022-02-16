@@ -5,10 +5,21 @@
  */
 package tn.edu.esprit.interfaces;
 
+import java.util.List;
+import tn.edu.esprit.model.Poste;
+
 /**
  *
  * @author ASUS
  */
 public interface IposteService {
-    
+   
+    //Ajouter
+    public void ajouterPoste(Poste p);
+    //Afficher
+    public List<Poste> afficherPoste();
+    //Supprimer
+    public void supprimerPoste(int Id_poste);
+    //Modifier
+    public void modifierPoste(int Id_poste ,Poste p);
 }

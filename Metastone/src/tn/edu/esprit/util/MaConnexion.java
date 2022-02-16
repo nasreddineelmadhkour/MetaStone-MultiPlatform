@@ -13,7 +13,7 @@ import java.sql.SQLException;
  */
 public class MaConnexion {
     // BD Credentials
-    final static String URL= "jdbc:mysql://127.0.0.1:3306/pidev";
+    final static String URL= "jdbc:mysql://127.0.0.1:3306/metacode";
     final static String USERNAME="root";
     final static String PWD="";
     //att

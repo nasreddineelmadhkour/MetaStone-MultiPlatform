@@ -42,8 +42,7 @@ public class CartesService {
             pst.setString(8,c.getrarete());
             pst.setString(9,c.getNom());
             pst.setString(10,c.getdescription());
-            pst.setInt(11,c.getvisibilte());
-                                
+            pst.setInt(11,c.getvisibilte());     
             pst.executeUpdate();
             System.out.println("Carte ajouter avec Succes");
             
@@ -52,12 +51,16 @@ public class CartesService {
         }
     }
 
+    /**
+     *
+     * @return
+     */
     public List<Cartes> afficherCartes() {
         
         //LIST
         List<Cartes> cartes = new ArrayList<>();
         //request 
-        String req ="SELECT * FROM CARTE";
+        String req ="SELECT * FROM CARTE ";
         try {
             //insert
             Statement st = cnx.createStatement();
@@ -96,26 +99,29 @@ public class CartesService {
     public void modifierCartes(int ID_CARTE,Cartes c) {
         
          //request 
-         String req;
-         if(c.getNom()!="")
-         {
-         req="UPDATE `carte` SET  `Nom`=? ,`Mana`=?,`Type`=?,`Vie`=?,`Prix`=?,`Description`=?,`Attaque`=?,`Defence`=?,`Rarete`=? WHERE ID_CARTE =?";
+       
+         
+        String req="UPDATE `carte` SET `Mana`=?, `Type`=? , `Vie` = ?, "
+                + "`Prix` =?, `Image`=?, `Attaque`=?,`Defence`=?, `Rarete`=?, "
+                + "`Nom`=?, `Description`=? , `Visibilite` = ? WHERE `Id_carte`=?";
 
         try 
         {
             PreparedStatement pst =cnx.prepareStatement(req);
-            pst.setString(1,c.getNom());
-            pst.setInt(2,c.getmana());
-            pst.setString(3,c.gettype());
-            pst.setInt(4,c.getvie());
-            pst.setInt(5,c.getprix());
-            pst.setString(6,c.getdescription());
-            pst.setInt(7,c.getattaque());
-            pst.setInt(8,c.getdefence());
-            pst.setString(9,c.getrarete());
-            pst.setString(10,c.getimage());
+            pst.setInt(1,c.getmana());
+            pst.setString(2,c.gettype());
+            pst.setInt(3,c.getvie());
+            pst.setInt(4,c.getprix());
+            pst.setString(5,c.getimage());
+            pst.setInt(6,c.getattaque());
+            pst.setInt(7,c.getdefence());
+            pst.setString(8,c.getrarete());
+            pst.setString(9,c.getNom());
+            pst.setString(10,c.getdescription());
             pst.setInt(11,c.getvisibilte());
             pst.setInt(12,ID_CARTE);
+            pst.executeUpdate();
+           
             System.out.println("modification de carte terminer avec Succes");
         } 
         catch (SQLException ex) 
@@ -123,7 +129,7 @@ public class CartesService {
             ex.printStackTrace();
         }
          
-         }
+        
                   
 
     }

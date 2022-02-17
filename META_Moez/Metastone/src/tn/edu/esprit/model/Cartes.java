@@ -5,79 +5,76 @@
  */
 package tn.edu.esprit.model;
 
-
-
 /**
  *
  * @author Moez
  */
 public class Cartes {
     private int ID_CARTE;
-    private String nom;
     private int mana;
     private String type;
     private int vie;
     private int prix;
-    private String description;
+    private String image;
     private int attaque;
     private int defence;
     private String rarete;
-    private String image;
+    private String nom;
+    private String description;
     private int visibilte;
     private String id;
        
        
 //constructor
     public Cartes(int mana, String type, int vie, int prix, String image, int attaque, int defence, String rarete, String nom, String description,int visibilte) {
-        this.nom = nom;
+        
         this.mana = mana;
         this.type = type;
         this.vie = vie;
         this.prix = prix;
-        this.description = description;
+        this.image = image;
         this.attaque = attaque;
         this.defence = defence;
         this.rarete = rarete;
-        this.image = image;
+        this.nom = nom;
+        this.description = description;
         this.visibilte = visibilte;
     }
     public Cartes(int ID_CARTE, int mana, String type, int vie, int prix, String image, int attaque, int defence, String rarete, String nom, String description,int visibilte) {
         this.ID_CARTE = ID_CARTE;
-        this.nom = nom;
         this.mana = mana;
         this.type = type;
         this.vie = vie;
         this.prix = prix;
-        this.description = description;
+        this.image = image;
         this.attaque = attaque;
         this.defence = defence;
         this.rarete = rarete;
-        this.image = image;
+        this.nom = nom;
+        this.description = description;
         this.visibilte = visibilte;
     }
 
     //..
     public Cartes ()
     {
-       nom="";
+       
        mana=0;
        type="";
        vie=0;
        prix=0;
-       description="";
+       image="";
        attaque=0;
        defence=0;
        rarete="";
-       image="";
+       nom="";
+       description="";
        visibilte=0;
 
        
        
     }
 
-    public Cartes(String aze, String moez, String string, String volcano, String string0, String string1, String gain_damage_, String string2, String string3, String legendaire, String url, String atrue, String string4) {
-  //      throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
 
     
 
@@ -89,9 +86,7 @@ public class Cartes {
     }
 
 
-    public String getNom() {
-        return nom;
-    }
+
 
     public int getmana() {
         return mana;
@@ -108,10 +103,12 @@ public class Cartes {
     public int getprix() {
         return prix;
     }
-
-    public String getdescription() {
-        return description;
+    
+    public String getimage() {
+        return image;
     }
+
+    
 
     public int getattaque() {
         return attaque;
@@ -124,9 +121,13 @@ public class Cartes {
     public String getrarete() {
         return rarete;
     }
+    
+    public String getNom() {
+        return nom;
+    }
 
-    public String getimage() {
-        return image;
+    public String getdescription() {
+        return description;
     }
 
     public int getvisibilte() {
@@ -136,11 +137,6 @@ public class Cartes {
   
     public void setId(String id) {
         this.id = id;
-    }
-
-
-    public void setNom(String nom) {
-        this.nom = nom;
     }
 
     public void setMana(int mana) {
@@ -158,9 +154,9 @@ public class Cartes {
     public void setPrix(int prix) {
         this.prix = prix;
     }
-
-    public void setDescription(String description) {
-        this.description = description;
+    
+    public void setImage(String image) {
+        this.image = image;
     }
 
     public void setAttaque(int attaque) {
@@ -174,9 +170,13 @@ public class Cartes {
     public void setRarete(String rarete) {
         this.rarete = rarete;
     }
+    
+    public void setNom(String nom) {
+        this.nom = nom;
+    }
 
-    public void setImage(String image) {
-        this.image = image;
+    public void setDescription(String description) {
+        this.description = description;
     }
 
     public void setVisibilite(int visibilte) {
@@ -197,11 +197,12 @@ public class Cartes {
 
     @Override
     public String toString() {
-        return "Cartes{" + "id=" + ID_CARTE + ", nom=" + nom + ", mana=" + mana + ", type=" + type + ", vie=" + vie + ", prix=" + prix + ", description=" + description + ", attaque=" + attaque + ", defence=" + defence + ", rarete=" + rarete + ", image=" + image + ", visibilte=" + visibilte + '}';
+        return "Cartes{" + "id=" + ID_CARTE +  ", mana=" + mana + ", type=" + type + ", vie=" + vie + ", prix=" + prix + ", image=" + image + ", attaque=" + attaque + ", defence=" + defence + ", rarete=" + rarete + ", nom=" + nom + ", description=" + description + ", visibilte=" + visibilte + '}';
     }
 
-    public void modifierUtilisateur(int i, Cartes c2) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public void modifiercartes(int i, Cartes c) {
     }
+
+  
             
 }

@@ -6,6 +6,7 @@
 package tn.edu.esprit.interfaces;
 
 import java.util.List;
+import tn.edu.esprit.model.Collection;
 //import tn.edu.esprit.model.collection;
 
 /**
@@ -14,14 +15,14 @@ import java.util.List;
  */
 public interface IcollectionService {
     //Ajouter
-    //public void ajouterCollection(collection n);
+    public void ajouterCollection(Collection n);
     //Fusionner
     //public void fusionnerCollection(collection n);
     //Afficher
-    //public List<Collection> afficherCollection();
+    public List<Collection> afficherCollection();
     //Supprimer
     public void supprimerCollection(int Collection);
     //Modifier
-    //public void modifierCollection(int ID_COLLECTION,Collection n);
+    public void modifierCollection(int ID_COLLECTION,Collection n);
     
 }

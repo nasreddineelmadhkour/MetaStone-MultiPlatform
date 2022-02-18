@@ -5,6 +5,7 @@
  */
 package tn.edu.esprit.service;
 
+import tn.edu.esprit.interfaces.IcommentaireService;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -12,7 +13,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
-import tn.edu.esprit.interfaces.IcommentaireService;
+
 import tn.edu.esprit.model.Commentaire;
 import tn.edu.esprit.util.MaConnexion;
 
@@ -20,11 +21,10 @@ import tn.edu.esprit.util.MaConnexion;
  *
  * @author ASUS
  */
-public class CommentaireService implements IcommentaireService{
+public class CommentaireService implements IcommentaireService {
     
     
     Connection cnx= MaConnexion.getInstance().getCnx();
-    
     /**
      *
      * @param c
@@ -32,30 +32,28 @@ public class CommentaireService implements IcommentaireService{
     @Override
     public void ajouterCommentaire(Commentaire c) {
         String req;
-        req = "INSERT INTO Commentaire(Id_cmnt,commentaire,Id_utilisateur) VALUES (?,?,?)";
+        req = "INSERT INTO `commentaire` (`Commentaire`,`Id_utilisateur`,`Id_poste`)  VALUES (?,?,?)";
 
     
 
     
         try {
-            PreparedStatement pst =cnx.prepareStatement(req);
-            pst.setInt(1,c.getId_cmnt());
-            pst.setString(2,c.getCommentaire());
-            pst.setInt(3,c.getId_utilisateur());
-         
+            PreparedStatement pst;
+            pst = cnx.prepareStatement(req);
+           
+            pst.setString(1,c.getCommentaire());
+            pst.setInt(2, c.getId_utilisateur());
+            pst.setInt(3, c.getId_poste());
 
-                         
             pst.executeUpdate();
+            
             System.out.println("Commentaire ajoutée");
             
         } catch (SQLException ex) {
             ex.printStackTrace();
         }    }
 
-    /**
-     *
-     * @return
-     */
+    
     @Override
     public List<Commentaire> afficherCommentaire() {
         //LIST
@@ -114,17 +112,18 @@ public class CommentaireService implements IcommentaireService{
         //request 
         String req;
         
-        req="UPDATE Commentaire SET commentaire=? WHERE Id_cmnt=?";
+        req="UPDATE commentaire SET Commentaire=? WHERE Id_cmnt=?";
 
         try 
         {
             PreparedStatement pst =cnx.prepareStatement(req);
            
-            pst.setString(2,c.getCommentaire());
+            pst.setString(1,c.getCommentaire());
+            pst.setInt(2, Id_cmnt);
             
             pst.executeUpdate();
             
-            System.out.println("modification terminer avec Succes");
+            System.out.println("modification terminée");
         } 
         catch (SQLException ex) 
         {
@@ -134,7 +133,8 @@ public class CommentaireService implements IcommentaireService{
          
     }
     
-}
+    }
+    
 
 
 

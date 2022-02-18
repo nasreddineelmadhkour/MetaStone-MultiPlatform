@@ -5,8 +5,6 @@
  */
 package tn.edu.esprit.model;
 
-import java.sql.Date;
-import java.time.LocalDateTime;
 
 /**
  *
@@ -21,6 +19,12 @@ public class Poste {
     private String Categorie;
 
     public Poste() {
+        Id_poste=0;
+        Id_utilisateur=0;
+        Titre="";
+        Date_poste="";
+        Contenu="";
+        Categorie="";
     }
 
     /**
@@ -40,10 +44,21 @@ public class Poste {
         this.Contenu = Contenu;
         this.Categorie = Categorie;
     }
-
-    public Poste(String string, String string0, String string1, String string2, int aInt) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+public Poste( String Titre,String Date_poste, String Contenu,String Categorie, int Id_utilisateur) {
+        this.Id_utilisateur = Id_utilisateur;
+        this.Titre = Titre;
+        this.Date_poste = Date_poste;
+        this.Contenu = Contenu;
+        this.Categorie = Categorie;
     }
+
+    public Poste(String Titre, String Date_poste, String Contenu, String Categorie) {
+        this.Titre = Titre;
+        this.Date_poste = Date_poste;
+        this.Contenu = Contenu;
+        this.Categorie = Categorie;
+    }
+
 
    
     
@@ -102,8 +117,5 @@ public class Poste {
         return "Poste{" + "Id_poste=" + Id_poste + ", Id_utilisateur=" + Id_utilisateur + ", Titre=" + Titre + ", Date_poste=" + Date_poste + ", Contenu=" + Contenu + ", Categorie=" + Categorie + '}';
     }
 
-    public boolean afficherPoste() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
     
 }

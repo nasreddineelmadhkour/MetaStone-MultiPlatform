@@ -10,12 +10,24 @@ package tn.edu.esprit.model;
  *
  * @author ASUS
  */
+
 public class Commentaire {
     private int Id_cmnt;
     private String Commentaire;
     private int Id_utilisateur;
     private int Id_poste;	
-
+    public Commentaire () 
+    {
+        Id_cmnt=0;
+        Id_utilisateur=0;
+        Commentaire="";
+        Id_poste=0;
+    }
+     public Commentaire( String Commentaire,int Id_utilisateur, int Id_poste) {
+        this.Commentaire = Commentaire;
+        this.Id_utilisateur = Id_utilisateur;
+        this.Id_poste = Id_poste;
+    }
     public Commentaire(int Id_cmnt, String Commentaire, int Id_utilisateur, int Id_poste) {
         this.Id_cmnt = Id_cmnt;
         this.Commentaire = Commentaire;
@@ -23,6 +35,8 @@ public class Commentaire {
         this.Id_poste = Id_poste;
         
     }
+
+   
     
     public int getId_cmnt() {
         return Id_cmnt;

@@ -16,13 +16,11 @@ import tn.edu.esprit.model.Collection;
 public interface IcollectionService {
     //Ajouter
     public void ajouterCollection(Collection n);
-    //Fusionner
-    //public void fusionnerCollection(collection n);
     //Afficher
     public List<Collection> afficherCollection();
     //Supprimer
     public void supprimerCollection(int Collection);
     //Modifier
-    public void modifierCollection(int ID_COLLECTION,Collection n);
-    
+    public void modifierCollection(int ID_UTILISATEUR,int ID_CARTE, Collection n);    //Fusionner
+    public void fusionnerCollection(int ID_COLLECTION1,int ID_COLLECTION2);
 }

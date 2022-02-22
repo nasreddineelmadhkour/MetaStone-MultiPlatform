@@ -29,7 +29,7 @@ public class javaMetastone {
         
             // ************ Ajouter Cartes ************* 
         CartesService cs= new CartesService();
-        //Cartes c = new Cartes(1,"aziz",1,10,"url",8,3,"legandaire ","Madara","shinobi power",1);
+        //Cartes c = new Cartes(6,"fady",1,10,"url",8,3,"legandaire ","Madara","shinobi power",1);
         //cs.ajouterCartes(c);
         
             // ************** Affichage Cartes **************
@@ -40,19 +40,21 @@ public class javaMetastone {
         //cs.supprimerCartes(37);
        
             //*********** Modifier Cartes ****************
-        Cartes c2 = new Cartes(2,"moez",1,10,"url",8,3,"epic ","aif","shinobi power",1);
+        //Cartes c2 = new Cartes(2,"moez",1,10,"url",8,3,"epic ","aif","shinobi power",1);
         //c2.setNom("");
-        cs.modifierCartes(3,c2);
-        System.out.println(cs.afficherCartes());
+        //cs.modifierCartes(3,c2);
+        //System.out.println(cs.afficherCartes());
         //---------------------------------------------------------------------------------------------------------\\
             // ************ Ajouter Collection ************* 
-        //CollectionService ns= new CollectionService();
-        //Collection n = new Collection(2,1);
+        CollectionService ns= new CollectionService();
+        //Collection n = new Collection(9,38);
         //ns.ajouterCollection(n);
         
             // **************** Affichage Collection ***************
-        //System.out.println("\n ********* Affichage Collection ********** \n");
-        //System.out.println(ns.afficherCollection());
+        System.out.println("\n ********* Affichage Collection ********** \n");
+        System.out.println(ns.afficherCollection());
+        ns.fusionnerCollection(7, 8);
+
        
             // *************** Supprimer Collection *************
         //ns.supprimerCollection(14);

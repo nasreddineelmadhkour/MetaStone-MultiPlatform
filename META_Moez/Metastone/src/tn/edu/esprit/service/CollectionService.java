@@ -5,6 +5,8 @@
  */
 package tn.edu.esprit.service;
 
+import static java.lang.Double.max;
+import static java.lang.Integer.min;
 import tn.edu.esprit.interfaces.IcollectionService;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -13,6 +15,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
+import tn.edu.esprit.model.Cartes;
 
 import tn.edu.esprit.model.Collection;
 import tn.edu.esprit.util.MaConnexion;
@@ -21,10 +24,11 @@ import tn.edu.esprit.util.MaConnexion;
  *
  * @author Moez
  */
-public class CollectionService {
+public class CollectionService implements IcollectionService{
     //var
     Connection cnx= MaConnexion.getInstance().getCnx();
 
+    @Override
     public void ajouterCollection(Collection n) {
         //request 
         String req="INSERT INTO `collection`(`id_utilisateur`, `id_carte` ) "
@@ -32,8 +36,8 @@ public class CollectionService {
 
         try {
             PreparedStatement pst =cnx.prepareStatement(req);           
-            pst.setInt(2,n.getID_UTILISATEUR());
-            pst.setInt(1,n.getID_CARTE());
+            pst.setInt(1,n.getID_UTILISATEUR());
+            pst.setInt(2,n.getID_CARTE());
             pst.executeUpdate();
             System.out.println("Collection ajouter avec Succes");
             
@@ -46,6 +50,7 @@ public class CollectionService {
      *
      * @return
      */
+    @Override
     public List<Collection> afficherCollection() {
         
         //LIST
@@ -69,6 +74,7 @@ public class CollectionService {
         return Collection;
     }
 
+    @Override
     public void supprimerCollection(int ID_COLLECTION) {
          //request 
         String req="DELETE FROM `collection` WHERE ID_COLLECTION=?";
@@ -87,6 +93,7 @@ public class CollectionService {
     }
 
    
+    @Override
     public void modifierCollection(int ID_UTILISATEUR,int ID_CARTE, Collection n) {
         
          //request 
@@ -113,5 +120,24 @@ public class CollectionService {
 
     }
 
+    @Override
+    public void fusionnerCollection(int ID_COLLECTION1, int ID_COLLECTION2) {
+        
+        String req = "";
+        
+        CartesService cs= new CartesService();
+        List<Cartes> cartes = new ArrayList<>();
+        cartes = cs.afficherCartes();
+        
+        int range = (cartes.size() - 1) + 1;
+        int rand=(int)(Math.random() * range) + 1;
+        System.out.println(cartes);
+        System.out.println(rand);
+        cartes.indexOf(rand);
+        System.out.println(cartes.get(rand));
+
+    }
+
+     
              
 }

@@ -110,8 +110,9 @@ public class CollectionService implements IcollectionService {
     }
 
     @Override
-    public void fusionnerCollection(int ID_COLLECTION1, int ID_COLLECTION2) {
-        /*
+    public void fusionnerCollection(int ID_COLLECTION1, int ID_COLLECTION2) 
+    {
+        
         String req = "DELETE FROM `collection` WHERE ID_COLLECTION IN (?,?)";
 
         try {
@@ -124,18 +125,31 @@ public class CollectionService implements IcollectionService {
         } catch (SQLException ex) {
             ex.printStackTrace();
         }
-        */
+        
         CartesService cs = new CartesService();
         List<Cartes> cartes = new ArrayList<>();
         cartes = cs.afficherCartes();
 
-        int range = (cartes.size() - 1) + 1;
-        int rand = (int) (Math.random() * range) + 1;
+        int range = (cartes.size() - 1) +1;
+        int rand = (int) (Math.random() * range);
         System.out.println(cartes);
         System.out.println(rand);
         cartes.indexOf(rand);
         System.out.println(cartes.get(rand));
+        
+        /*
+        String req = "INSERT INTO `collection`(``) "
+                + "VALUES (?)";
+        
+        try {
+            PreparedStatement pst = cnx.prepareStatement(req);
+            pst.setInt(1, rand);
+            pst.executeUpdate();
+            System.out.println("C_Rand ajoute avec succe");
 
-
+        } catch (SQLException ex) {
+            ex.printStackTrace();
+        }
+        */
     }
 }

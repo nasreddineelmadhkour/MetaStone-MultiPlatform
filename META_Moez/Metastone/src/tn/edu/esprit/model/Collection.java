@@ -27,7 +27,7 @@ public class Collection {
         this.ID_UTILISATEUR=ID_UTILISATEUR;
         this.ID_CARTE = ID_CARTE;
     }
-    
+       
     public Collection ()
     {
     }

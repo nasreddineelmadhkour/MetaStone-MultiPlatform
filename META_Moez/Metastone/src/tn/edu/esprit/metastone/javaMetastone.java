@@ -51,9 +51,11 @@ public class javaMetastone {
         //ns.ajouterCollection(n);
         
             // **************** Affichage Collection ***************
-        System.out.println("\n ********* Affichage Collection ********** \n");
-        System.out.println(ns.afficherCollection());
-        ns.fusionnerCollection(7, 8);
+        //System.out.println("\n ********* Affichage Collection ********** \n");
+        //System.out.println(ns.afficherCollection());
+        
+        // **************** Fusionner Collection ***************
+        ns.fusionnerCollection(7,8);
 
        
             // *************** Supprimer Collection *************

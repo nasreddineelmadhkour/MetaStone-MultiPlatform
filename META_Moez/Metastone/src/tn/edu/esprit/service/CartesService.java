@@ -77,6 +77,7 @@ public class CartesService {
         }
         return cartes;
     }
+    
 
     public void supprimerCartes(int ID_CARTE) {
          //request 
@@ -133,6 +134,106 @@ public class CartesService {
                   
 
     }
+    
+    //afficher par id user
+    public List<Cartes> afficherCartesParId(int Id_carte)
+    {
+        //LIST
+        List<Cartes> Cartes = new ArrayList<>();
+        //request 
+        String req ="SELECT * FROM Carte WHERE Id_carte like '"+Id_carte+"'";
+        try {
+            //insert
+            Statement st = cnx.createStatement();
+            ResultSet rs = st.executeQuery(req);
+            while(rs.next())
+            {
+                Cartes.add(new Cartes(rs.getInt(1),rs.getInt(2),rs.getString(3),rs.getInt(4),rs.getInt(5),rs.getString(6),rs.getInt(7),rs.getInt(8),rs.getString(9),rs.getString(10),rs.getString(11),rs.getInt(12)));
+                
+            }
+            
+            
+        }catch(SQLException ex){
+            ex.printStackTrace();
+        }
+        if (Cartes.size() < 1) {
+            System.out.println("La liste est vide!");
+        }
+        return Cartes;
+    }
+    
+    
+    
+   public List<Cartes> afficherCartesParType(String type)
+    {
+        //LIST
+        List<Cartes> cartes = new ArrayList<>();
+        //request 
+        String req ="SELECT * FROM CARTE WHERE Type like '"+type+"'";
+        try {
+            //insert
+            Statement st = cnx.createStatement();
+            ResultSet rs = st.executeQuery(req);
+            while(rs.next())
+            {
+                cartes.add(new Cartes(rs.getInt(1),rs.getInt(2),rs.getString(3),rs.getInt(4),rs.getInt(5),rs.getString(6),rs.getInt(7),rs.getInt(8),rs.getString(9),rs.getString(10),rs.getString(11),rs.getInt(12)));
+                
+            }
+            
+            
+        }catch(SQLException ex){
+            ex.printStackTrace();
+        }
+        return cartes;
+    }
+   
+   public List<Cartes> afficherCartesParNom(String Nom) {
+        //LIST
+        List<Cartes> cartes = new ArrayList<>();
+        List<Cartes> aux = new ArrayList<>();
+        //request 
+        String req = "SELECT * FROM CARTE WHERE  Nom like '%" + Nom + "%'";
+        try {
+            //insert
+            Statement st = cnx.createStatement();
+            ResultSet rs = st.executeQuery(req);
+            while (rs.next()) {
+                if (rs.getString(2) == Nom) {
+                    cartes.add(new Cartes(rs.getInt(2),rs.getString(3),rs.getInt(4),rs.getInt(5),rs.getString(6),rs.getInt(7),rs.getInt(8),rs.getString(9),rs.getString(10),rs.getString(11),rs.getInt(12)));
+                    return cartes;
+                }
+                cartes.add(new Cartes(rs.getInt(2),rs.getString(3),rs.getInt(4),rs.getInt(5),rs.getString(6),rs.getInt(7),rs.getInt(8),rs.getString(9),rs.getString(10),rs.getString(11),rs.getInt(12)));
+            }
 
+        } catch (SQLException ex) {
+            ex.printStackTrace();
+        }
+        if (cartes.size() < 1) {
+            System.out.println("La liste est vide!");
+        }
+        return cartes;
+    }
+   
+   /*
+    public List<Cartes> findByRechercher(int Id_carte) throws SQLException {
+        List<Cartes> arr = new ArrayList<>();
+        String req = "select * from participation where idUser = ?";
+        Cartes Cartes = null;
+        try {
+            PreparedStatement ps = con.prepareStatement(req);
+            ps.setInt(1, user.getIdUser());
+            ResultSet resultSet = ps.executeQuery();
+
+            while (resultSet.next()) {
+                int idComp = resultSet.getInt("idCompetition");
+                ServiceCompetition ser2 = new ServiceCompetition();
+                Competition comp = ser2.findById(idComp);
+                arr.add(comp);
+            }
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+        return arr;
+    }*/
              
 }

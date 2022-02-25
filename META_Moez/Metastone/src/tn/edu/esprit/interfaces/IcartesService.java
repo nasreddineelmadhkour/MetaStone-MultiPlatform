@@ -17,6 +17,12 @@ public interface IcartesService {
     public void ajouterCartes(Cartes c);
     //Afficher
     public List<Cartes> afficherCartes();
+             //par id
+             public List<Cartes> afficherCartesParId(int Id_utilisateur);
+             //par Type
+             public List<Cartes> afficherCartesParType(String Type);
+             //par Nom
+             public List<Cartes> afficherCartesParNom (String Nom);
     //Supprimer
     public void supprimerCartes(int ID_CARTE);
     //Modifier

@@ -110,46 +110,82 @@ public class CollectionService implements IcollectionService {
     }
 
     @Override
-    public void fusionnerCollection(int ID_COLLECTION1, int ID_COLLECTION2) 
-    {
+    public void fusionnerCollection(int ID_COLLECTION1, int ID_COLLECTION2, int Id_utilisateur) {
+        int nombreCartes = 0;boolean test=false;
+        String req;
+        int idCarte1;
+        int idCarte2;
+        String carte1 = "";
+        String carte2 = "";
+       
         
-        String req = "DELETE FROM `collection` WHERE ID_COLLECTION IN (?,?)";
-
+        String req1 = "SELECT * FROM collection INNER JOIN carte WHERE carte.Id_carte= collection.Id_carte AND (id_collection="+ID_COLLECTION1+" OR id_collection="+ID_COLLECTION2+") AND Id_utilisateur ="+Id_utilisateur;
         try {
-            PreparedStatement pst = cnx.prepareStatement(req);
-            pst.setInt(1, ID_COLLECTION1);
-            pst.setInt(2, ID_COLLECTION2);
-            pst.executeUpdate();
-            System.out.println("C1 C2 supprime avec Succes");
-
+            Statement st = cnx.createStatement();
+            ResultSet rs = st.executeQuery(req1);
+            String TypeCarte1,TypeCarte2;
+            List<String> cartess = new ArrayList<>();
+            
+            while (rs.next()) {
+                cartess.add(rs.getString("type"));
+                
+                
+            }
+            
+            
+            if(cartess.get(0).equals(cartess.get(1))){
+                    test=true;
+                    System.out.println(cartess.get(0));
+                    System.out.println(cartess.get(1));
+                }
         } catch (SQLException ex) {
             ex.printStackTrace();
         }
-        
-        CartesService cs = new CartesService();
-        List<Cartes> cartes = new ArrayList<>();
-        cartes = cs.afficherCartes();
+        if (test){
+        //if (nombreCartes > 1 && carte1.compareTo(carte2) == 0) {
+            req = "DELETE FROM `collection` WHERE ID_COLLECTION IN (?,?)";
 
-        int range = (cartes.size() - 1) +1;
-        int rand = (int) (Math.random() * range);
-        System.out.println(cartes);
-        System.out.println(rand);
-        cartes.indexOf(rand);
-        System.out.println(cartes.get(rand));
-        
-        /*
-        String req = "INSERT INTO `collection`(``) "
-                + "VALUES (?)";
-        
-        try {
-            PreparedStatement pst = cnx.prepareStatement(req);
-            pst.setInt(1, rand);
-            pst.executeUpdate();
-            System.out.println("C_Rand ajoute avec succe");
+            try {
+                PreparedStatement pst = cnx.prepareStatement(req);
+                pst.setInt(1, ID_COLLECTION1);
+                pst.setInt(2, ID_COLLECTION2);
+                pst.executeUpdate();
+                System.out.println("C1 C2 supprime avec Succes");
 
-        } catch (SQLException ex) {
-            ex.printStackTrace();
+            } catch (SQLException ex) {
+                ex.printStackTrace();
+            }
+
+            CartesService cs = new CartesService();
+            List<Cartes> cartes = new ArrayList<>();
+            cartes = cs.afficherCartes();
+
+            int range = (cartes.size() - 1) + 1;
+            int rand = (int) (Math.random() * range);
+            System.out.println(cartes);
+            System.out.println(rand);
+            cartes.indexOf(rand);
+            System.out.println(cartes.get(rand));
+
+            req = "INSERT INTO `collection`(`id_utilisateur`,`id_carte`) "
+                    + "VALUES (?,?)";
+
+            try {
+                PreparedStatement pst = cnx.prepareStatement(req);
+                pst.setInt(1, Id_utilisateur);
+                pst.setInt(2, cartes.get(rand).getID_CARTE());
+                pst.executeUpdate();
+                System.out.println("CARTE Gagne ajoute avec succee");
+
+            } catch (SQLException ex) {
+                ex.printStackTrace();
+            }
+
+        } else {
+            System.out.println("Les cartes que vous avez mis n'existe pas dans ta collection");
         }
-        */
+        
+        //}
     }
+
 }

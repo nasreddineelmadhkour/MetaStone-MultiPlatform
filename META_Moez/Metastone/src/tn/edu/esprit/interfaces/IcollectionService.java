@@ -22,5 +22,5 @@ public interface IcollectionService {
     public void supprimerCollection(int Collection);
     //Modifier
     public void modifierCollection(int ID_UTILISATEUR,int ID_CARTE, Collection n);    //Fusionner
-    public void fusionnerCollection(int ID_COLLECTION1,int ID_COLLECTION2);
+    public void fusionnerCollection(int ID_COLLECTION1,int ID_COLLECTION2,int Id_utilisateur);
 }

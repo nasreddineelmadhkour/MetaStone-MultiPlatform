@@ -33,8 +33,14 @@ public class javaMetastone {
         //cs.ajouterCartes(c);
         
             // ************** Affichage Cartes **************
-        //System.out.println("\n ********* Affichage Cartes ********** \n");
-        //System.out.println(cs.afficherCartes());
+        System.out.println("\n ********* Affichage Cartes ********** \n");
+        System.out.println(cs.afficherCartes());
+        System.out.println("\n ********* Affichage Cartes Par ID ********** \n");
+        System.out.println(cs.afficherCartesParId(47));
+        System.out.println("\n ********* Affichage Cartes Par Type ********** \n");
+        System.out.println(cs.afficherCartesParType("ninja"));
+        System.out.println("\n ********* Affichage Cartes Par Nom ********** \n");
+        System.out.println(cs.afficherCartesParNom("Mlewi"));
         
             // *************** Supprimer Cartes *************
         //cs.supprimerCartes(37);
@@ -46,7 +52,7 @@ public class javaMetastone {
         //System.out.println(cs.afficherCartes());
         //---------------------------------------------------------------------------------------------------------\\
             // ************ Ajouter Collection ************* 
-        CollectionService ns= new CollectionService();
+        //CollectionService ns= new CollectionService();
         //Collection n = new Collection(9,38);
         //ns.ajouterCollection(n);
         
@@ -55,7 +61,7 @@ public class javaMetastone {
         //System.out.println(ns.afficherCollection());
         
         // **************** Fusionner Collection ***************
-        ns.fusionnerCollection(7,8);
+        //ns.fusionnerCollection(12,21,1);
 
        
             // *************** Supprimer Collection *************

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/C:/Users/FadyBelY/Documents/NetBeansProjects/Metastone/src/gui/admin/merche/SupprimerMercheFormController.java</file>
+            <file>file:/C:/Users/FadyBelY/Documents/NetBeansProjects/Metastone/src/gui/admin/merche/AfficheMercheFormController.java</file>
+            <file>file:/C:/Users/FadyBelY/Documents/NetBeansProjects/Metastone/src/gui/ChoiceFormController.java</file>
+            <file>file:/C:/Users/FadyBelY/Documents/NetBeansProjects/Metastone/src/tn/edu/esprit/util/MaConnexion.java</file>
+            <file>file:/C:/Users/FadyBelY/Documents/NetBeansProjects/Metastone/src/tn/edu/esprit/model/Utilisateur.java</file>
+            <file>file:/C:/Users/FadyBelY/Documents/NetBeansProjects/Metastone/src/gui/admin/merche/AjouterMercheForm.fxml</file>
+            <file>file:/C:/Users/FadyBelY/Documents/NetBeansProjects/Metastone/src/tn/edu/esprit/interfaces/IcommandeService.java</file>
+            <file>file:/C:/Users/FadyBelY/Documents/NetBeansProjects/Metastone/src/tn/edu/esprit/metastone/main_activity.java</file>
+            <file>file:/C:/Users/FadyBelY/Documents/NetBeansProjects/Metastone/src/tn/edu/esprit/service/CommandeService.java</file>
+            <file>file:/C:/Users/FadyBelY/Documents/NetBeansProjects/Metastone/src/gui/ChoicesCSS.css</file>
+            <file>file:/C:/Users/FadyBelY/Documents/NetBeansProjects/Metastone/src/tn/edu/esprit/service/MercheService.java</file>
+            <file>file:/C:/Users/FadyBelY/Documents/NetBeansProjects/Metastone/src/gui/admin/merche/SupprimerMercheForm.fxml</file>
+            <file>file:/C:/Users/FadyBelY/Documents/NetBeansProjects/Metastone/src/tn/edu/esprit/util/SendSimpleEmail.java</file>
+            <file>file:/C:/Users/FadyBelY/Documents/NetBeansProjects/Metastone/src/tn/edu/esprit/interfaces/ImercheService.java</file>
+            <file>file:/C:/Users/FadyBelY/Documents/NetBeansProjects/Metastone/src/tn/edu/esprit/metastone/Metastone.java</file>
+            <file>file:/C:/Users/FadyBelY/Documents/NetBeansProjects/Metastone/src/gui/admin/merche/AfficheMercheForm.fxml</file>
+            <file>file:/C:/Users/FadyBelY/Documents/NetBeansProjects/Metastone/src/tn/edu/esprit/model/Commande.java</file>
+            <file>file:/C:/Users/FadyBelY/Documents/NetBeansProjects/Metastone/src/tn/edu/esprit/model/Merche.java</file>
+            <file>file:/C:/Users/FadyBelY/Documents/NetBeansProjects/Metastone/src/gui/admin/merche/AjouterMercheFormController.java</file>
+            <file>file:/C:/Users/FadyBelY/Documents/NetBeansProjects/Metastone/src/gui/ChoiceForm.fxml</file>
+        </group>
+    </open-files>
+</project-private>

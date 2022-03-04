@@ -3,14 +3,49 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/admin/Documents/GitHub/PIDEV/Metastone/src/tn/edu/esprit/model/Utilisateur.java</file>
-            <file>file:/C:/Users/admin/Documents/GitHub/PIDEV/Metastone/src/tn/edu/esprit/service/DemandeService.java</file>
-            <file>file:/C:/Users/admin/Documents/GitHub/PIDEV/Metastone/src/tn/edu/esprit/interfaces/IutilisateurService.java</file>
-            <file>file:/C:/Users/admin/Documents/GitHub/PIDEV/Metastone/src/tn/edu/esprit/util/MaConnexion.java</file>
-            <file>file:/C:/Users/admin/Documents/GitHub/PIDEV/Metastone/src/tn/edu/esprit/service/UtilisateurService.java</file>
-            <file>file:/C:/Users/admin/Documents/GitHub/PIDEV/Metastone/src/tn/edu/esprit/interfaces/IdemandeService.java</file>
-            <file>file:/C:/Users/admin/Documents/GitHub/PIDEV/Metastone/src/tn/edu/esprit/metastone/Metastone.java</file>
-            <file>file:/C:/Users/admin/Documents/GitHub/PIDEV/Metastone/src/tn/edu/esprit/model/Demande.java</file>
+            <file>file:/C:/Users/admin/Documents/NetBeansProjects/Metastone/src/gui/Login.fxml</file>
+            <file>file:/C:/Users/admin/Documents/NetBeansProjects/Metastone/src/tn/edu/esprit/gui/src/style.css</file>
+            <file>file:/C:/Users/admin/Documents/NetBeansProjects/Metastone/src/tn/edu/esprit/model/Collection.java</file>
+            <file>file:/C:/Users/admin/Documents/NetBeansProjects/Metastone/src/tn/edu/esprit/gui/InscriptionController.java</file>
+            <file>file:/C:/Users/admin/Documents/NetBeansProjects/Metastone/src/tn/edu/esprit/service/CartesService.java</file>
+            <file>file:/C:/Users/admin/Documents/NetBeansProjects/Metastone/src/tn/edu/esprit/gui/ProfilController.java</file>
+            <file>file:/C:/Users/admin/Documents/NetBeansProjects/Metastone/src/tn/edu/esprit/gui/MacollectionController.java</file>
+            <file>file:/C:/Users/admin/Documents/NetBeansProjects/Metastone/src/gui/Logo.png</file>
+            <file>file:/C:/Users/admin/Documents/NetBeansProjects/Metastone/src/tn/edu/esprit/gui/newpassword.fxml</file>
+            <file>file:/C:/Users/admin/Documents/NetBeansProjects/Metastone/src/tn/edu/esprit/model/Cartes.java</file>
+            <file>file:/C:/Users/admin/Documents/NetBeansProjects/Metastone/src/tn/edu/esprit/service/Iservices.java</file>
+            <file>file:/C:/Users/admin/Documents/NetBeansProjects/Metastone/src/tn/edu/esprit/gui/Macollection.fxml</file>
+            <file>file:/C:/Users/admin/Documents/NetBeansProjects/Metastone/src/gui/background_login.png</file>
+            <file>file:/C:/Users/admin/Documents/NetBeansProjects/Metastone/src/tn/edu/esprit/service/ServiceUtilisateur.java</file>
+            <file>file:/C:/Users/admin/Documents/NetBeansProjects/Metastone/src/tn/edu/esprit/gui/HomeController.java</file>
+            <file>file:/C:/Users/admin/Documents/NetBeansProjects/Metastone/src/tn/edu/esprit/model/Demande.java</file>
+            <file>file:/C:/Users/admin/Documents/NetBeansProjects/Metastone/src/tn/edu/esprit/service/CollectionService.java</file>
+            <file>file:/C:/Users/admin/Documents/NetBeansProjects/Metastone/src/tn/edu/esprit/gui/Code.fxml</file>
+            <file>file:/C:/Users/admin/Documents/NetBeansProjects/Metastone/src/tn/edu/esprit/gui/UnecarteController.java</file>
+            <file>file:/C:/Users/admin/Documents/NetBeansProjects/Metastone/src/tn/edu/esprit/gui/LoginController.java</file>
+            <file>file:/C:/Users/admin/Documents/NetBeansProjects/Metastone/src/tn/edu/esprit/gui/Home.fxml</file>
+            <file>file:/C:/Users/admin/Documents/NetBeansProjects/Metastone/src/gui/EXIT.png</file>
+            <file>file:/C:/Users/admin/Documents/NetBeansProjects/Metastone/src/tn/edu/esprit/gui/Login.fxml</file>
+            <file>file:/C:/Users/admin/Documents/NetBeansProjects/Metastone/src/gui/EXIT_hover.png</file>
+            <file>file:/C:/Users/admin/Documents/NetBeansProjects/Metastone/src/tn/edu/esprit/metastone/Metastone.java</file>
+            <file>file:/C:/Users/admin/Documents/NetBeansProjects/Metastone/src/tn/edu/esprit/gui/MdpoublierController.java</file>
+            <file>file:/C:/Users/admin/Documents/NetBeansProjects/Metastone/src/tn/edu/esprit/util/MaConnexion.java</file>
+            <file>file:/C:/Users/admin/Documents/NetBeansProjects/Metastone/src/tn/edu/esprit/util/Mail.java</file>
+            <file>file:/C:/Users/admin/Documents/NetBeansProjects/Metastone/src/tn/edu/esprit/gui/Mdpoublier.fxml</file>
+            <file>file:/C:/Users/admin/Documents/NetBeansProjects/Metastone/src/tn/edu/esprit/gui/Profil.fxml</file>
+            <file>file:/C:/Users/admin/Documents/NetBeansProjects/Metastone/src/tn/edu/esprit/model/Utilisateur.java</file>
+            <file>file:/C:/Users/admin/Documents/NetBeansProjects/Metastone/src/tn/edu/esprit/gui/NewpasswordController.java</file>
+            <file>file:/C:/Users/admin/Documents/NetBeansProjects/Metastone/src/tn/edu/esprit/service/ServiceDemande.java</file>
+            <file>file:/C:/Users/admin/Documents/NetBeansProjects/Metastone/src/gui/style.css</file>
+            <file>file:/C:/Users/admin/Documents/NetBeansProjects/Metastone/src/tn/edu/esprit/gui/Unecarte.fxml</file>
+            <file>file:/C:/Users/admin/Documents/NetBeansProjects/Metastone/src/gui/NewFXMain.java</file>
+            <file>file:/C:/Users/admin/Documents/NetBeansProjects/Metastone/src/tn/edu/esprit/gui/Inscription.fxml</file>
+            <file>file:/C:/Users/admin/Documents/NetBeansProjects/Metastone/src/tn/edu/esprit/service/IcartesService.java</file>
+            <file>file:/C:/Users/admin/Documents/NetBeansProjects/Metastone/src/gui/LoginController.java</file>
+            <file>file:/C:/Users/admin/Documents/NetBeansProjects/Metastone/src/tn/edu/esprit/gui/MetaStone.java</file>
+            <file>file:/C:/Users/admin/Documents/NetBeansProjects/Metastone/src/gui/inscription.png</file>
+            <file>file:/C:/Users/admin/Documents/NetBeansProjects/Metastone/src/tn/edu/esprit/gui/CodeController.java</file>
+            <file>file:/C:/Users/admin/Documents/NetBeansProjects/Metastone/src/tn/edu/esprit/service/IcollectionService.java</file>
         </group>
     </open-files>
 </project-private>

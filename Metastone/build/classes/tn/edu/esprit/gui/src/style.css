@@ -1,0 +1,375 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 28 févr. 2022, 15:00:00
+    Author     : admin
+*/
+
+@font-face {
+    -fx-font-family: "belwee";
+    -fx-src: url("belwe_bold_bt.ttf");
+}
+
+
+
+.button_se_connecter{
+    
+   -fx-background-color:transparent;                  
+   -fx-background-image: url('connexion0.png');
+   -fx-background-size: 100%;
+   -fx-background-repeat: no-repeat;
+   -fx-background-position: 100%;
+
+}
+.button_se_connecter:hover{
+    
+   -fx-background-color:transparent;                  
+   -fx-background-image: url('connexion1.png');
+   -fx-background-size: 101%;
+   -fx-background-repeat: no-repeat;
+   -fx-background-position: 100%;
+
+}
+.lineEdit_username_login{
+  -fx-background-color:transparent;  
+  -fx-prompt-text-fill:rgb(134,102,84);
+  -fx-font-family: "belwee";
+
+
+}
+.lineEdit_password_login{
+    -fx-background-color:transparent;  
+  -fx-prompt-text-fill:rgb(134,102,84); 
+    
+}
+
+.button_mdpOublier{
+    -fx-background-color:transparent;                  
+   -fx-background-image: url('mdp_oublier0.png');
+   -fx-background-size: 100%;
+   -fx-background-repeat: no-repeat;
+   -fx-background-position: 100%; 
+    
+}
+.button_mdpOublier:hover{
+    -fx-background-color:transparent;                  
+   -fx-background-image: url('mdp_oublier1.png');
+   -fx-background-size: 101%;
+   -fx-background-repeat: no-repeat;
+   -fx-background-position: 100%; 
+    
+}
+.button_inscrire{
+    -fx-background-color:transparent;                  
+   -fx-background-image: url('inscrire0.png');
+   -fx-background-size: 130%;
+   -fx-background-repeat: no-repeat;
+   -fx-background-position: 10%; 
+    
+}
+.button_inscrire:hover{
+    -fx-background-color:transparent;                  
+   -fx-background-image: url('inscrire1.png');
+   -fx-background-size: 133%;
+   -fx-background-repeat: no-repeat;
+   -fx-background-position: 25%; 
+    
+}
+.label_logo_application{
+    
+        -fx-background-color:transparent;                  
+   -fx-background-image: url('logo_application.png');
+   -fx-background-size: 100%;
+   -fx-background-repeat: no-repeat;
+   -fx-background-position: 100%; 
+}
+.button_exit{
+  -fx-background-color:transparent;                  
+   -fx-background-image: url('exit0.png');
+   -fx-background-size: 100%;
+   -fx-background-repeat: no-repeat;
+   -fx-background-position: 100%;        
+}
+.button_exit:hover{
+  -fx-background-color:transparent;                  
+   -fx-background-image: url('exit1.png');
+   -fx-background-size: 102%;
+   -fx-background-repeat: no-repeat;
+   -fx-background-position: 100%;     
+}
+.label_logo_equipe{
+    -fx-background-color:transparent;                  
+   -fx-background-image: url('logo_equipe.png');
+   -fx-background-size: 100%;
+   -fx-background-repeat: no-repeat;
+   -fx-background-position: 100%;     
+    
+}
+.button_contunie_mdp_oublier{
+    -fx-background-color:transparent;                  
+   -fx-background-image: url('continuer0.png');
+   -fx-background-size: 100%;
+   -fx-background-repeat: no-repeat;
+   -fx-background-position: 100%;  
+    
+}
+.button_contunie_mdp_oublier:hover{
+    -fx-background-color:transparent;                  
+   -fx-background-image: url('continuer1.png');
+   -fx-background-size: 100%;
+   -fx-background-repeat: no-repeat;
+   -fx-background-position: 100%;  
+    
+}
+.button_annuler_mdp_oublier{
+   -fx-background-color:transparent;                  
+   -fx-background-image: url('annuler0.png');
+   -fx-background-size: 100%;
+   -fx-background-repeat: no-repeat;
+   -fx-background-position: 100%;  
+      
+    
+}
+.button_annuler_mdp_oublier:hover{
+   -fx-background-color:transparent;                  
+   -fx-background-image: url('annuler1.png');
+   -fx-background-size: 100%;
+   -fx-background-repeat: no-repeat;
+   -fx-background-position: 100%;  
+      
+    
+}
+.background_inscription{
+  -fx-background-color:transparent;                  
+   -fx-background-image: url('inscription.png');
+   -fx-background-size: 100%;
+   -fx-background-width:100%;
+   -fx-background-hight:100%;
+   -fx-background-repeat: no-repeat;
+   -fx-background-position: 0%;  
+    
+    
+}
+.button_homme{
+    -fx-background-color:transparent;                  
+    
+}
+.button_femme{
+   -fx-background-color:transparent;                  
+    
+}
+.button_inscrire_2{
+    
+   -fx-background-color:transparent;                  
+   -fx-background-image: url('inscrire_0.png');
+   -fx-background-size: 100%;
+   -fx-background-repeat: no-repeat;
+   -fx-background-position: 100%;
+    
+}
+.button_inscrire_2:hover{
+    
+   -fx-background-color:transparent;                  
+   -fx-background-image: url('inscrire_1.png');
+   -fx-background-size: 100%;
+   -fx-background-repeat: no-repeat;
+   -fx-background-position: 100%;
+    
+}
+.button_annuler_2{
+    
+   -fx-background-color:transparent;                  
+   -fx-background-image: url('annuler_0.png');
+   -fx-background-size: 100%;
+   -fx-background-repeat: no-repeat;
+   -fx-background-position: 100%;
+    
+}
+.button_annuler_2:hover{
+    
+   -fx-background-color:transparent;                  
+   -fx-background-image: url('annuler_1.png');
+   -fx-background-size: 100%;
+   -fx-background-repeat: no-repeat;
+   -fx-background-position: 100%;
+    
+}
+
+.label_homme{
+    -fx-background-color:transparent;                  
+   -fx-background-image: url('homme1.png');
+   -fx-background-size: 150%;
+   -fx-background-repeat: no-repeat;
+   -fx-background-position: 50%;  
+    
+}
+.label_femme{
+   -fx-background-color:transparent;                  
+   -fx-background-image: url('femme1.png');
+   -fx-background-size: 150%;
+   -fx-background-repeat: no-repeat;
+   -fx-background-position: 50%;  
+    
+}
+.label_vTrue{
+    -fx-background-color:transparent;                  
+   -fx-background-image: url('YES.png');
+   -fx-background-size: 100%;
+   -fx-background-repeat: no-repeat;
+   -fx-background-position: 100%;  
+    
+}
+.label_vFalse{
+    -fx-background-color:transparent;                  
+   -fx-background-image: url('X.png');
+   -fx-background-size: 100%;
+   -fx-background-repeat: no-repeat;
+   -fx-background-position: 100%;  
+    
+}
+.button_profil{
+    
+    -fx-background-color:transparent;                  
+}
+.button_profil:hover{
+    
+    -fx-background-color:transparent;                  
+   -fx-background-image: url('Profil_1.png');
+   -fx-background-size: cover;
+   -fx-background-repeat: no-repeat;
+   -fx-background-position: 50%;
+    
+}
+.button_mycollection{
+    
+    -fx-background-color:transparent;                  
+}
+.button_mycollection:hover{
+        -fx-background-color:transparent;                  
+   -fx-background-image: url('My_Collection_1.png');
+   -fx-background-size: cover;
+   -fx-background-repeat: no-repeat;
+}
+.button_demande{
+    
+    -fx-background-color:transparent;                  
+}
+.button_demande:hover{
+        -fx-background-color:transparent;                  
+   -fx-background-image: url('Demande_1.png');
+   -fx-background-size: cover;
+   -fx-background-repeat: no-repeat;
+}
+
+.button_forum{
+    
+    -fx-background-color:transparent;                  
+}
+.button_forum:hover{
+        -fx-background-color:transparent;                  
+   -fx-background-image: url('Forum_1.png');
+   -fx-background-size: cover;
+   -fx-background-repeat: no-repeat;
+}
+
+.button_esports{
+    
+    -fx-background-color:transparent;                  
+}
+.button_esports:hover{
+        -fx-background-color:transparent;                  
+   -fx-background-image: url('E-Sports_1.png');
+   -fx-background-size: cover;
+   -fx-background-repeat: no-repeat;
+}
+
+.button_store{
+    
+    -fx-background-color:transparent;                  
+}
+.button_store:hover{
+        -fx-background-color:transparent;                  
+   -fx-background-image: url('Store_1.png');
+   -fx-background-size: cover;
+   -fx-background-repeat: no-repeat;
+}
+
+.button_paiement{
+    
+    -fx-background-color:transparent;                  
+}
+.button_paiement:hover{
+        -fx-background-color:transparent;                  
+   -fx-background-image: url('Paiement_1.png');
+   -fx-background-size: cover;
+   -fx-background-repeat: no-repeat;
+}
+.button_coaching{
+    
+    -fx-background-color:transparent;                  
+}
+.button_coaching:hover{
+        -fx-background-color:transparent;                  
+   -fx-background-image: url('Coaching_1.png');
+   -fx-background-size: cover;
+   -fx-background-repeat: no-repeat;
+}
+
+.label_MTC{
+    -fx-background-color:transparent;
+    -fx-text-fill: white;
+    -fx-alignment: center ;
+    -fx-font-size:20px;
+
+    
+}
+
+.button_deconnexion{
+     -fx-background-color:transparent;                  
+    
+}
+.button_deconnexion:hover{
+     -fx-background-color:transparent;                  
+   -fx-background-image: url('Deconnecter_1.png');
+   -fx-background-size: cover;
+   -fx-background-repeat: no-repeat;
+    
+}
+.label_carte1{
+     -fx-background-color:transparent;                  
+   -fx-background-image: url('effect_0.png');
+   -fx-background-size: cover;
+   -fx-background-repeat: no-repeat;
+
+}
+.label_carte3{
+   -fx-background-color:transparent;                  
+   -fx-background-image: url('effect_1.png');
+   -fx-background-size: cover;
+   -fx-background-repeat: no-repeat; 
+    
+}
+.label_fussionner{
+    -fx-background-color:transparent;                  
+   -fx-background-image: url('Fussioner_1.png');
+   -fx-background-size: cover;
+   -fx-background-repeat: no-repeat; 
+}
+.label_unecarte{
+    -fx-background-color:red; -fx-background-image: url('carte1.png'); -fx-background-size: cover; -fx-background-repeat: no-repeat;
+    
+}
+.button_goProfil{
+    -fx-background-color:transparent;                  
+    
+}
+.button_goProfil:hover{
+    -fx-background-color:transparent;                  
+   -fx-background-image: url('Profil_game_1.png');
+   -fx-background-size: cover;
+   -fx-background-repeat: no-repeat; 
+    
+}

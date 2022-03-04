@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: black;" stylesheets="@src/style.css" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="tn.edu.esprit.gui.InfoprofilController">
+   <children>
+      <ImageView fitHeight="720.0" fitWidth="1273.0" layoutX="5.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@src/Profil.png" />
+         </image>
+      </ImageView>
+      <TextField fx:id="profil_nom" alignment="CENTER" layoutX="259.0" layoutY="198.0" prefHeight="40.0" prefWidth="220.0" styleClass="lineEdit_username_login" />
+      <TextField fx:id="profil_prenom" alignment="CENTER" layoutX="602.0" layoutY="198.0" prefHeight="40.0" prefWidth="220.0" styleClass="lineEdit_username_login" />
+      <TextField fx:id="profil_email" alignment="CENTER" layoutX="925.0" layoutY="198.0" prefHeight="40.0" prefWidth="220.0" styleClass="lineEdit_username_login" />
+      <TextField fx:id="profil_adresse" alignment="CENTER" layoutX="259.0" layoutY="291.0" prefHeight="40.0" prefWidth="220.0" styleClass="lineEdit_username_login" />
+      <TextField fx:id="profil_tel" alignment="CENTER" layoutX="602.0" layoutY="291.0" prefHeight="40.0" prefWidth="220.0" styleClass="lineEdit_username_login" />
+      <TextField fx:id="profil_nom_utilisateur" alignment="CENTER" layoutX="259.0" layoutY="382.0" prefHeight="40.0" prefWidth="220.0" styleClass="lineEdit_username_login" />
+      <TextField fx:id="profil_age" alignment="CENTER" layoutX="925.0" layoutY="291.0" prefHeight="40.0" prefWidth="220.0" styleClass="lineEdit_username_login" />
+      <PasswordField fx:id="profil_mdp" alignment="CENTER" layoutX="602.0" layoutY="382.0" prefHeight="40.0" prefWidth="220.0" styleClass="lineEdit_password_login" />
+      <Label fx:id="profil_mtc" layoutX="1035.0" layoutY="58.0" prefHeight="13.0" prefWidth="148.0" styleClass="label_MTC" text="0" textAlignment="CENTER" />
+   </children>
+</AnchorPane>

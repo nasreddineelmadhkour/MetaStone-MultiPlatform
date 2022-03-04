@@ -15,6 +15,7 @@ public class Utilisateur {
     private String date_naiss;
     private String mtc,nom,prenom,email,tel,adresse,nom_utilisateur,
             mot_de_passe,sexe,photo_de_profil,role,rank,id,id_consommateur;
+    private int code;
    
        
 //constructor
@@ -71,6 +72,14 @@ public class Utilisateur {
        id_consommateur="";
        
        
+    }
+
+    public int getCode() {
+        return code;
+    }
+
+    public void setCode(int code) {
+        this.code = code;
     }
 
     
@@ -211,8 +220,10 @@ public class Utilisateur {
 
     @Override
     public String toString() {
-        return "Utilisateur{" + "id=" + ID_UTILISATEUR + ", mtc=" + mtc + ", nom=" + nom + ", prenom=" + prenom + ", date_naiss=" + date_naiss + ", email=" + email + ", tel=" + tel + ", adresse=" + adresse + ", nom_utilisateur=" + nom_utilisateur + ", mot_de_passe=" + mot_de_passe + ", sexe=" + sexe + ", photo_de_profil=" + photo_de_profil + ", role=" + role + ", rank=" + rank + ", id_consommateur=" + id_consommateur + '}';
+        return "Utilisateur{" + "ID_UTILISATEUR=" + ID_UTILISATEUR + ", date_naiss=" + date_naiss + ", mtc=" + mtc + ", nom=" + nom + ", prenom=" + prenom + ", email=" + email + ", tel=" + tel + ", adresse=" + adresse + ", nom_utilisateur=" + nom_utilisateur + ", mot_de_passe=" + mot_de_passe + ", sexe=" + sexe + ", photo_de_profil=" + photo_de_profil + ", role=" + role + ", rank=" + rank + ", id=" + id + ", id_consommateur=" + id_consommateur + ", code=" + code + '}';
     }
+
+   
     
     
 }

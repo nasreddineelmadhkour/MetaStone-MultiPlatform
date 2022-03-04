@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="464.0" prefWidth="756.0" styleClass="bg_final" stylesheets="@src/Style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tn.edu.esprit.gui.AddPosteController">
+   <children>
+      <Button layoutX="586.0" layoutY="277.0" mnemonicParsing="false" onAction="#publier" prefHeight="25.0" prefWidth="73.0" stylesheets="@../../../../../../../../../Downloads/Metastone/Metastone/src/tn/edu/esprit/gui/src/style.css">
+         <styleClass>
+            <String fx:value="btn_publie" />
+            <String fx:value="btn_publie1" />
+         </styleClass>
+      </Button>
+      <Button layoutX="586.0" layoutY="302.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="73.0" stylesheets="@../../../../../../../../../Downloads/Metastone/Metastone/src/tn/edu/esprit/gui/src/style.css">
+         <styleClass>
+            <String fx:value="btn_fichier" />
+            <String fx:value="btn_fichier1" />
+         </styleClass>
+      </Button>
+      <Button layoutX="586.0" layoutY="327.0" mnemonicParsing="false" onAction="#Annuler" prefHeight="25.0" prefWidth="73.0" stylesheets="@../../../../../../../../../Downloads/Metastone/Metastone/src/tn/edu/esprit/gui/src/style.css">
+         <styleClass>
+            <String fx:value="btn_annuler" />
+            <String fx:value="btn_annuler1" />
+         </styleClass>
+      </Button>
+      <TextArea layoutX="569.0" layoutY="183.0" onDragDetected="#contenu" prefHeight="82.0" prefWidth="105.0" />
+      <Button layoutX="221.0" layoutY="59.0" mnemonicParsing="false" prefHeight="68.0" prefWidth="95.0" stylesheets="@src/Style.css">
+         <styleClass>
+            <String fx:value="btn_jomjom" />
+            <String fx:value="btn_jomjom1" />
+         </styleClass>
+      </Button>
+   </children>
+</AnchorPane>

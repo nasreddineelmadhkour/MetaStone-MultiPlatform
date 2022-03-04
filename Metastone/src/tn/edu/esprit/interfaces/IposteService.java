@@ -22,4 +22,10 @@ public interface IposteService {
     public void supprimerPoste(int Id_poste);
     //Modifier
     public void modifierPoste(int Id_poste ,Poste p);
+    
+    //public List<Poste> afficherPosteParCategorie(String Categorie);
+   // public List<Poste> afficherPosteParDate(int UpVote);
+
+    
+
 }

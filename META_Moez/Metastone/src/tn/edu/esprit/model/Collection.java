@@ -16,7 +16,7 @@ package tn.edu.esprit.model;
 //constructor
 public class Collection {
     private int ID_COLLECTION, ID_UTILISATEUR, ID_CARTE;
-    private String id;
+    private String id,image;
 
     public Collection(int ID_COLLECTION, int ID_UTILISATEUR, int ID_CARTE) {
         this.ID_COLLECTION = ID_COLLECTION;
@@ -63,7 +63,14 @@ public class Collection {
     }
     
     
+   public String getImage() {
+        return image;
+    }
 
+    public void setImage(String image) {
+        this.image = image;
+    }
+    
 
     
 
@@ -71,7 +78,8 @@ public class Collection {
     public String toString() {
         return "COLLECTION{" + "ID_COLLECTION=" + ID_COLLECTION + ", ID_UTILISATEUR=" + ID_UTILISATEUR + ", ID_CARTE=" + ID_CARTE +'}';
     }
-    
+
+ 
     
     
 }

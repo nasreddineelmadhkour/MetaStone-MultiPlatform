@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="302.0" prefWidth="445.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.LoginController">
+   <children>
+      <AnchorPane id="AnchorPane" layoutY="5.0" prefHeight="520.0" prefWidth="733.0" style="-fx-background-color: transparent;">
+         <children>
+            <ImageView fitHeight="588.0" fitWidth="733.0" layoutY="-5.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@assets/background/background_login.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="login" layoutX="254.0" layoutY="269.0" mnemonicParsing="false" onAction="#se_connecter" prefHeight="44.0" prefWidth="226.0" styleClass="login" stylesheets="@style.css" text="Se connecter" textAlignment="CENTER">
+               <font>
+                  <Font name="High Tower Text" size="21.0" />
+               </font>
+            </Button>
+            <PasswordField fx:id="password" alignment="CENTER" layoutX="259.0" layoutY="214.0" prefHeight="53.0" prefWidth="219.0" promptText="Mot de passe" styleClass="password" stylesheets="@style.css">
+               <font>
+                  <Font name="High Tower Text" size="21.0" />
+               </font>
+            </PasswordField>
+            <TextField fx:id="username" alignment="CENTER" layoutX="285.0" layoutY="170.0" prefHeight="34.0" prefWidth="168.0" promptText="Utilisateur" styleClass="LineEdit" stylesheets="@style.css">
+               <font>
+                  <Font name="High Tower Text" size="22.0" />
+               </font>
+            </TextField>
+            <Button fx:id="inscrire" layoutX="105.0" layoutY="334.0" mnemonicParsing="false" onAction="#inscrire" prefHeight="92.0" prefWidth="88.0" styleClass="inscrire" stylesheets="@style.css" />
+            <Button fx:id="deconnecter" layoutX="642.0" layoutY="33.0" mnemonicParsing="false" onAction="#deconnecter" prefHeight="53.0" prefWidth="51.0" styleClass="deconnecter" stylesheets="@style.css">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </Button>
+            <Label fx:id="label_logo" layoutX="164.0" layoutY="4.0" prefHeight="164.0" prefWidth="410.0" styleClass="logo" stylesheets="@style.css" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

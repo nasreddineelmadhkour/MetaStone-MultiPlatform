@@ -5,7 +5,7 @@
  */
 package tn.edu.esprit.service;
 
-import tn.edu.esprit.interfaces.IcartesService;
+import tn.edu.esprit.service.IcartesService;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -21,7 +21,7 @@ import tn.edu.esprit.util.MaConnexion;
  *
  * @author Moez
  */
-public class CartesService {
+public class CartesService implements IcartesService{
     //var
     Connection cnx= MaConnexion.getInstance().getCnx();
 
@@ -79,6 +79,7 @@ public class CartesService {
     }
     
 
+    @Override
     public void supprimerCartes(int ID_CARTE) {
          //request 
         String req="DELETE FROM `carte` WHERE ID_CARTE=?";
@@ -97,6 +98,7 @@ public class CartesService {
     }
 
    
+    @Override
     public void modifierCartes(int ID_CARTE,Cartes c) {
         
          //request 
@@ -136,6 +138,7 @@ public class CartesService {
     }
     
     //afficher par id user
+    @Override
     public List<Cartes> afficherCartesParId(int Id_carte)
     {
         //LIST
@@ -164,6 +167,7 @@ public class CartesService {
     
     
     
+    @Override
    public List<Cartes> afficherCartesParType(String type)
     {
         //LIST
@@ -187,6 +191,7 @@ public class CartesService {
         return cartes;
     }
    
+    @Override
    public List<Cartes> afficherCartesParNom(String Nom) {
         //LIST
         List<Cartes> cartes = new ArrayList<>();
@@ -235,5 +240,32 @@ public class CartesService {
         }
         return arr;
     }*/
+
+    @Override
+    public Cartes getCarte(int id_carte) {
+        
+        Cartes C=new Cartes();
+        //LIST
+        //request 
+        String req ="SELECT * FROM CARTE where id_carte="+id_carte;
+        try {
+            //insert
+            Statement st = cnx.createStatement();
+            ResultSet rs = st.executeQuery(req);
+            while(rs.next())
+            {
+                Cartes c=new Cartes(rs.getInt(1),rs.getInt(2),rs.getString(3),rs.getInt(4),rs.getInt(5),rs.getString(6),rs.getInt(7),rs.getInt(8),rs.getString(9),rs.getString(10),rs.getString(11),rs.getInt(12));
+                
+                C=c;
+            }
+            
+            
+        }catch(SQLException ex){
+            ex.printStackTrace();
+        }
+        
+        
+        return C;
+    }
              
 }

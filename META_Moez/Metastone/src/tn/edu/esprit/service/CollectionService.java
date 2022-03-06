@@ -7,7 +7,7 @@ package tn.edu.esprit.service;
 
 import static java.lang.Double.max;
 import static java.lang.Integer.min;
-import tn.edu.esprit.interfaces.IcollectionService;
+import tn.edu.esprit.service.IcollectionService;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -52,12 +52,12 @@ public class CollectionService implements IcollectionService {
      * @return
      */
     @Override
-    public List<Collection> afficherCollection() {
+    public List<Collection> afficherCollection(int ID_UTILISATEUR) {
 
         //LIST
         List<Collection> Collection = new ArrayList<>();
         //request 
-        String req = "SELECT * FROM COLLECTION ";
+        String req = "SELECT * FROM COLLECTION where Id_utilisateur="+ID_UTILISATEUR;
         try {
             //insert
             Statement st = cnx.createStatement();
@@ -110,7 +110,7 @@ public class CollectionService implements IcollectionService {
     }
 
     @Override
-    public void fusionnerCollection(int ID_COLLECTION1, int ID_COLLECTION2, int Id_utilisateur) {
+    public int fusionnerCollection(int ID_COLLECTION1, int ID_COLLECTION2, int Id_utilisateur) {
         int nombreCartes = 0;boolean test=false;
         String req;
         int idCarte1;
@@ -118,7 +118,6 @@ public class CollectionService implements IcollectionService {
         String carte1 = "";
         String carte2 = "";
        
-        
         String req1 = "SELECT * FROM collection INNER JOIN carte WHERE carte.Id_carte= collection.Id_carte AND (id_collection="+ID_COLLECTION1+" OR id_collection="+ID_COLLECTION2+") AND Id_utilisateur ="+Id_utilisateur;
         try {
             Statement st = cnx.createStatement();
@@ -141,6 +140,7 @@ public class CollectionService implements IcollectionService {
         } catch (SQLException ex) {
             ex.printStackTrace();
         }
+        
         if (test){
         //if (nombreCartes > 1 && carte1.compareTo(carte2) == 0) {
             req = "DELETE FROM `collection` WHERE ID_COLLECTION IN (?,?)";
@@ -176,7 +176,7 @@ public class CollectionService implements IcollectionService {
                 pst.setInt(2, cartes.get(rand).getID_CARTE());
                 pst.executeUpdate();
                 System.out.println("CARTE Gagne ajoute avec succee");
-
+                return cartes.get(rand).getID_CARTE();
             } catch (SQLException ex) {
                 ex.printStackTrace();
             }
@@ -185,7 +185,32 @@ public class CollectionService implements IcollectionService {
             System.out.println("Les cartes que vous avez mis n'existe pas dans ta collection");
         }
         
-        //}
+        
+        
+        
+       return -1; //}
+    }
+
+    @Override
+    public Collection afficheCollection(int id_collection) {
+
+      
+        Collection C= new Collection();
+        //request 
+        String req = "SELECT image FROM `collection` inner join carte where collection.Id_carte=carte.Id_carte and Id_collection="+id_collection;
+        try {
+            //insert
+            Statement st = cnx.createStatement();
+            ResultSet rs = st.executeQuery(req);
+            while (rs.next()) {
+                C.setImage(rs.getString(1));
+
+            }
+
+        } catch (SQLException ex) {
+            ex.printStackTrace();
+        }
+        return C;
     }
 
 }

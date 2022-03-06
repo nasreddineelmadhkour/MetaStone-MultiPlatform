@@ -12,33 +12,40 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
+import gui.LoginController;
+import java.awt.Image;
+import java.io.IOException;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.stage.StageStyle;
+
+import javafx.application.Application;
+import javafx.scene.Scene;
+import javafx.scene.layout.StackPane;
 
 /**
  *
- * @author Moez
+ * @author admin
  */
 public class NewFXMain extends Application {
     
     @Override
-    public void start(Stage primaryStage) {
-        Button btn = new Button();
-        btn.setText("Say 'Hello World'");
-        btn.setOnAction(new EventHandler<ActionEvent>() {
-            
-            @Override
-            public void handle(ActionEvent event) {
-                System.out.println("Hello World!");
-            }
-        });
+    public void start(Stage primaryStage) throws IOException {
         
-        StackPane root = new StackPane();
-        root.getChildren().add(btn);
+       
         
-        Scene scene = new Scene(root, 300, 250);
         
-        primaryStage.setTitle("Hello World!");
+        Parent root =FXMLLoader.load(getClass().getResource("Login.fxml"));
+               
+        Scene scene = new Scene(root);
+        
+        //primaryStage.setTitle("Hello World!");
+        primaryStage.initStyle(StageStyle.UNDECORATED);
+
+
         primaryStage.setScene(scene);
         primaryStage.show();
+        
     }
 
     /**

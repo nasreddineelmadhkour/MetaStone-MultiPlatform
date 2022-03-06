@@ -1,0 +1,70 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 24 févr. 2022, 02:08:31
+    Author     : admin
+*/
+
+.login {
+  -fx-background-color:transparent;
+  -fx-background-image: url('assests/.png');
+       color:aqua;
+
+}
+.login:hover{
+    
+    -fx-background-color:transparent;
+    -fx-font-size: 22px;
+}
+
+.password{
+    
+      -fx-background-color:transparent;
+    -fx-prompt-text-fill:rgb(134,102,84);
+      
+
+      
+}
+.LineEdit{
+    -fx-background-color:transparent;
+    -fx-prompt-text-fill:rgb(134,102,84);
+    
+    
+}
+
+.inscrire{
+    -fx-background-color:transparent;                  
+   -fx-background-image: url('inscription.png');
+      -fx-background-size: 100%;
+   -fx-background-repeat: no-repeat;
+   -fx-background-position: 100%;
+}
+.deconnecter{
+   -fx-background-color:transparent; 
+   
+   -fx-background-image: url('EXIT.png');
+   -fx-background-size: 90%;
+   -fx-background-repeat: no-repeat;
+   -fx-background-position: 100%;
+}
+.deconnecter:hover{
+   -fx-background-color:transparent; 
+   
+   -fx-background-image: url('EXIT_hover.png');
+   -fx-background-size: 100%;
+   -fx-background-repeat: no-repeat;
+   -fx-background-position: 100%;
+}
+
+.logo{
+    -fx-background-color:transparent; 
+   
+   -fx-background-image: url('Logo.png');
+   -fx-background-size: 100%;
+   -fx-background-repeat: no-repeat;
+   -fx-background-position: 100%;
+    
+}

@@ -1,0 +1,95 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Mar 8, 2022, 11:24:28 AM
+    Author     : FadyBelY
+*/
+
+/*
+                            BACKGROUNDS
+*/
+.bg_carteFire{
+    -fx-background-image: url("assets/BgCarteFire.png");
+}
+.bgCF{
+    -fx-background-mage: url("assets/carteFire.png");
+}
+.bg_carteStore{
+    -fx-background-image: url("assets/carteStore.png");
+}
+.cartesBG{
+    -fx-background-image: url("assets/cartesBG.png");
+}
+
+
+/*
+                            Buttons & controls
+*/
+.btn_Promotion{
+    -fx-background-image: url("assets/bPromotion_0.png");
+}
+.btn_Promotion:hover{
+    -fx-background-image: url("assets/bPromotion_1.png");
+}
+.btn_RArrow{
+    -fx-background-image: url("assets/bRightArrow_0.png");
+}
+.btn_RArrow:hover{
+    -fx-background-image: url("assets/bRightArrow_1.png");
+}
+.btn_Quitter{
+    -fx-background-image: url("assets/Quitter_0.png");
+}
+.btn_Quitter:hover{
+    -fx-background-image: url("assets/Quitter_1.png");
+}
+.btn_collection{
+    -fx-background-image: url("assets/bCollection_0");
+}
+.btn_collection:hover{
+    -fx-background-image: url("assets/bCollection_1.png");
+}
+.btn_Acheter{
+    -fx-background-image: url("assets/bAcheter_0.png");
+}
+.btn_Acheter:hover{
+    -fx-background-image: url("assets/bAcheter_1.png");
+}
+
+
+.cb_Attaque{
+    -fx-background-image: url("assets/cbAttaque.png");
+}
+.cb_Defense{
+    -fx-background-image: url("assets/cbDefense.png");
+}
+.cb_Rare{
+    -fx-background-image: url("assets/cbRarete.png");
+}
+.cb_Type{
+    -fx-background-image: url("assets/cbType_carte.png");
+}
+.cb_Vie{
+    -fx-background-image: url("assets/cbVie.png");
+}
+
+
+
+/*
+                    EFFECTS
+*/
+.transparent{
+    -fx-background-color: rgba(0,0,0,0);
+}
+
+
+.scroll-pane {
+   -fx-background-color: transparent;
+}
+.scroll-pane > .viewport {
+   -fx-background-color: transparent;
+}
+

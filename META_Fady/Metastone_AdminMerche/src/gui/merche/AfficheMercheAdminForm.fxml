@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" styleClass="bgMerch" stylesheets="@../StyleCSS.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.merche.AfficheMercheAdminFormController">
+    <children>
+        <HBox layoutX="214.0" layoutY="113.0" prefHeight="389.0" prefWidth="733.0">
+            <children>
+                <ScrollPane fx:id="scroll" prefHeight="470.0" prefWidth="733.0" stylesheets="@../StyleCSS.css" HBox.hgrow="NEVER">
+                    <content>
+                        <GridPane fx:id="grid" maxHeight="303.0" maxWidth="170.0" minHeight="303.0" minWidth="170.0" prefHeight="303.0" prefWidth="170.0" styleClass="transparent" stylesheets="@../StyleCSS.css">
+                            <GridPane.margin>
+                                <Insets right="30" />
+                            </GridPane.margin>
+                            <rowConstraints>
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            </rowConstraints>
+                        </GridPane>
+                    </content>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+               <opaqueInsets>
+                  <Insets top="50.0" />
+               </opaqueInsets>
+                </ScrollPane>
+            </children>
+        </HBox>
+        <Button fx:id="bAjouter" layoutX="312.0" layoutY="633.0" mnemonicParsing="false" onAction="#AJOUTER" prefHeight="72.0" prefWidth="134.0" stylesheets="@../StyleCSS.css">
+            <styleClass>
+                <String fx:value="btn_AJOUTER" />
+                <String fx:value="transparent" />
+            </styleClass>
+        </Button>
+        <Button fx:id="bModifier" layoutX="505.0" layoutY="633.0" mnemonicParsing="false" onAction="#MODIFIER" prefHeight="72.0" prefWidth="134.0" stylesheets="@../StyleCSS.css">
+            <styleClass>
+                <String fx:value="btn_MODIFIER" />
+                <String fx:value="transparent" />
+            </styleClass>
+        </Button>
+        <Button fx:id="bSupprimer" layoutX="699.0" layoutY="633.0" mnemonicParsing="false" onAction="#SUPPRIMER" prefHeight="72.0" prefWidth="134.0" stylesheets="@../StyleCSS.css">
+            <styleClass>
+                <String fx:value="btn_SUPPRIMER" />
+                <String fx:value="transparent" />
+            </styleClass>
+        </Button>
+        <VBox alignment="CENTER" layoutX="1030.0" layoutY="151.0" prefHeight="357.0" prefWidth="225.0">
+         <children>
+            <Label fx:id="idProd_ch" text="id">
+               <textFill>
+                  <RadialGradient centerX="0.5276243093922652" centerY="0.48578199052132703" radius="0.5">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="1.0" green="0.5395683646202087" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="1.0" green="1.0" blue="1.0" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </RadialGradient>
+               </textFill>
+            </Label>
+            <ImageView fx:id="imgProd_ch" fitHeight="71.0" fitWidth="92.0" pickOnBounds="true" preserveRatio="true" />
+            <Label text="Nom" />
+            <TextField fx:id="nomProd_ch" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="149.0" stylesheets="@../assets/Style.css">
+               <styleClass>
+                  <String fx:value="input_TextField" />
+                  <String fx:value="transparent" />
+               </styleClass>
+            </TextField>
+            <Label text="Taille" />
+            <TextField fx:id="tailleProd_ch" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="149.0" stylesheets="@../assets/Style.css">
+               <styleClass>
+                  <String fx:value="input_TextField" />
+                  <String fx:value="transparent" />
+               </styleClass>
+            </TextField>
+            <Label text="Type" />
+            <TextField fx:id="typeProd_ch" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="149.0" stylesheets="@../assets/Style.css">
+               <styleClass>
+                  <String fx:value="input_TextField" />
+                  <String fx:value="transparent" />
+               </styleClass>
+            </TextField>
+            <Label text="Prix" />
+            <TextField fx:id="prixProd_ch" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="149.0" stylesheets="@../assets/Style.css">
+               <styleClass>
+                  <String fx:value="input_TextField" />
+                  <String fx:value="transparent" />
+               </styleClass>
+            </TextField>
+            <Label text="Quantite" />
+            <TextField fx:id="quantiteProd_ch" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="149.0" stylesheets="@../assets/Style.css">
+               <styleClass>
+                  <String fx:value="input_TextField" />
+                  <String fx:value="transparent" />
+               </styleClass>
+            </TextField>
+            <Label text="Description" />
+            <TextArea fx:id="descriptionProd_ch" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" opacity="0.47" prefHeight="35.0" prefWidth="149.0" />
+         </children></VBox>
+      <Button layoutX="793.0" layoutY="81.0" mnemonicParsing="false" onAction="#search" prefHeight="25.0" prefWidth="32.0" styleClass="searchI" stylesheets="@../StyleCSS.css" />
+      <TextField fx:id="tfSearch" layoutX="824.0" layoutY="81.0" prefHeight="26.0" prefWidth="100.0" promptText="Recherche..." stylesheets="@../StyleCSS.css">
+         <styleClass>
+            <String fx:value="txtF_search" />
+            <String fx:value="transparent" />
+         </styleClass>
+      </TextField>
+      <ImageView fitHeight="100.0" fitWidth="125.0" layoutX="12.0" layoutY="300.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/bMerch_1.png" />
+         </image>
+      </ImageView>
+      <ChoiceBox fx:id="filtre" layoutX="916.0" layoutY="69.0" prefHeight="56.0" prefWidth="55.0" stylesheets="@../StyleCSS.css">
+         <styleClass>
+            <String fx:value="btn_filtre" />
+            <String fx:value="transparent" />
+         </styleClass>
+      </ChoiceBox>
+      <Button fx:id="bProd" layoutX="178.0" layoutY="53.0" mnemonicParsing="false" prefHeight="113.0" prefWidth="109.0" stylesheets="@../StyleCSS.css">
+         <styleClass>
+            <String fx:value="transparent" />
+            <String fx:value="bgProduit" />
+         </styleClass>
+      </Button>
+      <Button layoutX="276.0" layoutY="53.0" mnemonicParsing="false" onAction="#GoToCommande" prefHeight="113.0" prefWidth="109.0" stylesheets="@../StyleCSS.css">
+         <styleClass>
+            <String fx:value="bgCommande" />
+            <String fx:value="transparent" />
+         </styleClass>
+      </Button>
+    </children>
+</AnchorPane>

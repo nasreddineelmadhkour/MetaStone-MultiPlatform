@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" maxHeight="303.0" maxWidth="170.0" minHeight="286.0" minWidth="158.0" onMousePressed="#click" prefHeight="286.0" prefWidth="158.0" stylesheets="@../StyleCSS.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.merche.ProductsController">
+   <styleClass>
+      <String fx:value="bgProducts" />
+      <String fx:value="transparent" />
+   </styleClass>
+   <children>
+      <Label fx:id="prixProd" layoutX="70.0" layoutY="238.0" text="Prix" />
+      <HBox alignment="CENTER" layoutX="34.0" layoutY="151.0" prefHeight="47.0" prefWidth="92.0">
+         <children>
+            <Label fx:id="descriptionProd" text="Description" />
+         </children>
+      </HBox>
+      <Label fx:id="typeProd" layoutX="66.0" layoutY="30.0" text="Type" />
+      <Label fx:id="quantiteProd" layoutX="69.0" layoutY="208.0" text="Qte" />
+      <ImageView fx:id="imgProd" fitHeight="71.0" fitWidth="92.0" layoutX="45.0" layoutY="52.0" pickOnBounds="true" preserveRatio="true" />
+      <Label fx:id="id_prod" layoutX="14.0" layoutY="23.0" text="id" textFill="#ff7800">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <HBox alignment="CENTER" layoutX="33.0" layoutY="116.0" prefHeight="31.0" prefWidth="92.0">
+         <children>
+            <Label fx:id="nomProd" text="Nom">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

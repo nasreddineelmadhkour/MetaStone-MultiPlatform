@@ -5,13 +5,13 @@
  */
 package tn.edu.esprit.interfaces;
 
-import tn.edu.esprit.model.Carte;
+import tn.edu.esprit.model.Cartes;
 
 /**
  *
  * @author FadyBelY
  */
 public interface MyListenerCarte {
-    public void onClickListener(Carte c);
+    public void onClickListener(Cartes c);
     
 }

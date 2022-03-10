@@ -24,6 +24,10 @@
 .commandItem{
     -fx-background-image: url("assets/commandeItems.png");
 }
+
+.lou7a{
+    -fx-background-image: url("assets/lou7a.png");
+}
 /*
 .bgCommande_unactive{
     -fx-background-image: url("assets/bProduit_0.png");
@@ -109,4 +113,9 @@
 }
 .scroll-pane > .viewport {
    -fx-background-color: transparent;
+}
+
+@font-face {
+    -fx-font-family: "belwee";
+    -fx-src: url("belwe_bold_bt.ttf");
 }

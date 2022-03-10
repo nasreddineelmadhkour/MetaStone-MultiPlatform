@@ -3,30 +3,27 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/FadyBelY/Documents/NetBeansProjects/Metastone_AdminMerche/src/tn/edu/esprit/model/Carte.java</file>
             <file>file:/C:/Users/FadyBelY/Documents/NetBeansProjects/Metastone_AdminMerche/src/gui/merche/ProductsController.java</file>
+            <file>file:/C:/Users/FadyBelY/Documents/NetBeansProjects/Metastone_AdminMerche/src/gui/merche/user/ProductDetailsController.java</file>
             <file>file:/C:/Users/FadyBelY/Documents/NetBeansProjects/Metastone_AdminMerche/src/tn/edu/esprit/service/CommandeService.java</file>
             <file>file:/C:/Users/FadyBelY/Documents/NetBeansProjects/Metastone_AdminMerche/src/gui/StyleCSS.css</file>
-            <file>file:/C:/Users/FadyBelY/Documents/NetBeansProjects/Metastone_AdminMerche/src/gui/merche/AfficheMercheAdminForm.fxml</file>
-            <file>file:/C:/Users/FadyBelY/Documents/NetBeansProjects/Metastone_AdminMerche/src/tn/edu/esprit/interfaces/MyListenerCarte.java</file>
-            <file>file:/C:/Users/FadyBelY/Documents/NetBeansProjects/Metastone_AdminMerche/src/gui/carte/AfficheCartesUserFormController.java</file>
-            <file>file:/C:/Users/FadyBelY/Documents/NetBeansProjects/Metastone_AdminMerche/src/gui/carte/CarteFireController.java</file>
-            <file>file:/C:/Users/FadyBelY/Documents/NetBeansProjects/Metastone_AdminMerche/src/gui/carte/Cartes.fxml</file>
-            <file>file:/C:/Users/FadyBelY/Documents/NetBeansProjects/Metastone_AdminMerche/src/gui/merche/AfficheCommandeAdminFormController.java</file>
-            <file>file:/C:/Users/FadyBelY/Documents/NetBeansProjects/Metastone_AdminMerche/src/tn/edu/esprit/metastone/main_activity.java</file>
-            <file>file:/C:/Users/FadyBelY/Documents/NetBeansProjects/Metastone_AdminMerche/src/tn/edu/esprit/interfaces/IcarteService.java</file>
-            <file>file:/C:/Users/FadyBelY/Documents/NetBeansProjects/Metastone_AdminMerche/src/tn/edu/esprit/service/CarteService.java</file>
+            <file>file:/C:/Users/FadyBelY/Documents/NetBeansProjects/Metastone_AdminMerche/src/gui/merche/user/AfficheMercheUserFormController.java</file>
             <file>file:/C:/Users/FadyBelY/Documents/NetBeansProjects/Metastone_AdminMerche/src/tn/edu/esprit/service/MercheService.java</file>
             <file>file:/C:/Users/FadyBelY/Documents/NetBeansProjects/Metastone_AdminMerche/src/gui/carte/Style.css</file>
-            <file>file:/C:/Users/FadyBelY/Documents/NetBeansProjects/Metastone_AdminMerche/src/tn/edu/esprit/metastone/Metastone_AdminMerche.java</file>
-            <file>file:/C:/Users/FadyBelY/Documents/NetBeansProjects/Metastone_AdminMerche/src/gui/merche/products.fxml</file>
-            <file>file:/C:/Users/FadyBelY/Documents/NetBeansProjects/Metastone_AdminMerche/src/gui/merche/commandesItem.fxml</file>
-            <file>file:/C:/Users/FadyBelY/Documents/NetBeansProjects/Metastone_AdminMerche/src/gui/carte/CarteFire.fxml</file>
+            <file>file:/C:/Users/FadyBelY/Documents/NetBeansProjects/Metastone_AdminMerche/src/tn/edu/esprit/interfaces/MyListenerCarte.java</file>
+            <file>file:/C:/Users/FadyBelY/Documents/NetBeansProjects/Metastone_AdminMerche/src/gui/carte/AfficheCartesUserFormController.java</file>
+            <file>file:/C:/Users/FadyBelY/Documents/NetBeansProjects/Metastone_AdminMerche/src/tn/edu/esprit/interfaces/MyListenerCommande.java</file>
+            <file>file:/C:/Users/FadyBelY/Documents/NetBeansProjects/Metastone_AdminMerche/src/gui/carte/CarteFireController.java</file>
             <file>file:/C:/Users/FadyBelY/Documents/NetBeansProjects/Metastone_AdminMerche/src/tn/edu/esprit/model/Merche.java</file>
             <file>file:/C:/Users/FadyBelY/Documents/NetBeansProjects/Metastone_AdminMerche/src/gui/carte/AfficheCartesUserForm.fxml</file>
             <file>file:/C:/Users/FadyBelY/Documents/NetBeansProjects/Metastone_AdminMerche/src/gui/merche/CommandesItemController.java</file>
+            <file>file:/C:/Users/FadyBelY/Documents/NetBeansProjects/Metastone_AdminMerche/src/tn/edu/esprit/service/CartesService.java</file>
+            <file>file:/C:/Users/FadyBelY/Documents/NetBeansProjects/Metastone_AdminMerche/src/tn/edu/esprit/model/Cartes.java</file>
             <file>file:/C:/Users/FadyBelY/Documents/NetBeansProjects/Metastone_AdminMerche/src/gui/merche/AfficheMercheAdminFormController.java</file>
-            <file>file:/C:/Users/FadyBelY/Documents/NetBeansProjects/Metastone_AdminMerche/src/tn/edu/esprit/interfaces/MyListener.java</file>
+            <file>file:/C:/Users/FadyBelY/Documents/NetBeansProjects/Metastone_AdminMerche/src/gui/merche/AfficheCommandeAdminFormController.java</file>
+            <file>file:/C:/Users/FadyBelY/Documents/NetBeansProjects/Metastone_AdminMerche/src/tn/edu/esprit/interfaces/IcarteService.java</file>
+            <file>file:/C:/Users/FadyBelY/Documents/NetBeansProjects/Metastone_AdminMerche/src/tn/edu/esprit/interfaces/ImercheService.java</file>
+            <file>file:/C:/Users/FadyBelY/Documents/NetBeansProjects/Metastone_AdminMerche/src/tn/edu/esprit/model/Commande.java</file>
             <file>file:/C:/Users/FadyBelY/Documents/NetBeansProjects/Metastone_AdminMerche/src/gui/carte/CartesController.java</file>
         </group>
     </open-files>

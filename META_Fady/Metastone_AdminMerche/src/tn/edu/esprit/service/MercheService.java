@@ -239,7 +239,7 @@ public class MercheService {
 
                         req = "UPDATE `merche` SET  `Quantite_produit`=? WHERE Id_produit =?";
                         PreparedStatement pstM = cnx.prepareStatement(req);
-                        pstM.setInt(1, qte - 1);
+                        pstM.setInt(1, qte - Quantite_a_acheter);
                         pstM.setInt(2, Id_produit);
                         pstM.executeUpdate();
                         //if qte = 0 then delete from table merche

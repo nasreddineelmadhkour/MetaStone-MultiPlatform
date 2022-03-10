@@ -223,8 +223,8 @@ public class CommandeService {
             Statement st = cnx.createStatement();
             ResultSet rs = st.executeQuery(req);
             while (rs.next()) {
-                System.out.println("rs 2: " + rs.getString(2) + "rs 3: " + rs.getString(3) + " rs 4: " + rs.getInt(4) + " rs 5: " + rs.getString(5) + " " + rs.getString(6));
-                commande.add(new Commande(rs.getString(2), rs.getString(3), rs.getInt(4), rs.getString(5), rs.getString(6)));
+               // System.out.println(rs.getInt(1),rs.getString(2) + "r rs.getString(3) + " rs 4: " + rs.getInt(4) + " rs 5: " + rs.getString(5) + " " + rs.getString(6));
+                commande.add(new Commande(rs.getInt(1),rs.getString(2), rs.getString(3), rs.getInt(4), rs.getString(5), rs.getString(6),rs.getInt(7), rs.getInt(8), rs.getInt(9)));
 
             }
         } catch (SQLException ex) {

@@ -18,7 +18,7 @@ import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 import tn.edu.esprit.interfaces.MyListenerCarte;
-import tn.edu.esprit.model.Carte;
+import tn.edu.esprit.model.Cartes;
 
 /**
  * FXML Controller class
@@ -38,9 +38,9 @@ public class CartesController implements Initializable {
     @FXML
     private Label desc;
     private MyListenerCarte myListener;
-    private Carte cart;
+    private Cartes cart;
 
-    public void setData(Carte c, MyListenerCarte myListener) {
+    public void setData(Cartes c, MyListenerCarte myListener) {
         this.cart = c;
         this.myListener = myListener;
         nom_carte.setText(c.getNom());

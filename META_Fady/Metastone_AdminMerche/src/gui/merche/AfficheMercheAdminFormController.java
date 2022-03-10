@@ -164,6 +164,7 @@ public class AfficheMercheAdminFormController implements Initializable {
                 grid.setMaxHeight(303);//
                 grid.setLayoutY(20);
 
+                
                 GridPane.setMargin(anchorPane, new Insets(150, 0, 20, 40));
             }
         } catch (IOException ex) {
@@ -180,7 +181,8 @@ public class AfficheMercheAdminFormController implements Initializable {
         filtre.getItems().add("Nom");
         filtre.getItems().add("Type");
         filtre.getItems().add("Taille");
-
+        
+       
         nom = nomProd_ch.toString();
         parNom = "";
         Update(parNom);

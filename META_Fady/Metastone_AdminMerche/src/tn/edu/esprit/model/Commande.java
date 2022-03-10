@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package tn.edu.esprit.model;
+
 import java.util.Date;
 
 /**
@@ -12,6 +13,7 @@ import java.util.Date;
  */
 public class Commande {
 //attribs
+
     private int Id_commande;
     private String Type_paiement;
     private String Date_commande;
@@ -23,8 +25,8 @@ public class Commande {
     private int Quantite_acheter;
 //CTOR
     //ctor with ID
-    public Commande(int Id_commande, String Type_paiement, String Date_commande, int Prix_total, String Adresse, String Date_livraison, int Id_utilisateur)
-    {
+
+    public Commande(int Id_commande, String Type_paiement, String Date_commande, int Prix_total, String Adresse, String Date_livraison, int Id_utilisateur) {
         this.Id_commande = Id_commande;
         this.Type_paiement = Type_paiement;
         this.Date_commande = Date_commande;
@@ -33,27 +35,39 @@ public class Commande {
         this.Date_livraison = Date_livraison;
         this.Id_utilisateur = Id_utilisateur;
     }
+
+    public Commande(int Id_commande, String Type_paiement, String Date_commande, int Prix_total, String Adresse, String Date_livraison, int Id_utilisateur, int Id_produit, int Quantite_acheter) {
+        this.Id_commande = Id_commande;
+        this.Type_paiement = Type_paiement;
+        this.Date_commande = Date_commande;
+        this.Prix_total = Prix_total;
+        this.Adresse = Adresse;
+        this.Date_livraison = Date_livraison;
+        this.Id_utilisateur = Id_utilisateur;
+        this.Id_produit = Id_produit;
+        this.Quantite_acheter = Quantite_acheter;
+    }
+
     //ctor w/o ID
-    public Commande(String Type_paiement, String Date_commande, int Prix_total, String Adresse, String Date_livraison)
-    {
+    public Commande(String Type_paiement, String Date_commande, int Prix_total, String Adresse, String Date_livraison) {
         this.Type_paiement = Type_paiement;
         this.Date_commande = Date_commande;
         this.Prix_total = Prix_total;
         this.Adresse = Adresse;
         this.Date_livraison = Date_livraison;
     }
+
     //ctor default
-    public Commande()
-    {
+    public Commande() {
         Type_paiement = "";
         Date_commande = "";
         Prix_total = 0;
         Adresse = "";
         Date_livraison = "";
     }
-    
+
     //ctor with id_user
-    public Commande(String Type_paiement, String Date_commande, int Prix_total, String Adresse, String Date_livraison, int Id_utilisateur,int Id_produit,int Quantite_acheter) {
+    public Commande(String Type_paiement, String Date_commande, int Prix_total, String Adresse, String Date_livraison, int Id_utilisateur, int Id_produit, int Quantite_acheter) {
         this.Type_paiement = Type_paiement;
         this.Date_commande = Date_commande;
         this.Prix_total = Prix_total;
@@ -71,12 +85,13 @@ public class Commande {
     public void setQuantite_acheter(int Quantite_acheter) {
         this.Quantite_acheter = Quantite_acheter;
     }
-    public int getId_produit() {    
+
+    public int getId_produit() {
         return Id_produit;
     }
 
 //GETTER & SETTER
-    public void setId_produit(int Id_produit) {    
+    public void setId_produit(int Id_produit) {
         this.Id_produit = Id_produit;
     }
 
@@ -108,7 +123,7 @@ public class Commande {
     public int getId_utilisateur() {
         return Id_utilisateur;
     }
-    
+
     //SETTERS
     public void setId_commande(int Id_commande) {
         this.Id_commande = Id_commande;
@@ -137,15 +152,12 @@ public class Commande {
     public void setId_utilisateur(int Id_utilisateur) {
         this.Id_utilisateur = Id_utilisateur;
     }
-    
+
 //Affichage
     //to String
     @Override
     public String toString() {
         return "Commande{" + "Id_commande=" + Id_commande + ", Type_paiement=" + Type_paiement + ", Date_commande=" + Date_commande + ", Prix_total=" + Prix_total + ", Adresse=" + Adresse + ", Date_livraison=" + Date_livraison + ", Id_utilisateur=" + Id_utilisateur + '}';
     }
-    
-            
-            
-            
+
 }

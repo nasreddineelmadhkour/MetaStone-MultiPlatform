@@ -10,6 +10,8 @@ import java.util.ResourceBundle;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
+import javafx.scene.input.MouseEvent;
+import tn.edu.esprit.interfaces.MyListenerCommande;
 import tn.edu.esprit.model.Commande;
 
 /**
@@ -37,13 +39,13 @@ public class CommandesItemController implements Initializable {
     private Label dateL;
     private Commande cmd;
 
+    private MyListenerCommande myListener;
     /**
      * Initializes the controller class.
      */
-    public void setData(Commande cmd) {
+    public void setData(Commande cmd,MyListenerCommande myListener) {
         this.cmd = cmd;
-        
-        //this.myListener = myListener;
+        this.myListener = myListener;
         id_cmd.setText(Integer.toString(cmd.getId_commande()));
         id_prod.setText(Integer.toString(cmd.getId_produit()));
         id_user.setText(Integer.toString(cmd.getId_utilisateur()));
@@ -59,5 +61,11 @@ public class CommandesItemController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
     }    
+
+    @FXML
+    private void click(MouseEvent event) {
+        myListener.onClickListener(cmd);
+    }
+    
     
 }

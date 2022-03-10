@@ -18,7 +18,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.stage.Stage;
 import gui.carte.AfficheCartesUserFormController;
-import tn.edu.esprit.model.Carte;
+import tn.edu.esprit.model.Cartes;
 
 /**
  * FXML Controller class
@@ -29,7 +29,7 @@ public class CarteFireController implements Initializable {
 
     @FXML
     private Label nomC;
-     static Carte cart;
+     static Cartes cart;
     @FXML
     private Label manaC;
     @FXML
@@ -38,12 +38,12 @@ public class CarteFireController implements Initializable {
     private Label vieC;
     @FXML
     private Label descC;
-    public void setInfo(Carte c){
+    public void setInfo(Cartes c){
         cart  = c;
         //setChosenCard(c);
         System.out.println(cart);
     }
-     public void setChosenCard(Carte c)
+     public void setChosenCard(Cartes c)
      {
        nomC.setText(c.getNom());
        atqC.setText(Integer.toString(c.getattaque()));

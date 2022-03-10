@@ -19,10 +19,14 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.ScrollPane;
+import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.GridPane;
+import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
+import tn.edu.esprit.interfaces.MyListenerCommande;
 import tn.edu.esprit.model.Commande;
 import tn.edu.esprit.service.CommandeService;
 
@@ -47,6 +51,38 @@ public class AfficheCommandeAdminFormController implements Initializable {
     private ScrollPane scroll;
     @FXML
     private GridPane grid;
+    
+    private MyListenerCommande myListener;
+    @FXML
+    private Label id_commande;
+    @FXML
+    private TextField dateLiv;
+    @FXML
+    private VBox vboxCh;
+    private String id = "";
+    
+    public void setChosenCommande(Commande c){
+        vboxCh.setOpacity(100);
+        if(id.compareTo("") == 0)
+        {
+            id = Integer.toString(c.getId_commande());
+            vboxCh.setOpacity(100);
+            bSupprimer.setDisable(false);
+            id_commande.setText(Integer.toString(c.getId_commande()));
+            dateLiv.setText(c.getDate_livraison());
+
+        }else
+        {
+                        
+            bSupprimer.setDisable(true);
+            vboxCh.setOpacity(0);
+            dateLiv.setText("");
+            id = "";
+        }
+        
+        
+        
+    }
 
     public void Update() {
         Commande cmd;
@@ -55,6 +91,13 @@ public class AfficheCommandeAdminFormController implements Initializable {
         commandeList.clear();
         grid.getChildren().clear();
         commandeList.addAll(commande.afficherToutLesCommande());
+         myListener = new MyListenerCommande() {
+            @Override
+            public void onClickListener(Commande c) {
+                setChosenCommande(c);
+
+            }
+        };
         int c = 0;
         int l = 0;
         try {
@@ -65,7 +108,7 @@ public class AfficheCommandeAdminFormController implements Initializable {
                 AnchorPane anchorPane = fxmlLoader.load();
 
                 CommandesItemController commandeController = fxmlLoader.getController();
-                commandeController.setData(commandeList.get(i));
+                commandeController.setData(commandeList.get(i),myListener);
                 if (c > 0) {
                     c = 0;
                     l++;
@@ -94,23 +137,37 @@ public class AfficheCommandeAdminFormController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
+        vboxCh.setOpacity(100);
         bCommande.setDisable(true);
         bAjouter.setDisable(true);
         bModifier.setDisable(true);
         bSupprimer.setDisable(true);
+        id = "";
         Update();
     }
 
     @FXML
     private void GoToProduit(ActionEvent event) throws IOException {
        // URL fxURL = getClass().getResource("AfficheMercheAdminForm.fxml");
-       URL fxURL = getClass().getResource("../carte/AfficheCartesUserForm.fxml");
+        //URL fxURL = getClass().getResource("../carte/AfficheCartesUserForm.fxml");
+        URL fxURL = getClass().getResource("../carte/AfficheCartesUserForm.fxml");
         FXMLLoader loader = new FXMLLoader(fxURL);
         Parent root = (Parent) loader.load();
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         stage.setTitle("Metastone - Merche");
         stage.setScene(new Scene(root));
         stage.show();
+    }
+
+    @FXML
+    private void modifyCommande(ActionEvent event) {
+    }
+
+    @FXML
+    private void deleteCommande(ActionEvent event) {
+        CommandeService cmd = new CommandeService();
+        int id_cmd = Integer.parseInt(id_commande.getText());
+        cmd.supprimerCommande(id_cmd, false);
     }
 
 }

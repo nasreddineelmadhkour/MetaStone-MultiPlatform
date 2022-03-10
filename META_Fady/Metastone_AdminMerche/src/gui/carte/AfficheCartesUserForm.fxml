@@ -5,13 +5,13 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ChoiceBox?>
 <?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.RowConstraints?>
 
-
-<AnchorPane id="AnchorPane" prefHeight="720.0" prefWidth="1280.0" styleClass="bg_carteStore" stylesheets="@Style.css" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17" fx:controller="gui.carte.AfficheCartesUserFormController">
+<AnchorPane id="AnchorPane" prefHeight="720.0" prefWidth="1280.0" styleClass="bg_carteStore" stylesheets="@Style.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.carte.AfficheCartesUserFormController">
    <children>
       <ChoiceBox layoutX="797.0" layoutY="104.0" prefHeight="31.0" prefWidth="131.0" stylesheets="@Style.css">
          <styleClass>
@@ -66,5 +66,66 @@
             </ScrollPane>
          </children>
       </HBox>
+      <Button layoutX="18.0" layoutY="670.0" mnemonicParsing="false" onAction="#afficheAll" prefHeight="33.0" prefWidth="67.0" styleClass="transparent" stylesheets="@Style.css" />
+      <Button layoutX="101.0" layoutY="674.0" mnemonicParsing="false" onAction="#afficheM0" prefHeight="30.0" prefWidth="29.0" stylesheets="@Style.css">
+         <styleClass>
+            <String fx:value="m0" />
+            <String fx:value="transparent" />
+         </styleClass>
+      </Button>
+      <Button layoutX="133.0" layoutY="673.0" mnemonicParsing="false" onAction="#afficheM1" prefHeight="30.0" prefWidth="28.0" stylesheets="@Style.css">
+         <styleClass>
+            <String fx:value="m1" />
+            <String fx:value="transparent" />
+         </styleClass>
+      </Button>
+      <Button layoutX="164.0" layoutY="673.0" mnemonicParsing="false" onAction="#afficheM2" prefHeight="28.0" prefWidth="30.0" stylesheets="@Style.css">
+         <styleClass>
+            <String fx:value="m2" />
+            <String fx:value="transparent" />
+         </styleClass>
+      </Button>
+      <Button layoutX="197.0" layoutY="674.0" mnemonicParsing="false" onAction="#afficheM3" prefHeight="28.0" prefWidth="30.0" stylesheets="@Style.css">
+         <styleClass>
+            <String fx:value="m3" />
+            <String fx:value="transparent" />
+         </styleClass>
+      </Button>
+      <Button layoutX="229.0" layoutY="673.0" mnemonicParsing="false" onAction="#afficheM4" prefHeight="28.0" prefWidth="30.0" stylesheets="@Style.css">
+         <styleClass>
+            <String fx:value="m4" />
+            <String fx:value="transparent" />
+         </styleClass>
+      </Button>
+      <Button layoutX="261.0" layoutY="673.0" mnemonicParsing="false" onAction="#afficheM5" prefHeight="28.0" prefWidth="30.0" stylesheets="@Style.css">
+         <styleClass>
+            <String fx:value="m5" />
+            <String fx:value="transparent" />
+         </styleClass>
+      </Button>
+      <Button layoutX="294.0" layoutY="673.0" mnemonicParsing="false" onAction="#afficheM6" prefHeight="28.0" prefWidth="30.0" stylesheets="@Style.css">
+         <styleClass>
+            <String fx:value="m6" />
+            <String fx:value="transparent" />
+         </styleClass>
+      </Button>
+      <Button layoutX="325.0" layoutY="670.0" mnemonicParsing="false" onAction="#afficheM7" prefHeight="33.0" prefWidth="60.0" stylesheets="@Style.css">
+         <styleClass>
+            <String fx:value="m7" />
+            <String fx:value="transparent" />
+         </styleClass>
+      </Button>
+      <Button layoutX="417.0" layoutY="675.0" mnemonicParsing="false" onAction="#search" prefHeight="25.0" prefWidth="60.0" stylesheets="@../StyleCSS.css">
+         <styleClass>
+            <String fx:value="searchI" />
+            <String fx:value="transparent" />
+         </styleClass>
+      </Button>
+      <TextField fx:id="tfNom" layoutX="475.0" layoutY="675.0" prefHeight="25.0" prefWidth="99.0" stylesheets="@../StyleCSS.css">
+         <styleClass>
+            <String fx:value="txtF_search" />
+            <String fx:value="transparent" />
+         </styleClass>
+      </TextField>
    </children>
 </AnchorPane>

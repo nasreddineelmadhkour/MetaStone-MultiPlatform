@@ -17,6 +17,7 @@ import java.util.ArrayList;
 import java.util.List;
 import tn.edu.esprit.model.Cartes;
 
+
 import tn.edu.esprit.model.Collection;
 import tn.edu.esprit.util.MaConnexion;
 
@@ -204,7 +205,6 @@ public class CollectionService implements IcollectionService {
             ResultSet rs = st.executeQuery(req);
             while (rs.next()) {
                 C.setImage(rs.getString(1));
-
             }
 
         } catch (SQLException ex) {

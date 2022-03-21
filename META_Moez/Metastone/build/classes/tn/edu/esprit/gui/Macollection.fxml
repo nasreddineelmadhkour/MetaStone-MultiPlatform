@@ -19,7 +19,7 @@
       <Label fx:id="label_effect_fussioner" layoutX="704.0" layoutY="215.0" prefHeight="84.0" prefWidth="84.0" styleClass="label_fussionner" visible="false" />
       <Button fx:id="button_annuler" layoutX="983.0" layoutY="666.0" mnemonicParsing="false" onAction="#annuler" prefHeight="46.0" prefWidth="161.0" styleClass="button_annuler_mdp_oublier" />
       <Button fx:id="button_continue" disable="true" layoutX="787.0" layoutY="666.0" mnemonicParsing="false" onAction="#fusionner" prefHeight="46.0" prefWidth="161.0" styleClass="button_contunie_mdp_oublier" />
-      <ListView fx:id="list_collection" layoutX="180.0" layoutY="47.0" onMouseClicked="#select" prefHeight="621.0" prefWidth="196.0" style="-fx-background-color: black;" />
+      <ListView fx:id="list_collection" layoutX="180.0" layoutY="47.0" onMouseClicked="#select" prefHeight="621.0" prefWidth="196.0" style="-fx-background-color: transparent;" />
       <ImageView fx:id="select_image1" fitHeight="113.0" fitWidth="84.0" layoutX="542.0" layoutY="151.0" onMouseClicked="#deselectionnercarte1" pickOnBounds="true" preserveRatio="true" />
       <ImageView fx:id="select_image2" fitHeight="113.0" fitWidth="84.0" layoutX="868.0" layoutY="151.0" onMouseClicked="#deselectionnercarte2" pickOnBounds="true" preserveRatio="true" />
       <Label fx:id="label_carte1" layoutX="567.0" layoutY="197.0" prefHeight="21.0" prefWidth="41.0" textFill="WHITE" visible="false" />

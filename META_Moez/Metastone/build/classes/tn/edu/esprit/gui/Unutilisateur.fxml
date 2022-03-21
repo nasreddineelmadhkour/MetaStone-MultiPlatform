@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" fx:id="anchor_utilisateur" prefHeight="181.0" prefWidth="717.0" style="-fx-background-color: black;" stylesheets="@src/style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tn.edu.esprit.Controller.UnutilisateurController">
+   <children>
+      <ImageView fitHeight="181.0" fitWidth="727.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@src/Ligne_USER_1.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="pdp" fitHeight="80.0" fitWidth="80.0" layoutX="37.0" layoutY="51.0" pickOnBounds="true" preserveRatio="true" />
+      <Label fx:id="nom" alignment="CENTER" layoutX="151.0" layoutY="41.0" prefHeight="27.0" prefWidth="69.0" styleClass="lineEdit_username_login" text="Label" />
+      <Label fx:id="prenom" alignment="CENTER" layoutX="232.0" layoutY="41.0" prefHeight="27.0" prefWidth="98.0" styleClass="lineEdit_username_login" text="Label" />
+      <Label fx:id="age" alignment="CENTER" layoutX="340.0" layoutY="41.0" prefHeight="27.0" prefWidth="50.0" styleClass="lineEdit_username_login" />
+      <Label fx:id="email" alignment="CENTER" layoutX="402.0" layoutY="41.0" prefHeight="27.0" prefWidth="157.0" styleClass="lineEdit_username_login" text="Label" />
+      <Label fx:id="tel" alignment="CENTER" layoutX="571.0" layoutY="41.0" prefHeight="27.0" prefWidth="140.0" styleClass="lineEdit_username_login" text="Label" />
+      <Label fx:id="adresse" alignment="CENTER" layoutX="151.0" layoutY="118.0" prefHeight="27.0" prefWidth="98.0" styleClass="lineEdit_username_login" text="Label" />
+      <Label fx:id="nom_utilisateur" alignment="CENTER" layoutX="261.0" layoutY="118.0" prefHeight="27.0" prefWidth="98.0" styleClass="lineEdit_username_login" text="Label" />
+      <Label fx:id="sexe" alignment="CENTER" layoutX="502.0" layoutY="118.0" prefHeight="27.0" prefWidth="58.0" styleClass="lineEdit_username_login" text="Label" />
+      <Label fx:id="rank" alignment="CENTER" layoutX="570.0" layoutY="118.0" prefHeight="27.0" prefWidth="69.0" styleClass="lineEdit_username_login" text="Label" />
+      <Label fx:id="mtc" alignment="CENTER" layoutX="656.0" layoutY="118.0" prefHeight="27.0" prefWidth="58.0" styleClass="lineEdit_username_login" text="Label" />
+      <PasswordField fx:id="mdp" alignment="CENTER" disable="true" layoutX="365.0" layoutY="116.0" prefHeight="31.0" prefWidth="126.0" styleClass="lineEdit_password_login" />
+   </children>
+</AnchorPane>

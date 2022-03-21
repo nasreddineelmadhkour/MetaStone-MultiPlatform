@@ -9,9 +9,13 @@ import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
+import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.paint.Color;
+import javafx.stage.Stage;
 
 /**
  * FXML Controller class
@@ -25,6 +29,8 @@ public class UnecarteController implements Initializable {
     @FXML
     private Label label_carte;
     private int id_collection;
+    private Scene scene;
+    private Stage stage;
     @FXML
     private ImageView image_carte;
     /**
@@ -33,8 +39,10 @@ public class UnecarteController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
-    }    
+                scene.setFill(Color.TRANSPARENT);
 
+    }    
+    
     public AnchorPane getAnchor_carte() {
         return anchor_carte;
     }

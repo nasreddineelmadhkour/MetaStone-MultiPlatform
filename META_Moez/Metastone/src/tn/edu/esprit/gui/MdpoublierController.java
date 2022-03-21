@@ -17,6 +17,7 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.TextField;
+import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import tn.edu.esprit.model.Utilisateur;
 import tn.edu.esprit.service.ServiceUtilisateur;
@@ -58,7 +59,7 @@ public class MdpoublierController implements Initializable {
            code=USER.generer(U.getID_UTILISATEUR());
            System.out.println(code);
 
-           //Mail.sendMail(U.getEmail(), code);
+           Mail.sendMail(U.getEmail(), code);
            
              FXMLLoader loader = new FXMLLoader(getClass().getResource("Code.fxml"));
              fxml=loader.load(); 
@@ -88,7 +89,7 @@ public class MdpoublierController implements Initializable {
              fxml=loader.load(); 
              stage=(Stage)((Node)event.getSource()).getScene().getWindow();
              scene=new Scene(fxml);
-             stage.setScene(scene);
+             stage.setScene(scene);scene.setFill(Color.TRANSPARENT);stage.centerOnScreen();
              stage.show(); 
         
     }

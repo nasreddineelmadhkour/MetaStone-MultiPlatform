@@ -18,6 +18,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
+import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import tn.edu.esprit.model.Utilisateur;
 import tn.edu.esprit.service.Iservices;
@@ -46,7 +47,7 @@ public class NewpasswordController implements Initializable {
     }    
 
     @FXML
-    private void continuer(ActionEvent event) throws SQLException {
+    private void continuer(ActionEvent event) throws SQLException, IOException {
         
         if(lineEdit_new_password.getText()!="")
         {
@@ -56,7 +57,16 @@ public class NewpasswordController implements Initializable {
             U=USER_ex.getUtilisateur(Integer.parseInt(label_id_user.getText()));
             U.setMot_de_passe(lineEdit_new_password.getText());
             USER.modifier(U,Integer.parseInt(label_id_user.getText()));
-            
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("Home.fxml"));
+             fxml=loader.load(); 
+             HomeController homecontroller=loader.getController();
+             homecontroller.setUtilisateur(U);
+             stage=(Stage)((Node)event.getSource()).getScene().getWindow();
+             scene=new Scene(fxml);
+             scene.setFill(Color.TRANSPARENT);
+             stage.setScene(scene);
+             stage.centerOnScreen();
+             stage.show();
             
         }
         else

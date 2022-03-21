@@ -91,5 +91,26 @@ public class ServiceDemande implements Iservices<Demande>{
         return demandes;   
 
     }
+
+    
+    public Demande getDemande(int ID_demande) throws SQLException {
+     //LIST
+        Demande d = new Demande();
+        //request 
+        String req ="SELECT * FROM DEMANDE";
+        
+            //insert
+            Statement st = cnx.createStatement();
+            ResultSet rs = st.executeQuery(req);
+            while(rs.next())
+            {
+                Demande D=new Demande(rs.getInt(1),rs.getString(2),rs.getString(3),rs.getInt(4));
+                d=D;
+            }
+            
+            
+        
+        return d;   
+    }
     
 }

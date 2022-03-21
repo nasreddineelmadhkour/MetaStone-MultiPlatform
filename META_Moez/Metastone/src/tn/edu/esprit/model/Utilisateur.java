@@ -12,18 +12,19 @@ package tn.edu.esprit.model;
  */
 public class Utilisateur {
     private int ID_UTILISATEUR;
-    private String date_naiss;
+    private String age;
     private String mtc,nom,prenom,email,tel,adresse,nom_utilisateur,
             mot_de_passe,sexe,photo_de_profil,role,rank,id,id_consommateur;
     private int code;
+    private String Etat;
    
        
 //constructor
-    public Utilisateur(String nom, String prenom, String date_naiss,String email,String tel,String adresse,String nom_utilisateur,String mot_de_passe,String sexe,String photo_de_profil,String mtc,String role, String rank,String id_consommateur) {
+    public Utilisateur(String nom, String prenom, String age,String email,String tel,String adresse,String nom_utilisateur,String mot_de_passe,String sexe,String photo_de_profil,String mtc,String role, String rank,String id_consommateur) {
         this.mtc = mtc;
         this.nom = nom;
         this.prenom = prenom;
-        this.date_naiss = date_naiss;
+        this.age = age;
         this.email = email;
         this.tel = tel;
         this.adresse = adresse;
@@ -35,12 +36,12 @@ public class Utilisateur {
         this.rank = rank;
         this.id_consommateur=id_consommateur;
     }
-    public Utilisateur(int ID_UTILISATEUR, String nom, String prenom, String date_naiss, String email, String tel, String adresse, String nom_utilisateur, String mot_de_passe, String sexe, String photo_de_profil,String mtc, String role, String rank, String id_consommateur) {
+    public Utilisateur(int ID_UTILISATEUR, String nom, String prenom, String age, String email, String tel, String adresse, String nom_utilisateur, String mot_de_passe, String sexe, String photo_de_profil,String mtc, String role, String rank, String id_consommateur,String Etat) {
         this.ID_UTILISATEUR = ID_UTILISATEUR;
         this.mtc = mtc;
         this.nom = nom;
         this.prenom = prenom;
-        this.date_naiss = date_naiss;
+        this.age = age;
         this.email = email;
         this.tel = tel;
         this.adresse = adresse;
@@ -50,7 +51,8 @@ public class Utilisateur {
         this.photo_de_profil = photo_de_profil;
         this.role = role;
         this.rank = rank;
-        this.id_consommateur = id_consommateur;   
+        this.id_consommateur = id_consommateur; 
+        this.Etat=Etat;
     }
 
     //..
@@ -59,7 +61,7 @@ public class Utilisateur {
        mtc="";
        nom="";
        prenom="";
-       date_naiss="";
+       age="";
        email="";
        tel="";
        adresse="";
@@ -70,8 +72,16 @@ public class Utilisateur {
        role="";
        rank="";
        id_consommateur="";
+       Etat="";
        
-       
+    }
+
+    public String getEtat() {
+        return Etat;
+    }
+
+    public void setEtat(String Etat) {
+        this.Etat = Etat;
     }
 
     public int getCode() {
@@ -103,8 +113,8 @@ public class Utilisateur {
         return prenom;
     }
 
-    public String getDate_naiss() {
-        return date_naiss;
+    public String getAge() {
+        return age;
     }
 
     public String getEmail() {
@@ -163,8 +173,8 @@ public class Utilisateur {
         this.prenom = prenom;
     }
 
-    public void setDate_naiss(String date_naiss) {
-        this.date_naiss = date_naiss;
+    public void setAge(String age) {
+        this.age = age;
     }
 
     public void setEmail(String email) {
@@ -220,9 +230,9 @@ public class Utilisateur {
 
     @Override
     public String toString() {
-        return "Utilisateur{" + "ID_UTILISATEUR=" + ID_UTILISATEUR + ", date_naiss=" + date_naiss + ", mtc=" + mtc + ", nom=" + nom + ", prenom=" + prenom + ", email=" + email + ", tel=" + tel + ", adresse=" + adresse + ", nom_utilisateur=" + nom_utilisateur + ", mot_de_passe=" + mot_de_passe + ", sexe=" + sexe + ", photo_de_profil=" + photo_de_profil + ", role=" + role + ", rank=" + rank + ", id=" + id + ", id_consommateur=" + id_consommateur + ", code=" + code + '}';
+        return "Utilisateur{" + "ID_UTILISATEUR=" + ID_UTILISATEUR + ", age=" + age + ", mtc=" + mtc + ", nom=" + nom + ", prenom=" + prenom + ", email=" + email + ", tel=" + tel + ", adresse=" + adresse + ", nom_utilisateur=" + nom_utilisateur + ", mot_de_passe=" + mot_de_passe + ", sexe=" + sexe + ", photo_de_profil=" + photo_de_profil + ", role=" + role + ", rank=" + rank + ", id=" + id + ", id_consommateur=" + id_consommateur + ", code=" + code + ", Etat=" + Etat + '}';
     }
-
+    
    
     
     

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tn.edu.esprit.gui.CommentsofpostController">
+   <children>
+      <ImageView fitHeight="720.0" fitWidth="1280.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../saifsrc/unnamed%20(1).png" />
+         </image>
+      </ImageView>
+      <ListView fx:id="lisviewofcomments" layoutX="190.0" layoutY="398.0" opacity="0.5" prefHeight="276.0" prefWidth="587.0" />
+      <ImageView fitHeight="325.0" fitWidth="587.0" layoutX="187.0" layoutY="80.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../saifsrc/publication.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="userimage" fitHeight="80.0" fitWidth="80.0" layoutX="646.0" layoutY="128.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fitHeight="214.0" fitWidth="147.0" layoutX="625.0" layoutY="78.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../saifsrc/unnamed%20(4).png" />
+         </image>
+      </ImageView>
+      <Label fx:id="titre" alignment="CENTER" layoutX="340.0" layoutY="162.0" prefHeight="36.0" prefWidth="147.0" text="titre">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <Label fx:id="description" alignment="CENTER" layoutX="213.0" layoutY="216.0" prefHeight="153.0" prefWidth="401.0" text="my description post is about telling the truth of this man ddd" wrapText="true" />
+      <TextField fx:id="commentofpost" alignment="CENTER" layoutX="873.0" layoutY="164.0" prefHeight="240.0" prefWidth="154.0" promptText="Commentaire" styleClass="text_color" stylesheets="@../saifsrc/Style.css" />
+      <Button fx:id="ajoutercommet" layoutX="800.0" layoutY="669.0" mnemonicParsing="false" onAction="#ajoutercommet" prefHeight="43.0" prefWidth="165.0" styleClass="btn_publier" stylesheets="@../saifsrc/Style.css" />
+      <Button fx:id="appliquercomment" layoutX="873.0" layoutY="434.0" mnemonicParsing="false" onAction="#appliquercomment" prefHeight="36.0" prefWidth="154.0" styleClass="btn_ajouter" stylesheets="@../saifsrc/Style.css" />
+      <Button fx:id="modifercomment" layoutX="873.0" layoutY="473.0" mnemonicParsing="false" onAction="#modifercomment" prefHeight="36.0" prefWidth="154.0" styleClass="btn_modifier" stylesheets="@../saifsrc/Style.css" />
+      <Button layoutX="973.0" layoutY="669.0" mnemonicParsing="false" onAction="#retourner" prefHeight="43.0" prefWidth="165.0" styleClass="button_retour" stylesheets="@src/style.css" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<AnchorPane id="AnchorPane" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tn.edu.esprit.Controller.EvenementfrontviewController">
+   <children>
+      <ImageView fitHeight="720.0" fitWidth="1280.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@saifsrc/unnamed%20(35).png" />
+         </image>
+      </ImageView>
+      <ScrollPane fx:id="scroll" layoutX="193.0" layoutY="207.0" prefHeight="298.0" prefWidth="425.0" styleClass="scroll_pane" stylesheets="@src/style.css">
+         <content>
+            <GridPane fx:id="grid" prefHeight="293.0" prefWidth="423.0">
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+            </GridPane>
+         </content>
+      </ScrollPane>
+      <Button layoutX="558.0" layoutY="590.0" mnemonicParsing="false" onAction="#to_home" prefHeight="41.0" prefWidth="164.0" styleClass="button_retour" stylesheets="@src/style.css" />
+      <Button layoutX="560.0" layoutY="139.0" mnemonicParsing="false" onAction="#to_news" prefHeight="31.0" prefWidth="117.0" text="News" />
+   </children>
+</AnchorPane>

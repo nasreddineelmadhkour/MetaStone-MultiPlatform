@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" onMouseClicked="#onmeclick" prefHeight="164.0" prefWidth="577.0" styleClass="transparent" stylesheets="@../saifsrc/values/style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tn.edu.esprit.gui.OnepostviewController">
+   <children>
+      <ImageView fitHeight="164.0" fitWidth="577.0" layoutX="2.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../saifsrc/pub.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="titre_poste" alignment="CENTER" contentDisplay="CENTER" layoutX="313.0" layoutY="57.0" prefHeight="51.0" prefWidth="171.0" text="titre" textFill="WHITE">
+         <font>
+            <Font size="28.0" />
+         </font>
+      </Label>
+      <Label fx:id="nombre_post" layoutX="524.0" layoutY="72.0" text="nombre" textFill="WHITE" />
+      <ImageView fx:id="userpic" fitHeight="113.0" fitWidth="207.0" layoutX="14.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@src/femme1.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

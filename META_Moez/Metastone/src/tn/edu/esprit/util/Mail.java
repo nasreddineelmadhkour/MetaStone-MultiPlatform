@@ -7,7 +7,6 @@ package tn.edu.esprit.util;
 
 
 import java.util.Properties;
-
 import javax.mail.Authenticator;
 import javax.mail.Message;
 import javax.mail.PasswordAuthentication;
@@ -50,7 +49,7 @@ public class Mail {
             String msg=code+" est votre code de récupération de compte";
             
             
-message.setContent("<body style='box-sizing: border-box;'><div style='position: relative;max-width: 800px;margin: auto 0;'><div><img style='vertical-align:middle;width:100%;' src='https://www.linkpicture.com/q/image_1_2.png'><div style='font-size: 20px; position:relative;text-align: center;background:black; height: 50  px;'><table style='width: 80%;margin-left: 15%;'><tr><td style='width: 70%;color: rgb(255,249,234); text-align: center;'>votre code de récupération de compte est :</td><td style='font-size: 30px;color: rgb(243,184,68);text-align:left;width: 30%;'>4512</td></tr></table></div><img style='vertical-align:middle;width:100%;' src='https://www.linkpicture.com/q/image_2_1.png'></div></body>"
+message.setContent("<body style='box-sizing: border-box;'><div style='position: relative;max-width: 800px;margin: auto 0;'><div><img style='vertical-align:middle;width:100%;' src='https://www.linkpicture.com/q/image_1_2.png'><div style='font-size: 20px; position:relative;text-align: center;background:black; height: 50  px;'><table style='width: 80%;margin-left: 15%;'><tr><td style='width: 70%;color: rgb(255,249,234); text-align: center;'>votre code de récupération de compte est :</td><td style='font-size: 30px;color: rgb(243,184,68);text-align:left;width: 30%;'>"+code+"</td></tr></table></div><img style='vertical-align:middle;width:100%;' src='https://www.linkpicture.com/q/image_2_1.png'></div></body>"
         
         ,"text/html");
             

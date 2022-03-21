@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" onMouseClicked="#onclick" prefHeight="260.0" prefWidth="546.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tn.edu.esprit.gui.OnecommentsviewController">
+   <children>
+      <ImageView fitHeight="267.0" fitWidth="549.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../saifsrc/unnamed%20(2).png" />
+         </image>
+      </ImageView>
+      <Label fx:id="commentaireofone" alignment="CENTER" layoutX="56.0" layoutY="87.0" prefHeight="73.0" prefWidth="405.0" text="description" wrapText="true">
+         <font>
+            <Font size="27.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

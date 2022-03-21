@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
@@ -7,8 +8,7 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
-<AnchorPane id="AnchorPane" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: black;" stylesheets="@src/style.css" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="tn.edu.esprit.gui.InfoprofilController">
+<AnchorPane id="AnchorPane" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: black;" stylesheets="@src/style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tn.edu.esprit.gui.InfoprofilController">
    <children>
       <ImageView fitHeight="720.0" fitWidth="1273.0" layoutX="5.0" pickOnBounds="true" preserveRatio="true">
          <image>
@@ -24,5 +24,10 @@
       <TextField fx:id="profil_age" alignment="CENTER" layoutX="925.0" layoutY="291.0" prefHeight="40.0" prefWidth="220.0" styleClass="lineEdit_username_login" />
       <PasswordField fx:id="profil_mdp" alignment="CENTER" layoutX="602.0" layoutY="382.0" prefHeight="40.0" prefWidth="220.0" styleClass="lineEdit_password_login" />
       <Label fx:id="profil_mtc" layoutX="1035.0" layoutY="58.0" prefHeight="13.0" prefWidth="148.0" styleClass="label_MTC" text="0" textAlignment="CENTER" />
+      <Button fx:id="button_modifier" layoutX="957.0" layoutY="356.0" mnemonicParsing="false" onAction="#modifier" prefHeight="40.0" prefWidth="157.0" styleClass="button_modifier" />
+      <Button fx:id="button_quitter" layoutX="883.0" layoutY="661.0" mnemonicParsing="false" onAction="#quit" prefHeight="40.0" prefWidth="157.0" styleClass="button_retour" />
+      <Button fx:id="button_save" disable="true" layoutX="957.0" layoutY="356.0" mnemonicParsing="false" onAction="#modifier_terminer" prefHeight="40.0" prefWidth="157.0" styleClass="button_save" visible="false" />
+      <Button layoutX="54.0" layoutY="373.0" mnemonicParsing="false" onAction="#go_game" prefHeight="101.0" prefWidth="101.0" styleClass="button_gogame" />
+      <Button fx:id="annuler" layoutX="957.0" layoutY="415.0" mnemonicParsing="false" onAction="#button_annuler" prefHeight="40.0" prefWidth="157.0" styleClass="button_annuler" visible="false" />
    </children>
 </AnchorPane>

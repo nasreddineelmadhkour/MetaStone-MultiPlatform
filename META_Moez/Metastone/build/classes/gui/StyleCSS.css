@@ -1,0 +1,121 @@
+/*
+                                        BACKGROUND IMGS
+*/
+.bgMerch{
+    -fx-background-image: url("assets/dashboard_1.png");
+}
+
+.bgProduit{
+    -fx-background-image: url("assets/bProduit_0.png");
+}
+.bgProduit:hover{
+    -fx-background-image: url("assets/bProduit_1.png");
+}
+.bgCommande{
+    -fx-background-image: url("assets/bCommande_0.png");
+}
+.bgCommande:hover{
+    -fx-background-image: url("assets/bCommande_1.png");
+}
+.bgProducts{
+    -fx-background-image: url("assets/productBG.png");
+}
+
+.commandItem{
+    -fx-background-image: url("assets/commandeItems.png");
+}
+
+.lou7a{
+    -fx-background-image: url("assets/lou7a.png");
+}
+/*
+.bgCommande_unactive{
+    -fx-background-image: url("assets/bProduit_0.png");
+}
+.bgCommande_active{
+    -fx-background-image: url("assets/bProduit_1.png");
+}
+*/
+/*
+                                        MAIN BUTTONS
+*/
+.btn_AJOUTER{
+    -fx-background-image: url("assets/bAjouter_0.png");
+}
+.btn_AJOUTER:hover{
+    -fx-background-image: url("assets/bAjouter_1.png");
+}
+
+.btn_MODIFIER{
+    -fx-background-image: url("assets/bModifier_0.png");
+}
+.btn_MODIFIER:hover{
+    -fx-background-image: url("assets/bModifier_1.png");
+}
+
+.btn_SUPPRIMER{
+    -fx-background-image: url("assets/bSupprimer_0.png");
+}
+.btn_SUPPRIMER:hover{
+    -fx-background-image: url("assets/bSupprimer_1.png");
+}
+
+.btn_CONFIRMER{
+    -fx-background-image: url("assets/bConfirmer_0.png");
+}
+.btn_CONFIRMER:hover{
+    -fx-background-image: url("assets/bConfirmer_1.png");
+}
+
+/*
+                              INPUTS
+*/
+.txtF_search{
+    -fx-background-image: url("assets/searchTF.png");
+    
+}
+.searchI{
+    -fx-background-image: url("assets/search.png");
+    -fx-background-color: rgba(0,0,0,0);
+}
+.searchI:hover{
+    -fx-background-image: url("assets/searchHOLDED.png");
+    -fx-background-color: rgba(0,0,0,0);
+}
+
+.btn_filtre{
+    -fx-background-image: url("assets/bFiltre.png");
+}
+
+
+/*
+                               Effects
+*/
+
+.transparent{
+    -fx-background-color: rgba(0,0,0,0);
+}
+
+
+
+/*
+                               OTHER
+*/
+.bMerch_0{
+    -fx-background-image: url("assets/bMerch_0.png");
+}
+
+.bMerch_1{
+    -fx-background-image: url("assets/bMerch_1.png");
+}
+.scroll-pane {
+   -fx-background-color: transparent;
+}
+.scroll-pane > .viewport {
+   -fx-background-color: transparent;
+}
+
+@font-face {
+    -fx-font-family: "belwee";
+    -fx-src: url("belwe_bold_bt.ttf");
+}

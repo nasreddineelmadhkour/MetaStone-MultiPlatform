@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="720.0" prefWidth="1280.0" styleClass="bgMerch" stylesheets="@../StyleCSS.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.merche.AfficheCommandeAdminFormController">
+   <children>
+      <Button layoutX="209.0" layoutY="93.0" mnemonicParsing="false" onAction="#GoToProduit" prefHeight="108.0" prefWidth="112.0" stylesheets="@../StyleCSS.css" AnchorPane.leftAnchor="178.0" AnchorPane.topAnchor="53.0">
+         <styleClass>
+            <String fx:value="bgProduit" />
+            <String fx:value="transparent" />
+         </styleClass>
+      </Button>
+      <Button fx:id="bCommande" layoutX="234.0" layoutY="203.0" mnemonicParsing="false" prefHeight="108.0" prefWidth="112.0" stylesheets="@../StyleCSS.css" AnchorPane.leftAnchor="276.0" AnchorPane.topAnchor="53.0">
+         <styleClass>
+            <String fx:value="bgCommande" />
+            <String fx:value="transparent" />
+         </styleClass>
+      </Button>
+      <Button fx:id="bModifier" layoutX="535.0" layoutY="652.0" mnemonicParsing="false" onAction="#modifyCommande" prefHeight="72.0" prefWidth="134.0" stylesheets="@../StyleCSS.css" AnchorPane.leftAnchor="505.0" AnchorPane.topAnchor="633.0">
+         <styleClass>
+            <String fx:value="btn_MODIFIER" />
+            <String fx:value="transparent" />
+         </styleClass>
+      </Button>
+      <Button fx:id="bAjouter" layoutX="336.0" layoutY="642.0" mnemonicParsing="false" prefHeight="72.0" prefWidth="134.0" stylesheets="@../StyleCSS.css" AnchorPane.leftAnchor="312.0" AnchorPane.topAnchor="633.0">
+         <styleClass>
+            <String fx:value="btn_AJOUTER" />
+            <String fx:value="transparent" />
+         </styleClass>
+      </Button>
+      <Button fx:id="bSupprimer" layoutX="723.0" layoutY="652.0" mnemonicParsing="false" onAction="#deleteCommande" prefHeight="72.0" prefWidth="134.0" stylesheets="@../StyleCSS.css" AnchorPane.leftAnchor="699.0" AnchorPane.topAnchor="633.0">
+         <styleClass>
+            <String fx:value="btn_SUPPRIMER" />
+            <String fx:value="transparent" />
+         </styleClass>
+      </Button>
+      <VBox layoutX="190.0" layoutY="158.0" prefHeight="327.0" prefWidth="782.0">
+         <children>
+            <ScrollPane fx:id="scroll" prefHeight="350.0" prefWidth="781.0" stylesheets="@../StyleCSS.css">
+               <content>
+                  <GridPane fx:id="grid" prefHeight="75.0" prefWidth="779.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                  </GridPane>
+               </content>
+            </ScrollPane>
+         </children>
+      </VBox>
+      <Label layoutX="1086.0" layoutY="228.0" />
+      <VBox fx:id="vboxCh" alignment="CENTER" layoutX="1036.0" layoutY="171.0" prefHeight="336.0" prefWidth="214.0">
+         <children>
+            <Label text="ID" />
+            <Label fx:id="id_commande" text="id" />
+            <Pane prefHeight="24.0" prefWidth="214.0" />
+            <Label text="Date Livraison">
+               <font>
+                  <Font name="Candara Bold" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="dateLiv" maxHeight="149.0" maxWidth="149.0" minHeight="25.0" minWidth="25.0" prefHeight="22.0" prefWidth="161.0" stylesheets="@../assets/Style.css">
+               <styleClass>
+                  <String fx:value="input_TextField" />
+                  <String fx:value="transparent" />
+               </styleClass>
+            </TextField>
+            <Pane prefHeight="72.0" prefWidth="214.0" />
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

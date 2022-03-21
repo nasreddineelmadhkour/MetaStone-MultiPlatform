@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" onMouseClicked="#onclick" prefHeight="246.0" prefWidth="183.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tn.edu.esprit.Controller.OnecommentviewbackController">
+   <children>
+      <ImageView fitHeight="267.0" fitWidth="190.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@saifsrc/unnamed%20(11).png" />
+         </image>
+      </ImageView>
+      <Label layoutX="52.0" layoutY="14.0" prefHeight="21.0" prefWidth="97.0" text="Comment">
+         <font>
+            <Font name="Cambria" size="21.0" />
+         </font>
+      </Label>
+      <Label fx:id="descriptioncomment" alignment="TOP_CENTER" layoutX="22.0" layoutY="108.0" prefHeight="99.0" prefWidth="143.0" text="description" wrapText="true">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

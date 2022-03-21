@@ -28,14 +28,14 @@ public class ServiceUtilisateur implements Iservices<Utilisateur>{
     @Override
     public void ajouter(Utilisateur u) throws SQLException {
         //request 
-        String req="INSERT INTO `utilisateur`(`Nom`, `Prenom`, `Date_naiss`, `email`, `Tel`, `Adresse`, `Nom_utilisateur`, `Mot_de_passe`, `Sexe`, `Photo_de_profil`, `MTC`, `Role`, `Rank`, `Id_consommateur`, `Code`) "
-                + "VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,NULL)";
+        String req="INSERT INTO `utilisateur`(`Nom`, `Prenom`, `age`, `email`, `Tel`, `Adresse`, `Nom_utilisateur`, `Mot_de_passe`, `Sexe`, `Photo_de_profil`, `MTC`, `Role`, `Rank`, `Id_consommateur`, `Code`,`etat`) "
+                + "VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,NULL,'activer')";
 
         
             PreparedStatement pst =cnx.prepareStatement(req);
             pst.setString(1,u.getNom());
             pst.setString(2,u.getPrenom());
-            pst.setString(3,u.getDate_naiss());
+            pst.setString(3,u.getAge());
             pst.setString(4,u.getEmail());
             pst.setString(5,u.getTel());
             pst.setString(6,u.getAdresse());
@@ -58,22 +58,20 @@ public class ServiceUtilisateur implements Iservices<Utilisateur>{
     @Override
     public void modifier(Utilisateur u, int ID_UTILISATEUR) throws SQLException {
             //request 
-        String req="UPDATE `utilisateur` SET `Nom`=?, `Prenom`=? , `Date_naiss` = ?, "
-                + "`email` =?, `Tel`=?, `Adresse`=?,`Mot_de_passe`=?, `Sexe`=?, "
-                + "`Photo_de_profil`=? WHERE `ID_utilisateur`=?";
+            System.out.println("pre modifier");
+        String req="UPDATE `utilisateur` SET `Nom`=?, `Prenom`=? , `age` = ?, "
+                + "`email` =?, `Tel`=?, `Adresse`=?,`Mot_de_passe`=? WHERE `ID_utilisateur`=?";
 
         
             PreparedStatement pst =cnx.prepareStatement(req);
             pst.setString(1,u.getNom());
             pst.setString(2,u.getPrenom());
-            pst.setString(3,u.getDate_naiss());
+            pst.setString(3,u.getAge());
             pst.setString(4,u.getEmail());
             pst.setString(5,u.getTel());
             pst.setString(6,u.getAdresse());
             pst.setString(7,u.getMot_de_passe());
-            pst.setString(8,u.getSexe());
-            pst.setString(9,u.getPhoto_de_profil());
-            pst.setInt(10,ID_UTILISATEUR);
+            pst.setInt(8,ID_UTILISATEUR);
             pst.executeUpdate();
             System.out.println("Modification terminer avec Succes");
     }
@@ -105,7 +103,7 @@ public class ServiceUtilisateur implements Iservices<Utilisateur>{
             ResultSet rs = st.executeQuery(req);
             while(rs.next())
             {
-                utilisateurs.add(new Utilisateur(rs.getInt(1),rs.getString(2),rs.getString(3),rs.getString("Date_naiss"),rs.getString(5),rs.getString(6),rs.getString(7),rs.getString(8),rs.getString(9),rs.getString(10),rs.getString(11),rs.getString(12),rs.getString(13),rs.getString(14),rs.getString(15)));
+                utilisateurs.add(new Utilisateur(rs.getInt(1),rs.getString(2),rs.getString(3),rs.getString(4),rs.getString(5),rs.getString(6),rs.getString(7),rs.getString(8),rs.getString(9),rs.getString(10),rs.getString(11),rs.getString(12),rs.getString(13),rs.getString(14),rs.getString(15),rs.getString(17)));
                 
             }
           
@@ -176,7 +174,7 @@ public class ServiceUtilisateur implements Iservices<Utilisateur>{
                u.setID_UTILISATEUR(rs.getInt(1));
                u.setNom(rs.getString(2));
                u.setPrenom(rs.getString(3));
-               u.setDate_naiss(rs.getString(4));
+               u.setAge(rs.getString(4));
                u.setEmail(rs.getString(5));
                u.setTel(rs.getString(6));
                u.setAdresse(rs.getString(7));
@@ -189,6 +187,8 @@ public class ServiceUtilisateur implements Iservices<Utilisateur>{
                u.setRank(rs.getString(14));
                u.setId_consommateur(rs.getString(15));
                u.setCode(rs.getInt(16));
+               u.setEtat(rs.getString(17));
+
 
             }
     return u;
@@ -209,7 +209,7 @@ public class ServiceUtilisateur implements Iservices<Utilisateur>{
                u.setID_UTILISATEUR(rs.getInt(1));
                u.setNom(rs.getString(2));
                u.setPrenom(rs.getString(3));
-               u.setDate_naiss(rs.getString(4));
+               u.setAge(rs.getString(4));
                u.setEmail(rs.getString(5));
                u.setTel(rs.getString(6));
                u.setAdresse(rs.getString(7));
@@ -222,10 +222,81 @@ public class ServiceUtilisateur implements Iservices<Utilisateur>{
                u.setRank(rs.getString(14));
                u.setId_consommateur(rs.getString(15));
                u.setCode(rs.getInt(16));
-
+               u.setEtat(rs.getString(17));
             }
     return u;
     }
     
+    public void desactiverCompte(int ID_UTILISATEUR) throws SQLException {
+            //request 
+        
+        String req="UPDATE `utilisateur` SET `etat`='desactiver' WHERE `ID_utilisateur`=?";
+
+        
+            PreparedStatement pst =cnx.prepareStatement(req);
+
+            pst.setInt(1,ID_UTILISATEUR);
+            pst.executeUpdate();
+            System.out.println("Desactivation terminer avec Succes");
+    }
+    public void activerCompte(int ID_UTILISATEUR) throws SQLException {
+            //request 
+       String req="UPDATE `utilisateur` SET `etat`='activer' WHERE `ID_utilisateur`=?";
+
+        
+            PreparedStatement pst =cnx.prepareStatement(req);
+
+            pst.setInt(1,ID_UTILISATEUR);
+            pst.executeUpdate();
+            System.out.println("Activation terminer avec Succes");
+    }
     
+    public List<Utilisateur> afficherUtilisateur() throws SQLException {
+        //LIST
+        List<Utilisateur> utilisateurs = new ArrayList<>();
+        //request 
+        String req ="SELECT * FROM UTILISATEUR where role='utilisateur'";
+
+            //insert
+            Statement st = cnx.createStatement();
+            ResultSet rs = st.executeQuery(req);
+            while(rs.next())
+            {
+                utilisateurs.add(new Utilisateur(rs.getInt(1),rs.getString(2),rs.getString(3),rs.getString(4),rs.getString(5),rs.getString(6),rs.getString(7),rs.getString(8),rs.getString(9),rs.getString(10),rs.getString(11),rs.getString(12),rs.getString(13),rs.getString(14),rs.getString(15),rs.getString(17)));
+                
+            }
+          
+        return utilisateurs;
+    }
+    
+    public List<Utilisateur> rechercher(String chercher) throws SQLException {
+        //LIST
+        List<Utilisateur> utilisateurs = new ArrayList<>();
+        //request 
+        String req ="SELECT * FROM UTILISATEUR where nom like '%"+chercher+"%' OR prenom like '%"+chercher+"%'  OR age like '%"+chercher+"%'  or tel like '%"+chercher+"%'  or adresse like '%"+chercher+"%'  or rank like '%"+chercher+"%'  or nom_utilisateur like '%"+chercher+"%'  or etat like '%"+chercher+"%'";
+
+            //insert
+            Statement st = cnx.createStatement();
+            ResultSet rs = st.executeQuery(req);
+            while(rs.next())
+            {
+                utilisateurs.add(new Utilisateur(rs.getInt(1),rs.getString(2),rs.getString(3),rs.getString(4),rs.getString(5),rs.getString(6),rs.getString(7),rs.getString(8),rs.getString(9),rs.getString(10),rs.getString(11),rs.getString(12),rs.getString(13),rs.getString(14),rs.getString(15),rs.getString(17)));
+                
+            }
+          
+        return utilisateurs;
+    }
+
+    public void changerRole(int id_utilisateur, String type) throws SQLException {
+          
+        String req="UPDATE `utilisateur` SET `role`=? WHERE `ID_utilisateur`=?";
+
+        
+            PreparedStatement pst =cnx.prepareStatement(req);
+            pst.setString(1,type);
+            pst.setInt(2,id_utilisateur);
+            pst.executeUpdate();
+            System.out.println("Modification de role changer avec Succes");
+            
+    }
 }

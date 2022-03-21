@@ -1,0 +1,121 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Mar 3, 2022, 7:29:33 PM
+    Author     : FadyBelY
+*/
+
+.bg {-fx-background-image: url("bg.png")}
+
+.btn_carte {-fx-background-image: url("carte_0.png")}
+.btn_carte:hover {-fx-background-image: url("carte_1.png")}
+
+.btn_merche {-fx-background-image: url("merche_0.png")}
+.btn_merche:hover {-fx-background-image: url("merche_1.png")}
+
+.btn_ajouter{
+    -fx-background-image: url("Ajouter_0.png")
+}
+.btn_ajouter:hover{
+    -fx-background-image: url("Ajouter_1.png")
+}
+
+.btn_annuler{
+    -fx-background-image: url("Annuler_0.png")
+}
+.btn_annuler:hover{
+    -fx-background-image: url("Annuler_1.png")
+}
+
+.btn_continuer{
+    -fx-background-image: url("Continuer_0.png")
+}
+.btn_continuer:hover{
+    -fx-background-image: url("Continuer_1.png")
+}
+
+.btn_modifier{
+    -fx-background-image: url("Modifier_0.png")
+}
+.btn_modifier:hover{
+    -fx-background-image: url("Modifier_1.png")
+}
+
+
+.btn_quitter{
+    -fx-background-image: url("Quitter_0.png")
+}
+.btn_quitter:hover{
+    -fx-background-image: url("Quitter_1.png")
+}
+
+
+.btn_supprimer{
+    -fx-background-image: url("Supprimer_0.png")
+}
+.btn_supprimer:hover{
+    -fx-background-image: url("Supprimer_1.png")
+}
+
+.input_TextField{
+    -fx-background-image: url("war9a.png")
+}
+
+.input_TextArea{
+    -fx-background-image: url("war9a_kbira.png");
+    -fx-background-color: brown;
+}
+
+.bg_rightBox{
+    -fx-background-image: url("war9a_kbira_mauve.png");
+}
+
+
+.bg_leftBox{
+    -fx-background-image: url("box2.png");
+}
+
+
+.affiche_grd{
+    -fx-background-image: url("war9a_v.png");
+}
+
+.transparent{
+    -fx-background-color: rgba(0,0,0,0);
+}
+
+.searchIcon{
+    -fx-background-image: url("searchIcone.png");
+}
+
+.searchIcon:hover{
+    -fx-background-image: url("searchIcone_hover.png");
+}
+
+
+
+.round_layout{
+    -fx-border-radius: 50;
+}
+.shadow{
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,1), 8.0, 0.0, 0.0, 8.0);
+}
+.ghlidh{
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,1), 2.0, 0.0, 0.0, 2.0);
+}
+
+.bgCarte{
+    -fx-background-image: url("store_carte.png");
+}
+.bgCarteCh{
+    -fx-background-image: url("store_carte_fire.png");
+}
+.bgCarteOng{
+    -fx-background-image: url("carte_ong.png");
+}
+.bgStore{
+    -fx-background-image: url("bgstore.png");
+}

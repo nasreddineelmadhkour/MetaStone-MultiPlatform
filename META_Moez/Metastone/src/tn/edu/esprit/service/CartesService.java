@@ -268,4 +268,22 @@ public class CartesService implements IcartesService{
         return C;
     }
              
+    //Affichage par mana
+     public List<Cartes> afficherCartesParMana(int Mana) {
+        List<Cartes> carte = new ArrayList<>();
+
+        String req = "SELECT * FROM CARTE WHERE MANA LIKE '"+Mana+"'";
+        try {
+            //insert
+            Statement st = cnx.createStatement();
+            ResultSet rs = st.executeQuery(req);
+            while (rs.next()) {
+                carte.add(new Cartes(rs.getInt(1), rs.getInt(2), rs.getString(3), rs.getInt(4), rs.getInt(5), rs.getString(6), rs.getInt(7), rs.getInt(8), rs.getString(9), rs.getString(10), rs.getString(11), rs.getInt(12)));
+            }
+
+        } catch (SQLException ex) {
+            ex.printStackTrace();
+        }
+        return carte;
+    }
 }

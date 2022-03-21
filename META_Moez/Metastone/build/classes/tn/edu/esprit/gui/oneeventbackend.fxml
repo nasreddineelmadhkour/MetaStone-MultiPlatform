@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" onMouseClicked="#onclick" prefHeight="196.0" prefWidth="179.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tn.edu.esprit.Controller.OneeventbackendController">
+   <children>
+      <ImageView fitHeight="196.0" fitWidth="179.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@saifsrc/unnamed%20(37).png" />
+         </image>
+      </ImageView>
+      <Label fx:id="lieu" layoutX="31.0" layoutY="114.0" prefHeight="21.0" prefWidth="117.0" text="lieu" />
+      <Label fx:id="date" layoutX="31.0" layoutY="135.0" prefHeight="21.0" prefWidth="117.0" text="date" />
+   </children>
+</AnchorPane>

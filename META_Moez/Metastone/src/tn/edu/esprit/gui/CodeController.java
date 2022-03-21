@@ -52,7 +52,7 @@ public class CodeController implements Initializable {
         //System.out.println(Integer.parseInt(label_user_id.getText()));
         
         U=USER.getUtilisateur(Integer.parseInt(label_user_id.getText()));
-       
+        
         if(U.getCode()==Integer.parseInt(lineEdit_code.getText()))
         {
             System.out.println("code correct");

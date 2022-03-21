@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<AnchorPane id="AnchorPane" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tn.edu.esprit.Controller.TournoifrontendController">
+   <children>
+      <ImageView fitHeight="720.0" fitWidth="1280.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@saifsrc/unnamed%20(31).png" />
+         </image>
+      </ImageView>
+      <ScrollPane fx:id="scroll" layoutX="111.0" layoutY="90.0" prefHeight="559.0" prefWidth="1099.0" styleClass="scroll_pane" stylesheets="@src/style.css">
+         <content>
+            <GridPane fx:id="grid" prefHeight="553.0" prefWidth="1087.0">
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+            </GridPane>
+         </content>
+      </ScrollPane>
+      <Button layoutX="924.0" layoutY="678.0" mnemonicParsing="false" onAction="#retourner" prefHeight="41.0" prefWidth="156.0" styleClass="button_retour" stylesheets="@src/style.css" />
+      <Button layoutX="161.0" layoutY="25.0" mnemonicParsing="false" onAction="#to_event" prefHeight="142.0" prefWidth="145.0" styleClass="to_event" stylesheets="@src/style.css" />
+   </children>
+</AnchorPane>

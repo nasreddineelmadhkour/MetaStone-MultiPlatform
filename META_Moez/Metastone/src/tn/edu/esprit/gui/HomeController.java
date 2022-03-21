@@ -5,6 +5,7 @@
  */
 package tn.edu.esprit.gui;
 
+import gui.merche.user.AfficheMercheUserFormController;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -19,7 +20,12 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.VBox;
+import javafx.scene.paint.Color;
 import javafx.stage.Stage;
+import tn.edu.esprit.Controller.BackviewoftournoiController;
+import tn.edu.esprit.Controller.DemandeFrontController;
+import tn.edu.esprit.Controller.EvenementfrontviewController;
+import tn.edu.esprit.Controller.TournoifrontendController;
 import tn.edu.esprit.model.Utilisateur;
 
 /**
@@ -38,7 +44,10 @@ public class HomeController implements Initializable {
     private Button button_deconnexion;
     @FXML
     private Label label_MTC;
+    @FXML
+    private Button goesport;
 
+    
     /**
      * Initializes the controller class.
      */
@@ -67,8 +76,10 @@ public class HomeController implements Initializable {
 
              stage=(Stage)((Node)event.getSource()).getScene().getWindow();
              scene=new Scene(fxml);
+             scene.setFill(Color.TRANSPARENT);
              stage.setScene(scene);
              stage.centerOnScreen();
+             
              stage.show();
     }
 
@@ -81,8 +92,8 @@ public class HomeController implements Initializable {
 
              stage=(Stage)((Node)event.getSource()).getScene().getWindow();
              scene=new Scene(fxml);
+             scene.setFill(Color.TRANSPARENT);stage.centerOnScreen();
              stage.setScene(scene);
-             stage.centerOnScreen();
              stage.show();
     }
 
@@ -94,8 +105,70 @@ public class HomeController implements Initializable {
              scene=new Scene(fxml);
              stage.setScene(scene);
              stage.centerOnScreen();
+             scene.setFill(Color.TRANSPARENT);
              stage.show();
         
     }
+    @FXML
+    private void myforum(ActionEvent event) throws IOException {
+   
+             FXMLLoader loader = new FXMLLoader(getClass().getResource("forumview.fxml"));
+             fxml=loader.load(); 
+             ForumviewController forumviewController=loader.getController();
+             
+             forumviewController.setUtilisateur(u);
+             stage=(Stage)((Node)event.getSource()).getScene().getWindow();
+             scene=new Scene(fxml);
+             stage.setScene(scene);
+             stage.centerOnScreen();
+             stage.show();
     
+    }
+
+    @FXML
+    private void gotoesport(ActionEvent event) throws IOException {
+        
+          FXMLLoader loader = new FXMLLoader(getClass().getResource("/tn/edu/esprit/gui/tournoifrontend.fxml"));
+             fxml=loader.load(); 
+             TournoifrontendController profilcontroller=loader.getController();
+             profilcontroller.setUtilisateur(u);
+
+             stage=(Stage)((Node)event.getSource()).getScene().getWindow();
+             scene=new Scene(fxml);
+             scene.setFill(Color.TRANSPARENT);stage.centerOnScreen();
+             stage.setScene(scene);
+             stage.show(); 
+    }
+
+    public void setUtilisateurr(Utilisateur u) {
+        this.u=u;
+    }
+
+    @FXML
+    private void to_demande(ActionEvent event) throws IOException {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/tn/edu/esprit/gui/DemandeFront.fxml"));
+             fxml=loader.load(); 
+             DemandeFrontController demandeFrontController=loader.getController();
+             
+             demandeFrontController.setUtilisateur(u);
+             stage=(Stage)((Node)event.getSource()).getScene().getWindow();
+             scene=new Scene(fxml);
+             stage.setScene(scene);
+             stage.centerOnScreen();
+             stage.show();
+    }
+
+    @FXML
+    private void to_store(ActionEvent event) throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("../../../../gui/merche/user/AfficheMercheUserForm.fxml"));
+             fxml=loader.load(); 
+             AfficheMercheUserFormController demandeFrontController=loader.getController();
+             
+             demandeFrontController.setUtilisateur(u);
+             stage=(Stage)((Node)event.getSource()).getScene().getWindow();
+             scene=new Scene(fxml);
+             stage.setScene(scene);
+             stage.centerOnScreen();
+             stage.show();
+    }
 }

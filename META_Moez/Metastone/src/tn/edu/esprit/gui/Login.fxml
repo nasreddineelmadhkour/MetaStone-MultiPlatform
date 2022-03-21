@@ -8,20 +8,20 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane id="AnchorPane" prefHeight="625.0" prefWidth="901.0" stylesheets="@src/style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tn.edu.esprit.gui.LoginController">
+<AnchorPane id="AnchorPane" prefHeight="826.0" prefWidth="1280.0" style="-fx-background-color: transparent;" stylesheets="@src/style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tn.edu.esprit.gui.LoginController">
    <children>
-      <ImageView fitHeight="684.0" fitWidth="915.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="684.0" fitWidth="911.0" layoutX="185.0" layoutY="151.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@src/background_login.png" />
          </image>
       </ImageView>
-      <Button fx:id="button_connexion" layoutX="307.0" layoutY="345.0" mnemonicParsing="false" onAction="#connexion" prefHeight="57.0" prefWidth="301.0" styleClass="button_se_connecter" />
-      <TextField fx:id="username" alignment="CENTER" layoutX="357.0" layoutY="230.0" prefHeight="31.0" prefWidth="202.0" promptText="Nom d'utilisateur" styleClass="lineEdit_username_login" />
-      <PasswordField fx:id="password" alignment="CENTER" layoutX="327.0" layoutY="289.0" prefHeight="37.0" prefWidth="262.0" promptText="Mot de passe" styleClass="lineEdit_password_login" />
-      <Button fx:id="button_mpd_oublier_login" layoutX="321.0" layoutY="407.0" mnemonicParsing="false" onAction="#mdp_oublier" prefHeight="66.0" prefWidth="268.0" styleClass="button_mdpOublier" />
-      <Button layoutX="115.0" layoutY="257.0" mnemonicParsing="false" onAction="#inscription" prefHeight="100.0" prefWidth="100.0" styleClass="button_inscrire" />
-      <Label layoutX="217.0" layoutY="56.0" prefHeight="149.0" prefWidth="483.0" styleClass="label_logo_application" />
-      <Button layoutX="809.0" layoutY="43.0" mnemonicParsing="false" onAction="#exit" prefHeight="66.0" prefWidth="71.0" styleClass="button_exit" />
-      <Label layoutX="684.0" layoutY="505.0" prefHeight="159.0" prefWidth="202.0" styleClass="label_logo_equipe" />
+      <Button fx:id="button_connexion" layoutX="490.0" layoutY="496.0" mnemonicParsing="false" onAction="#connexion" prefHeight="57.0" prefWidth="301.0" styleClass="button_se_connecter" />
+      <TextField fx:id="username" alignment="CENTER" layoutX="540.0" layoutY="381.0" prefHeight="31.0" prefWidth="202.0" promptText="Nom d'utilisateur" styleClass="lineEdit_username_login" />
+      <Button fx:id="button_mpd_oublier_login" layoutX="504.0" layoutY="558.0" mnemonicParsing="false" onAction="#mdp_oublier" prefHeight="66.0" prefWidth="268.0" styleClass="button_mdpOublier" />
+      <Button layoutX="298.0" layoutY="408.0" mnemonicParsing="false" onAction="#inscription" prefHeight="100.0" prefWidth="100.0" styleClass="button_inscrire" />
+      <Label layoutX="383.0" layoutY="48.0" prefHeight="149.0" prefWidth="510.0" styleClass="label_logo_application" />
+      <Button layoutX="992.0" layoutY="194.0" mnemonicParsing="false" onAction="#exit" prefHeight="66.0" prefWidth="71.0" styleClass="button_exit" />
+      <Label layoutX="867.0" layoutY="656.0" prefHeight="159.0" prefWidth="202.0" styleClass="label_logo_equipe" />
+      <PasswordField fx:id="password" alignment="CENTER" layoutX="510.0" layoutY="440.0" prefHeight="37.0" prefWidth="262.0" promptText="Mot de passe" styleClass="lineEdit_password_login" />
    </children>
 </AnchorPane>

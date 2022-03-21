@@ -25,10 +25,10 @@
             <Cursor fx:constant="DEFAULT" />
          </cursor>
       </Button>
-      <Button layoutX="237.0" layoutY="141.0" mnemonicParsing="false" prefHeight="126.0" prefWidth="270.0" styleClass="button_demande" />
-      <Button layoutX="244.0" layoutY="243.0" mnemonicParsing="false" prefHeight="137.0" prefWidth="228.0" styleClass="button_forum" />
-      <Button layoutX="243.0" layoutY="379.0" mnemonicParsing="false" prefHeight="109.0" prefWidth="202.0" styleClass="button_esports" />
-      <Button layoutX="245.0" layoutY="464.0" mnemonicParsing="false" prefHeight="103.0" prefWidth="253.0" styleClass="button_store" />
+      <Button layoutX="237.0" layoutY="141.0" mnemonicParsing="false" onAction="#to_demande" prefHeight="126.0" prefWidth="270.0" styleClass="button_demande" />
+      <Button layoutX="244.0" layoutY="243.0" mnemonicParsing="false" onAction="#myforum" prefHeight="137.0" prefWidth="228.0" styleClass="button_forum" />
+      <Button fx:id="goesport" layoutX="243.0" layoutY="379.0" mnemonicParsing="false" onAction="#gotoesport" prefHeight="109.0" prefWidth="202.0" styleClass="button_esports" />
+      <Button layoutX="245.0" layoutY="464.0" mnemonicParsing="false" onAction="#to_store" prefHeight="103.0" prefWidth="253.0" styleClass="button_store" />
       <Button layoutX="770.0" layoutY="134.0" mnemonicParsing="false" prefHeight="137.0" prefWidth="270.0" styleClass="button_paiement" />
       <Button layoutX="810.0" layoutY="253.0" mnemonicParsing="false" prefHeight="109.0" prefWidth="228.0" styleClass="button_coaching" />
       <Label fx:id="label_MTC" layoutX="917.0" layoutY="100.0" prefHeight="26.0" prefWidth="74.0" styleClass="label_MTC" text="0" textAlignment="CENTER" />

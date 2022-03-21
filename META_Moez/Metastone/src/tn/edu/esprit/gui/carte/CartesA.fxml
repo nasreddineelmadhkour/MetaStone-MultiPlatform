@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMousePressed="#click" prefHeight="233.0" prefWidth="164.0" styleClass="cartesBG" stylesheets="@Style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.carte.CartesAController">
+   <children>
+      <Label fx:id="mana" layoutX="15.0" layoutY="21.0" text="mana" textFill="WHITE" />
+      <Label fx:id="atq" layoutX="20.0" layoutY="203.0" text="atq" />
+      <Label fx:id="vie" layoutX="140.0" layoutY="206.0" text="vie" />
+      <Label fx:id="nom_carte" layoutX="74.0" layoutY="115.0" text="nom" />
+      <HBox alignment="CENTER" layoutX="31.0" layoutY="157.0" prefHeight="49.0" prefWidth="109.0">
+         <children>
+            <Label fx:id="desc" text="desc" />
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

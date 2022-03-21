@@ -23,9 +23,13 @@ public interface IcartesService {
              public List<Cartes> afficherCartesParType(String Type);
              //par Nom
              public List<Cartes> afficherCartesParNom (String Nom);
+             //par mana
+             public List<Cartes> afficherCartesParMana(int Mana);
     //Supprimer
     public void supprimerCartes(int ID_CARTE);
     //Modifier
     public void modifierCartes(int ID_CARTE,Cartes c);
     public Cartes getCarte(int id_carte);
+    
+    
 }

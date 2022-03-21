@@ -31,9 +31,12 @@ import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Background;
+import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import tn.edu.esprit.model.Cartes;
 import tn.edu.esprit.model.Collection;
+
+
 import tn.edu.esprit.model.Utilisateur;
 import tn.edu.esprit.service.CartesService;
 import tn.edu.esprit.service.CollectionService;
@@ -79,7 +82,6 @@ public class MacollectionController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
-               
         
      
     }    
@@ -101,40 +103,38 @@ public class MacollectionController implements Initializable {
 
     void setUtilisateur(Utilisateur u) {
         this.u=u;
-        
+
          ObservableList<AnchorPane> pubss = FXCollections.observableArrayList();
                 CollectionService CS= new CollectionService();
                 System.out.println(u.getID_UTILISATEUR());
                 System.out.println(CS.afficherCollection(u.getID_UTILISATEUR()).size());  
-          for (int i = 0; i < CS.afficherCollection(u.getID_UTILISATEUR()).size(); i++) {
+          for (int i = 0; i < CS.afficherCollection(u.getID_UTILISATEUR()).size(); i++) 
+          { 
+              
+             
+              
+              
                   Collection get = CS.afficherCollection(u.getID_UTILISATEUR()).get(i);
                   FXMLLoader load = new FXMLLoader(getClass().getResource("Unecarte.fxml"));
                     UnecarteController unecarteController= new UnecarteController();
                 try {
-                    Parent root =load.load();
+                    Parent fxml =load.load();
+
                 } catch (IOException ex) {
                         System.out.println("errour");
                 }
             UnecarteController unecarteController2=  load.getController();
             unecarteController2.setId_collection(get.getID_COLLECTION());
               AnchorPane p = new AnchorPane(unecarteController2.getAnchor_carte());
+              p.setStyle("-fx-background-color:black;");
+                  
               p.setId(Integer.toString(get.getID_COLLECTION()));
+              
               CartesService cs=new CartesService();
               String geturl ="/tn/edu/esprit/gui/src/"+cs.afficherCartesParId(get.getID_CARTE()).get(0).getimage();
               System.out.println(geturl);
               Label label=new Label(Integer.toString(get.getID_COLLECTION()));
-              //InputStream stream;
-                
-//                    try {
-//                        
-//                        stream = new FileInputStream("C:\\Users\\admin\\Documents\\NetBeansProjects\\Metastone\\src\\tn\\edu\\esprit\\gui\\src\\"+geturl);
-//                    Image image2 = new Image(stream);
-//                    ImageView image=new ImageView();
-//                     image.setImage(image2);
-//                    p.getChildren().add(image);
-//                    } catch (FileNotFoundException ex) {
-//                        System.out.println("errour image");                    }
-//               
+           
               Image im1= new Image(geturl);
               ImageView i2 =new ImageView();
               i2.setImage(im1);
@@ -146,11 +146,10 @@ public class MacollectionController implements Initializable {
               
 
               pubss.add(p);
-              
     
         }
                 
-        
+            
             list_collection.getItems().addAll(pubss);
         
         
@@ -225,7 +224,7 @@ public class MacollectionController implements Initializable {
         CartesService CS =new CartesService();
         Cartes C=new Cartes();
         C=CS.getCarte(Num_carte);
-        
+      
         Image image= new Image("/tn/edu/esprit/gui/src/"+C.getimage());
         select_image3.setImage(image);
         

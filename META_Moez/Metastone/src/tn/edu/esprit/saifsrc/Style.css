@@ -1,0 +1,186 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 1 mars 2022, 22:37:12
+    Author     : ASUS
+*/
+.btn_x{
+    
+    -fx-background-image: url("0.png");
+    
+}
+.btn_community{
+    -fx-background-color:transparent;                  
+   
+   
+}
+.btn_community:hover{
+    
+   -fx-background-image: url('unnamed2.png');
+   -fx-background-size: cover;
+   -fx-background-repeat: no-repeat;
+}
+
+
+
+.btn_soutientechnique{
+   -fx-background-color:transparent;                  
+
+}
+.btn_soutientechnique:hover{
+    
+   -fx-background-image: url('unnamed4.png');
+   -fx-background-size: cover;
+   -fx-background-repeat: no-repeat;
+}
+
+
+.btn_evaluate{
+    
+    -fx-background-color:transparent;
+}
+.btn_evaluate:hover{
+   -fx-background-color:transparent;                  
+   -fx-background-image: url('unnamed6.png');
+   -fx-background-size: cover;
+   -fx-background-repeat: no-repeat; 
+}
+.bg_final{
+    
+    -fx-background-image: url("BG_final.png");
+}
+.btn_publie{
+    -fx-background-color:transparent;                  
+   -fx-background-image: url('2.png');
+   -fx-background-size: cover;
+   -fx-background-repeat: no-repeat; 
+}
+.btn_publie:hover{
+    -fx-background-color:transparent;                  
+   -fx-background-image: url('3.png');
+   -fx-background-size: cover;
+   -fx-background-repeat: no-repeat; 
+}
+
+.btn_publie1:hover{
+    
+    -fx-background-image: url("2.png");
+}
+.btn_fichier{
+    
+    -fx-background-image: url("5.png");
+}
+.btn_fichier1:hover{
+    
+    -fx-background-image: url("6.png");
+}
+
+
+
+.btn_annuler{
+    
+    -fx-background-image: url("3.png");
+}
+.btn_annuler1:hover{
+    
+    -fx-background-image: url("4.png");
+}
+
+
+.btn_jomjom{
+    -fx-background-image: url("jom.png");
+}
+.btn_jomjom1:hover{
+    -fx-background-image: url("jomjom.png");
+}
+
+.btn_se{
+    
+    -fx-background-image: url("BG_Publication_Com.png");
+}
+
+.btn_ajouter{
+    
+   -fx-background-color:transparent;                  
+   -fx-background-image: url('ajouter0.png');
+   -fx-background-size: cover;
+   -fx-background-repeat: no-repeat;
+}
+.btn_ajouter:hover{
+    
+   -fx-background-color:transparent;                  
+   -fx-background-image: url('ajouter1.png');
+   -fx-background-size: cover;
+   -fx-background-repeat: no-repeat;
+}
+
+.btn_modifier{
+   -fx-background-color:transparent;                  
+   -fx-background-image: url('modfier0.png');
+   -fx-background-size: cover;
+   -fx-background-repeat: no-repeat;
+    
+}
+.btn_modifier:hover{
+   -fx-background-color:transparent;                  
+   -fx-background-image: url('modfier1.png');
+   -fx-background-size: cover;
+   -fx-background-repeat: no-repeat;
+    
+}
+.btn_supprimer{
+   -fx-background-color:transparent;                  
+   -fx-background-image: url('supprimer0.png');
+   -fx-background-size: cover;
+   -fx-background-repeat: no-repeat; 
+}
+.btn_supprimer:hover{
+   -fx-background-color:transparent;                  
+   -fx-background-image: url('supprimer1.png');
+   -fx-background-size: cover;
+   -fx-background-repeat: no-repeat; 
+}
+.btn_publier{
+   -fx-background-color:transparent;                  
+   -fx-background-image: url('publier0.png');
+   -fx-background-size: cover;
+   -fx-background-repeat: no-repeat;  
+}
+.btn_publier:hover{
+   -fx-background-color:transparent;                  
+   -fx-background-image: url('publier1.png');
+   -fx-background-size: cover;
+   -fx-background-repeat: no-repeat;  
+}
+
+.btn_commenter{
+   -fx-background-color:transparent;                  
+   -fx-background-image: url('commenter0.png');
+   -fx-background-size: cover;
+   -fx-background-repeat: no-repeat;  
+}
+.btn_commenter:hover{
+   -fx-background-color:transparent;                  
+   -fx-background-image: url('commenter1.png');
+   -fx-background-size: cover;
+   -fx-background-repeat: no-repeat;   
+    
+}
+
+.btn_quitter{
+    
+    -fx-background-image: url("7.png");
+}
+.btn_quitter1:hover{
+    
+    -fx-background-image: url("8.png");}
+.transparen{
+    -fx-background-color: rgba(0,0,0,0);}
+
+.text_color{
+    -fx-background-color:transparent;
+    -fx-text-fill: rgb(255,199,117);
+}

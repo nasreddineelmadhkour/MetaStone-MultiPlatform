@@ -1,0 +1,90 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Carte index{% endblock %}
+
+{% block body %}
+             <div class="card-body">
+                <table class="table">
+                   <tr>
+                       <th>IdCarte</th>
+                       <th>Mana</th>
+                       <th>Type</th>
+                       <th>Vie</th>
+                       <th>Prix</th>
+                       <th>Image</th>
+                       <th>Attaque</th>
+                       <th>Defence</th>
+                       <th>Rarete</th>
+                       <th>Nom</th>
+                       <th>Description</th>
+                       <th>Visibilite</th>
+                       <th>Actions</th>
+                   </tr>
+                    <tbody>
+                    {% for carte in cartes %}
+                        <tr>
+                            <td>{{ carte.idCarte }}</td>
+
+                            <td>{{ carte.mana }}</td>
+
+                            <td>{{ carte.type }}</td>
+
+                            <td>{{ carte.vie }}</td>
+
+                            <td>{{ carte.prix }}</td>
+
+                            <td><img src="../../../uploads/{{ carte.image }}" style="width: 50px;height: 80px;"/></td>
+
+                            <td>{{ carte.attaque }}</td>
+
+                            <td>{{ carte.defence }}</td>
+
+                            <td>{{ carte.rarete }}</td>
+
+                            <td>{{ carte.nom }}</td>
+
+                            <td>{{ carte.description }}</td>
+
+                            <td>{{ carte.visibilite ? 'Yes' : 'No' }}</td>
+                            <td>
+                                <a class="btn btn-danger" href="{{ path('app_carte_show_back', {'idCarte': carte.idCarte}) }}">show</a>
+                                <a class="btn btn-info" href="{{ path('app_carte_edit', {'idCarte': carte.idCarte}) }}">edit</a>
+                            </td>
+                        </tr>
+                    {% else %}
+                        <tr>
+                            <td colspan="13">no records found</td>
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+                     <a class="btn btn-danger" href="{{ path('app_carte_new') }}">Create new</a>
+             </div>
+
+
+
+
+
+    <!-- Wrapper End-->
+    <!-- offcanvas start -->
+
+    <!-- Backend Bundle JavaScript -->
+    <script src="{{ asset ('Backend/assets/js/libs.min.js') }}"></script>
+    <!-- widgetchart JavaScript -->
+    <script src="{{ asset ('Backend/assets/js/charts/widgetcharts.js') }}"></script>
+    <!-- dashboard JavaScript -->
+    <script src="{{ asset ('Backend/assets/js/charts/dashboard.js') }}"></script>
+
+    <!-- fslightbox JavaScript -->
+    <script src="{{ asset ('Backend/assets/js/fslightbox.js') }}"></script>
+    <!-- app JavaScript -->
+    <script src="{{ asset ('Backend/assets/js/app.js') }}"></script>
+    <!-- apexchart JavaScript -->
+    <script src="{{ asset ('Backend/assets/js/charts/apexcharts.js') }}"></script>
+    <!-- countdown JavaScript -->
+    <script src="{{ asset ('Backend/assets/js/countdown.js') }}" ></script>
+
+
+
+
+{% endblock %}

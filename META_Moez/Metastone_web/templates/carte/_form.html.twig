@@ -1,0 +1,54 @@
+<div class="container">
+
+{{ form_start(form,{'attr':{'novalidate': 'novalidate'}}) }}
+
+{{ form_label(form.nom,"Nom") }}
+{{ form_widget(form.nom, {'attr':{'class': 'form-control'}}) }}
+<span style="color:red">{{ form_errors(form.nom) }}</span>
+
+{{ form_label(form.mana,"Mana") }}
+{{ form_widget(form.mana, {'attr':{'class': 'form-control'}}) }}
+<span style="color:red">{{ form_errors(form.mana) }}</span>
+
+{{ form_label(form.type,"Type") }}
+{{ form_widget(form.type, {'attr':{'class': 'form-control'}})}}
+<span style="color:red">{{ form_errors(form.type) }}</span>
+
+<span style="color:red"></span>
+{{ form_label(form.vie,"Vie") }}
+{{ form_widget(form.vie, {'attr':{'class': 'form-control'}})}}
+<span style="color:red">{{ form_errors(form.vie) }}</span>
+
+
+{{ form_label(form.prix,"Prix") }}
+{{ form_widget(form.prix, {'attr':{'class': 'form-control'}})}}
+<span style="color:red">{{ form_errors(form.prix) }}</span>
+
+
+{{ form_label(form.image,"Image") }}
+{{ form_widget(form.image, {'attr':{'class': 'form-control'}})}}
+<span style="color:red">{{ form_errors(form.image) }}</span>
+
+{{ form_label(form.attaque,"Attaque") }}
+{{ form_widget(form.attaque, {'attr':{'class': 'form-control'}})}}
+<span style="color:red">{{ form_errors(form.attaque) }}</span>
+
+{{ form_label(form.defence,"Defence") }}
+{{ form_widget(form.defence, {'attr':{'class': 'form-control'}})}}
+<span style="color:red">{{ form_errors(form.defence) }}</span>
+
+{{ form_label(form.rarete,"Rareté") }}
+{{ form_widget(form.rarete, {'attr':{'class': 'form-control'}})}}
+<span style="color:red">{{ form_errors(form.rarete) }}</span>
+
+{{ form_label(form.description,"Description") }}
+{{ form_widget(form.description, {'attr':{'class': 'form-control'}})}}
+<span style="color:red">{{ form_errors(form.description) }}</span>
+
+{{ form_label(form.visibilite,"Visibilité") }}
+{{ form_widget(form.visibilite)}}
+<span style="color:red">{{ form_errors(form.visibilite) }}</span>
+<br/>
+<button class="btn btn-info" type="submit">{{ button_label|default('Ajouter la carte') }}</button>
+{{ form_end(form) }}
+</div>

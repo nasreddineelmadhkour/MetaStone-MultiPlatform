@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="JavaScriptLibraryMappings">
+    <file url="PROJECT" libraries="{8552500275, analytics, bootstrap, cards-6e561cf7682b10bb817a7b2e62b79ef91697bb4f0626098020e678d4574cc11d77c15d3dbd3a6252c73e3c97a32136500b452bc3646edde60a3b4204abc302cd, cookie-consent-filter-add23d42b75aa22162922ff6ef9c6352acb02aa34b9c0226fab7f33ded65ef4f4b4f2ad1f05d1f0ec65064a83f61b0d21e0c2fc7954d318575cae30bb0a6c265, hearthstone-040e0a4c1798554a742a9d2ea1b4ab9a5696c577906a1a6cadadae1b30fa71a88aecc955459757d925305e833df1598036430fb475f46a3fe876aeecdeb36979, hearthstone-ui-2ee3f6683c13566c20a0bad7d86238203f1f627254a4b0f29fa12c613b38f11d8b87f9bba428ee105579fa3ecb425ffe4d5406ba54e2902732667e71511701b9, nr-1215, www-widgetapi}" />
+  </component>
+</project>

@@ -1,0 +1,124 @@
+html {
+    height: 100%;
+}
+body {
+    background-color: #263238;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    font-family: Arial;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 600px;
+}
+
+#styleTransfer {
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    max-height: 500px;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr auto 1fr;
+    gap: 30px;
+    align-items: center;
+}
+
+h1 {
+    color: #eee;
+    font-size: 100px;
+}
+
+img,
+canvas {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border-radius: 10px;
+}
+
+.wrapper {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    position: relative;
+}
+
+.wrapper > svg {
+    position: absolute;
+    top: 30%;
+    left: 30%;
+    right: 30%;
+    bottom: 30%;
+    width: 40%;
+    height: 40%;
+    opacity: 0;
+    transition: 0.3s ease;
+}
+
+body.loading .wrapper > svg {
+    opacity: 1;
+}
+
+.wrapper .material-icons {
+    position: absolute;
+    width: 55px;
+    height: 55px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #424242;
+    font-size: 40px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    background: #eee;
+    border-radius: 10px;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+#stylePicker {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#stylePicker button {
+    font-size: 20px;
+    padding: 15px;
+    cursor: pointer;
+    border: solid #eee 3px;
+    border-radius: 10px;
+    color: #eee;
+    background-color: transparent;
+    margin-top: 20px;
+    transition: opacity 0.2s ease;
+}
+
+#stylePicker button:disabled {
+    opacity: 0.4;
+}
+
+#input {
+    display: none;
+}
+
+svg rect {
+    fill: #ff6700;
+}
+
+@media (max-width: 900px) {
+    #stylePicker button {
+        padding: 10px;
+        font-size: 15px;
+    }
+
+    .wrapper .material-icons {
+        font-size: 30px;
+        width: 40px;
+        height: 40px;
+    }
+}

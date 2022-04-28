@@ -1,0 +1,538 @@
+/* Base*
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+*, html, :after,
+:before {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+html, body { max-width: 100%; }
+
+
+footer, article,
+aside, div,
+footer,
+header,nav,
+section , span{
+    display: block;
+}
+
+body {
+    overflow-x: hidden;
+    background-color: #000;
+}
+
+* html .row {
+    /* IE6 =========== */
+    zoom: 1;
+}
+
+*:first-child+html .row {
+    /* IE7 =========== */
+    zoom: 1;
+}
+
+.row:after {
+    content: "";
+    visibility: hidden;
+    display: block;
+    clear: both;
+    height: 0;
+}
+
+.anim {
+    -webkit-transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+}
+
+/* Base Styles
+–––––––––––––––––––––––––––––––––––––––––––––––––––– */
+html,body,
+header, nav,
+div, ul,
+li, h1,
+h2, h3,
+h4, h5,
+h6, p,
+section{
+    margin: auto;
+    padding:0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align:
+            baseline; font-style: normal;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+ul {  list-style: none; }
+a { text-decoration: none; }
+
+
+/* Typography
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+body {
+    font-family: 'Lato', "Helvetica Neue", Arial, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14.5px;
+    line-height: 2.4em;
+}
+
+h1, h2 ,
+h3, h4,
+h5, h6,
+a, p,
+article {
+    color: #000;
+}
+
+h1 { font-size: 3.2rem; line-height: 1.2;  letter-spacing: -.1rem;}
+h2 { font-size: 1.5rem; line-height: 1.25; letter-spacing: -.05rem; }
+
+.title{ text-align: center; margin-bottom: 35px;  padding-bottom: 15px; border-bottom: 2px solid #F2F2F2; }
+
+
+/* Main Section
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.first-section {
+    position: relative;
+    width: 100%;
+    min-height: 100%;
+    height: 590px;
+
+    /* background Gradient =========== */
+    background-image: linear-gradient(135deg,#00d577,rgba(97,3,202,0.5));
+    background-image: -webkit-linear-gradient(315deg,#00d577,rgba(97,3,202,0.5));
+    margin-bottom: -100px;
+}
+
+.first-section:after {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    display: block;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+
+    /* background Photo =========== */
+    background: url(../media/bg-v1.jpg) no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.first-section .container {
+    top: 25%;
+    text-align: center;
+}
+
+/* Line Title and Version Text =========== */
+.first-section h1,
+.first-section span,
+.first-section li {
+    display: inline-block;
+}
+.first-section ul.connect li {
+    margin-right: 10px;
+}
+
+.first-section ul.connect {
+    margin-top: 15px;
+}
+
+/* Main section color =========== */
+.first-section h1,
+.first-section h3,
+.first-section span,
+.get-in-touch > a {
+    color: #fff;
+}
+
+/* Photo credits =========== */
+span.tg{
+    text-align: right;
+    position: absolute;
+    right: 0;
+    font-size: 0.8rem;
+    margin-right: 10px;
+    line-height: 1rem;
+    margin-top: -30px;
+    color: rgba(255,255,255,0.2);
+}
+
+
+
+/* Framework version
+–––––––––––––––––––––––––––––––––––––––––––––––––––– */
+.first-section span {
+    font-size: 0.85rem;
+    font-weight: bold;
+    line-height: 20px;
+    vertical-align: top;
+    margin: 0px 5px 15px;
+}
+
+
+/* Sections
+–––––––––––––––––––––––––––––––––––––––––––––––––––– */
+.content{
+    position: relative;
+    max-width: 1200px;
+    margin: 100px auto;
+    left: 0;
+    right: 0;
+}
+
+.container{
+    position: relative;
+}
+
+
+.cl-1, .cl-2{
+    background-color: #FFF;
+    margin: 0 10px 25px 10px;
+    padding: 10px 22px 22px 22px;
+    border-radius: 5px;
+    clear: both;
+}
+
+.text-center{
+    text-align: center;
+}
+
+.cl-2 button{
+    margin: 10px;
+}
+
+/*-------------------------------------*/
+/*           typography        		  */
+/*------------------------------------*/
+
+input{
+    border: none;
+}
+
+.buttons-container input{
+    width: 100%;
+    border: none;
+    margin: 20px 0px 10px;
+    font-size: 12px;
+    background: #f3f3f3;
+    color: #b5b3b3;
+    padding: 5px 10px;
+    font-style: italic;
+}
+
+li{
+    list-style-type: none;
+}
+
+@media (min-width: 43.69em){
+    .three-column {
+        display: -webkit-flex;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-flex-direction: row;
+        -moz-box-orient: horizontal;
+        -moz-box-direction: normal;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    }
+    ul.buttons-container > li{
+        width: 33.33%;
+        max-width: 300px;
+        padding: 0px 10px 30px;
+        border-bottom: 2px solid #F2F2F2;
+        text-align: center;
+    }
+}
+
+ul.buttons-container > li{
+    margin-bottom: 25px;
+    border-bottom: 2px solid #F2F2F2;
+}
+
+ul.buttons li{
+    display: inline-block;
+    margin: 0px 10px 30px;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+
+select{
+    border: none;
+    -webkit-appearance:none;
+    -moz-appearance:none;
+    appearance:none;
+    cursor:pointer;
+}
+
+li span.button-title{
+    margin-top: 12px;
+
+}
+
+
+/* Button HearthStone Base
+–––––––––––––––––––––––––––––––––––––––––––––––––––– */
+.hs-wrapper {
+    cursor: pointer;
+    width: 200px;
+    padding: 0 2px;
+    border-right: none;
+    border-left: none;
+    box-shadow: 0px 1px 20px 0px rgba(0, 0, 0, 0.35);
+    border-radius: 5px;
+}
+
+.hs-button {
+    display: block;
+    text-align: center;
+    border-radius: 2px;
+    border: solid 3px #795548;
+}
+
+.hs-text {
+    display: table-cell; width: 100%;
+    vertical-align: middle;
+    padding: 9px 24px;
+    padding: 0.6rem 1.5rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    text-shadow: 0 0 4px #000, 0 0 8px #000;
+    font-size: 20px;
+    font-size: 1.25rem;
+    letter-spacing: 2px;
+}
+
+.hs-border{
+    display: table;
+    padding: 3px;
+    border-radius: 2px;
+    height: 35px;
+    min-height: 35px;
+    width: 100%;
+    /* Font style */
+    text-transform: uppercase;
+    font-family: 'Fondamento', cursive;
+    font-weight: normal;
+    color: #fff;
+    text-decoration: none;
+    text-shadow: 1px 1px #000;
+    font-size: 17px;
+    line-height: 1;
+    letter-spacing: 1px;
+    text-align: center;
+}
+.hs-border-card{
+    display: table;
+    padding: 3px;
+    border-radius: 2px;
+    height: 35px;
+    min-height: 35px;
+    width: 100%;
+    /* Font style */
+    text-transform: uppercase;
+    font-family: 'Fondamento', cursive;
+    font-weight: normal;
+    color: #FF0000;
+    text-decoration: none;
+    text-shadow: 1px 1px #000;
+    font-size: 40px;
+    line-height: 1;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+
+/* HearthStone Classic Violet Button
+–––––––––––––––––––––––––––––––––––––––––––––––––––– */
+.hs-wrapper.classic {
+    background-color: #c1b3b0;
+    background: linear-gradient(to bottom,
+    #c1b3b0,
+    #c1b3b0 9%,
+    #4a3424 93%,
+    #1c140d);
+    border-top: 2px solid #AD9A90;
+    border-bottom: 2px solid #1c140d;
+}
+.hs-button.classic {
+    background: linear-gradient(to bottom,
+    #6f5742,
+    #81615d);
+}
+
+.hs-text.classic {
+    background: radial-gradient(circle,
+    #bc22c7 25%,
+    #7c1693 75%,
+    #5c1096);
+}
+
+.hs-border.classic {
+    background-color: #BC22C7;
+    box-shadow: 0px 2px 6px 0px #331e0b;
+    background: linear-gradient(to bottom,
+    #f756fe,
+    #c84bd6 5%,
+    #7305ae 59%,
+    #661f91);
+}
+
+.hs-border:hover .hs-text.classic {
+    background: radial-gradient(circle,
+    #e235ee 22%,
+    #981cb4);
+}
+
+
+/* HearthStone Green Button
+–––––––––––––––––––––––––––––––––––––––––––––––––––– */
+.hs-wrapper.green {
+    background-color: #d8be52;
+    background: linear-gradient(to bottom,
+    #d8be52, #a77d33 9%,
+    #5f3f1d 93%,
+    #1c140d);
+    border-top: 2px solid #d8be52;
+    border-bottom: 2px solid #1c140d;
+}
+
+.hs-button.green {
+    background: linear-gradient(to bottom,
+    #6f5742,
+    #81615d);
+}
+
+.hs-text.green {
+    background: radial-gradient(circle,
+    #05c4b2 25%,
+    #009688 75%,
+    #015f57);
+}
+
+.hs-border.green {
+    background-color: #009688;
+    box-shadow: 0px 2px 6px 0px #014640;
+    background: linear-gradient(to bottom,
+    #18e9d5,
+    #13bcab 5%,
+    #015f57 59%,
+    #014640);
+}
+
+.hs-border:hover .hs-text.green {
+    background: radial-gradient(circle,
+    #18e9d5 22%,
+    #05a193 83%,
+    #028277);
+}
+
+
+/* HearthStone Silver Button
+–––––––––––––––––––––––––––––––––––––––––––––––––––– */
+.hs-wrapper.silver {
+    background-color: #d8be52;
+    background: linear-gradient(to bottom,
+    #d8be52,
+    #a77d33 9%,
+    #5f3f1d 93%,
+    #1c140d);
+    border-top: 2px solid #d8be52;
+    border-bottom: 2px solid #1c140d;
+}
+
+.hs-button.silver {
+    background: linear-gradient(to bottom,
+    #6f5742,
+    #81615d);
+}
+
+.hs-text.silver {
+    background: radial-gradient(circle,
+    #b6c2dd 25%,
+    #838da5 75%,
+    #43506e);
+}
+
+.hs-border.silver {
+    background-color: #a1b9e8;
+    box-shadow: 0px 2px 6px 0px #3a4663;
+    background: linear-gradient(to bottom,
+    #bfcce6,
+    #a1b9e8 5%,
+    #43506e 59%,
+    #3a4663);
+}
+
+.hs-border:hover .hs-text.silver {
+    background: radial-gradient(circle,
+    #cfdbf5 22%,
+    #a3afcc 83%,
+    #697da9);
+}
+
+
+/* HearthStone Gold Button
+–––––––––––––––––––––––––––––––––––––––––––––––––––– */
+.hs-wrapper.gold {
+    background-color: #d8be52;
+    background: linear-gradient(to bottom,
+    #d8be52,
+    #a77d33 9%,
+    #5f3f1d 93%,
+    #1c140d);
+    border-top: 2px solid #d8be52;
+    border-bottom: 2px solid #1c140d;
+}
+
+.hs-button.gold {
+    background: linear-gradient(to bottom,
+    #6f5742,
+    #81615d);
+}
+
+.hs-text.gold {
+    background: radial-gradient(circle,
+    #edca37 25%,
+    #a77d33 75%,
+    #5f3f1d);
+}
+
+.hs-border.gold {
+    background-color: #a77d33;
+    box-shadow: 0px 2px 6px 0px #362c26;
+    background: linear-gradient(to bottom,
+    #d8be52,
+    #d5b631 5%,
+    #5f3f1d 59%,
+    #362c26);
+}
+
+.hs-border:hover .hs-text.gold{
+    background: radial-gradient(circle,
+    #fed83b 22%,
+    #dba23e 83%,
+    #9d6224);
+}
+

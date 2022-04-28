@@ -1,0 +1,64 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+
+                            {% block title %}View Carte{% endblock %}
+
+                            <h1>Show Carte</h1>
+
+<div class="card-body">
+    <table class="table">
+        <tr>
+            <th>Image</th>
+            <th>Nom</th>
+            <th>Mana</th>
+            <th>Type</th>
+            <th>Vie</th>
+            <th>Prix</th>
+            <th>Attaque</th>
+            <th>Defence</th>
+            <th>Rarete</th>
+            <th>Description</th>
+        </tr>
+
+
+        <tbody>
+        <tr>
+
+            <td><img src="../../../uploads/{{ carte.image }}" style="width: 100px;height: 160px;"/></td>
+
+            <td>{{ carte.nom }}</td>
+
+            <td>{{ carte.mana }}</td>
+
+            <td>{{ carte.type }}</td>
+
+            <td>{{ carte.vie }}</td>
+
+            <td>{{ carte.prix }}</td>
+
+            <td>{{ carte.attaque }}</td>
+
+            <td>{{ carte.defence }}</td>
+
+            <td>{{ carte.rarete }}</td>
+
+            <td>{{ carte.description }}</td>
+        </tr>
+        </tbody>
+    </table>
+
+</div>
+
+    {{ include('carte/_delete_form.html.twig') }}
+
+    <a class="btn btn-danger" href="{{ path('app_carte_index') }}">back to list</a>
+
+                      </br>
+                 </br>
+            </br>
+        </br>
+    </br>
+</br>
+{% endblock %}
+
+

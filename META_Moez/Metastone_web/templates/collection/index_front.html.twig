@@ -1,0 +1,79 @@
+{% extends 'base_front.html.twig' %}
+
+{% block title %}Collection List{% endblock %}
+
+{% block body %}
+    <h1>Collection List</h1>
+<div class="card-body">
+    <table class="table">
+        <tr>
+            <th>IdCollection</th>
+            <th>actions</th>
+        </tr>
+
+        <tbody>
+        {% for collection in collections %}
+            <tr>
+                <td>{{ collection.idCollection }}</td>
+                <td>
+
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="2">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a class="btn btn-danger" href="{{ path('app_carte_index_front') }}">Shop</a>
+</div>
+    </br>
+    </br>
+    </br>
+    </br>
+
+    <!-- catalog -->
+
+    <div id="drag-container">
+        <div id="spin-container">
+            <!-- Add your images (or video) here -->
+            <img src="https://d15f34w2p8l1cc.cloudfront.net/hearthstone/f3e40db17ad26757bfe335d0fb54121a2800fdc6a99689ff49f21b4a60ff1535.png">
+            <img src="https://d15f34w2p8l1cc.cloudfront.net/hearthstone/f14452c2bd5c7b7c84e651f82981c22f947dc3e24175d637bcc3ba233ea0d3c2.png">
+            <img src="https://d15f34w2p8l1cc.cloudfront.net/hearthstone/5f1e5eb2a4ad4bad04a7d4c75e94080fc2a44256d221f688c146ece780eb80b6.png">
+            <img src="https://d15f34w2p8l1cc.cloudfront.net/hearthstone/86b0f1dafbafcd88a036278e3e7a3657694e1790ea50281fa1fea760b19c80b0.png">
+            <img src="https://d15f34w2p8l1cc.cloudfront.net/hearthstone/f14452c2bd5c7b7c84e651f82981c22f947dc3e24175d637bcc3ba233ea0d3c2.png">
+            <img src="https://d15f34w2p8l1cc.cloudfront.net/hearthstone/66c18e5b31479c4bf2749274e064213ba48c2fc7ae25512e633fe92205fe918a.png">
+
+
+
+            <!-- Example image with link -->
+            <a target="_blank" href="https://d15f34w2p8l1cc.cloudfront.net/hearthstone/f14452c2bd5c7b7c84e651f82981c22f947dc3e24175d637bcc3ba233ea0d3c2.png">
+                <img src="https://d15f34w2p8l1cc.cloudfront.net/hearthstone/f14452c2bd5c7b7c84e651f82981c22f947dc3e24175d637bcc3ba233ea0d3c2.png" alt="">
+            </a>
+
+            <!-- Example add video  -->
+            <video controls autoplay="autoplay" loop>
+                <source src="https://player.vimeo.com/external/322244668.sd.mp4?s=338c48ac2dfcb1d4c0689968b5baf94eee6ca0c1&profile_id=165&oauth2_token_id=57447761" type="video/mp4">
+            </video>
+
+            <!-- Text at center of ground -->
+            <p>Your Collection</p>
+        </div>
+        <div id="ground"></div>
+    </div>
+
+    <div id="music-container"></div>
+
+    <link href="{{ asset('Frontend/css/catalog.css') }}" rel="stylesheet">
+    <script src="{{ asset('Frontend/js/catalog.js') }}"></script>
+    <!--           End catalog            -->
+    </br>
+    </br>
+    </br>
+    </br>
+
+
+
+{% endblock %}

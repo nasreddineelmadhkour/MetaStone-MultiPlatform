@@ -132,7 +132,29 @@ public class CommentaireService implements IcommentaireService {
          
          
     }
-    
+    public int calculateups(int upvote) throws SQLException {
+        int nbups = 0;
+        Statement ste = cnx.createStatement();
+       
+        ResultSet rs = ste.executeQuery("select upvote FROM commentaire ;" );
+        while (rs.next()) {    
+                nbups=rs.getInt(1);
+        
+        }
+        return nbups;
+    }
+
+    public int calculatedowns(int downvote) throws SQLException {
+             int nbups = 0;
+        Statement ste = cnx.createStatement();
+       
+        ResultSet rs = ste.executeQuery("select downvote FROM commentaire ;");
+        while (rs.next()) {    
+                nbups=rs.getInt(1);
+        
+        }
+        return nbups;
+    }
     }
     
 

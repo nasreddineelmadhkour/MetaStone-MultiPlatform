@@ -26,10 +26,10 @@
          </styleClass>
       </Button>
       <TextArea layoutX="569.0" layoutY="183.0" onDragDetected="#contenu" prefHeight="82.0" prefWidth="105.0" />
-      <Button layoutX="221.0" layoutY="59.0" mnemonicParsing="false" prefHeight="68.0" prefWidth="95.0" stylesheets="@src/Style.css">
+      <Button layoutX="235.0" layoutY="67.0" mnemonicParsing="false" onAction="#commenter" prefHeight="58.0" prefWidth="52.0" stylesheets="@src/Style.css">
          <styleClass>
-            <String fx:value="btn_jomjom" />
             <String fx:value="btn_jomjom1" />
+            <String fx:value="btn_jomjom" />
          </styleClass>
       </Button>
    </children>

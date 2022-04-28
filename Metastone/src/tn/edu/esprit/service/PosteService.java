@@ -13,7 +13,9 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
+import java.util.stream.Collectors;
 
 import tn.edu.esprit.model.Poste;
 import tn.edu.esprit.util.MaConnexion;
@@ -128,7 +130,7 @@ public class PosteService implements IposteService{
         }
          
 }
-    
+    /*
       public List<Poste> afficherPosteParCategorie(String Categorie)
     {
         //LIST
@@ -149,8 +151,8 @@ public class PosteService implements IposteService{
         }catch(SQLException ex){
         }
         return postes;
-    }
-      public List<Poste> afficherPosteParDate(Date Date_poste)
+    }*/
+     /* public List<Poste> afficherPosteParDate(Date Date_poste)
     {
         //LIST
         List<Poste> postes = new ArrayList<>();
@@ -170,6 +172,25 @@ public class PosteService implements IposteService{
         }catch(SQLException ex){
         }
         return postes;
+    }
+      */
+      
+      
+    @Override
+       public List<Poste> sortByDate(){
+        
+        List<Poste> postes= afficherPoste();
+        List<Poste> resultat=postes.stream().sorted(Comparator.comparing(Poste::getDate_poste)).collect(Collectors.toList());
+        return resultat;
+    }
+//recherche avec stream
+    
+    
+    @Override
+    public List<Poste> findbyCategorie(String Categorie) {
+       List<Poste> postes =afficherPoste();
+        List<Poste> resultat=postes.stream().filter(evenement->Categorie.equals(evenement.getCategorie())).collect(Collectors.toList());
+        return resultat;
     }
       /* public Poste rechercher(int a) throws SQLException {
         Statement ste = cnx.createStatement();
@@ -201,23 +222,13 @@ public class PosteService implements IposteService{
 
     */
    
-   /* public List<Poste> showpublicationbyuser(int a) throws SQLException {
+   public List<Poste> showpublicationbyuser(int Id_utilisateur) throws SQLException {
         
-        List<Poste> arr=new ArrayList<>();
-        String req=("select * from poste where id='"+Id_utilisateur+"';");
-        try {
-            Statement st = cnx.createStatement();
-            ResultSet rs = st.executeQuery(req);
-            while(rs.next())
-            {
-                arr.add(new Poste(rs.getInt(1),rs.getString(2),rs.getDate(3),rs.getString(4),rs.getString(5),rs.getInt(6),rs.getInt(7),rs.getInt(8),rs.getString(9),rs.getInt(10)));
-                
-            }
-        
-        }catch(SQLException ex){
-        }
-    return arr;
-    }*/
+        List<Poste> postes= afficherPoste();
+        List<Poste> resultat=postes.stream().sorted(Comparator.comparing((poste) -> poste.getId_utilisateur())).collect(Collectors.toList());
+        return resultat;
+    
+   
 /*
     public int calculatereacts(int a) throws SQLException {
         int nbreacts = 0;
@@ -232,29 +243,7 @@ public class PosteService implements IposteService{
     }
 
     
-    public int calculateups(int a) throws SQLException {
-        int nbups = 0;
-        Statement ste = cnx.createStatement();
-       
-        ResultSet rs = ste.executeQuery("select postcount FROM post as p INNER JOIN (SELECT idpub,count(*) AS postcount FROM vote where type=1 GROUP BY idpub) as v on p.id = idpub where p.id='"+a+"';");
-        while (rs.next()) {    
-                nbups=rs.getInt(1);
-        
-        }
-        return nbups;
-    }
-
-    public int calculatedowns(int a) throws SQLException {
-             int nbups = 0;
-        Statement ste = cnx.createStatement();
-       
-        ResultSet rs = ste.executeQuery("select postcount FROM post as p INNER JOIN (SELECT idpub,count(*) AS postcount FROM vote where valeur=2 GROUP BY idpub) as v on p.id = id_post where p.id='"+a+"';");
-        while (rs.next()) {    
-                nbups=rs.getInt(1);
-        
-        }
-        return nbups;
-    }
+    
 
     /**
      *

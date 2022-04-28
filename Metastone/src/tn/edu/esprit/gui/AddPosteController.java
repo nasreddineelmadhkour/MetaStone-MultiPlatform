@@ -7,7 +7,10 @@ package tn.edu.esprit.gui;
 
 import java.io.IOException;
 import java.net.URL;
+import java.util.Comparator;
+import java.util.List;
 import java.util.ResourceBundle;
+import java.util.stream.Collectors;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -30,7 +33,6 @@ import tn.edu.esprit.service.PosteService;
  */
 public class AddPosteController implements Initializable {
 
-    @FXML
     private TextArea contenu;
     /**
      * Initializes the controller class.
@@ -56,16 +58,35 @@ public class AddPosteController implements Initializable {
 
     @FXML
     private void publier(ActionEvent event) {
-        IposteService poste1 =new PosteService();
-        Poste p=new Poste();
-        p.setContenu(contenu.getText());
-        poste1.ajouterPoste(p);
+        
         
         
     }
 
     @FXML
     private void contenu(MouseEvent event) {
+        IposteService poste1 =new PosteService();
+        Poste p=new Poste();
+        p.setContenu(contenu.getText());
+        poste1.ajouterPoste(p);
     }
+
+    @FXML
+    private void commenter(ActionEvent event) throws IOException {
+        URL fxURL = getClass().getResource("AddCommentaire.fxml");
+
+        FXMLLoader loader = new FXMLLoader(fxURL);
+        Parent root = (Parent) loader.load();
+        Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+      //  stage.initModality(Modality.APPLICATION_MODAL);
+      //  stage.initStyle(StageStyle.UNDECORATED);
+        stage.setTitle("esm men fou9");
+        stage.setScene(new Scene(root));
+        stage.show();
+    }
+    
+    
+   
+
     
 }

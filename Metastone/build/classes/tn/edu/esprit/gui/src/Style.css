@@ -92,3 +92,20 @@ and open the template in the editor.
     
     -fx-background-image: url("11.png");
 }
+.btn_quitter{
+    
+    -fx-background-image: url("7.png");
+}
+.btn_quitter1:hover{
+    
+    -fx-background-image: url("8.png");}
+.transparen{
+    -fx-background-color: rgba(0,0,0,0);}
+
+
+
+
+
+.y{
+    -fx-background-color: #3c3c3c;
+}

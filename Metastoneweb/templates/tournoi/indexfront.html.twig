@@ -1,0 +1,39 @@
+{% extends 'base_front.html.twig' %}
+
+{% block title %}Tournoi {% endblock %}
+
+{% block body %}
+    <h1>Tournoi </h1>
+    <a href="{{ path('app_tournoi_new') }}">Create new</a>
+      
+    <div class="cards">
+          {% for tournoi in tournois %}
+        
+           <div class="card">
+           <img class="card-img-top" src="{{ asset('Frontend/images/news-img-1.jpg')}}" alt="Card image">
+            <div class="card-body text-center">
+            <h4 class="card-title">{{ tournoi.date ? tournoi.date|date('Y-m-d') : '' }}</h4>
+            <h6>{{ tournoi.description }}</h6>
+            <h6>{{ tournoi.createur }}</h6>
+            <h6>{{ tournoi.nbrJoueur }}</h6>
+            <p class="price">{{ tournoi.recompence }} DT</p>
+
+                 <td>
+                    <a href="{{ path('app_tournoi_show', {'idTournoi': tournoi.idTournoi}) }}">show</a>
+                    <a href="{{ path('app_tournoi_edit', {'idTournoi': tournoi.idTournoi}) }}">edit</a>
+                    <a href="{{ path('app_joueur_new') }}">Participer</a>
+                </td>
+          </div>
+        </div>
+         
+           {% else %}
+            <tr>
+                <td colspan="4">no records found</td>
+            </tr>
+        {% endfor %}
+   
+        
+       
+
+    
+{% endblock %}

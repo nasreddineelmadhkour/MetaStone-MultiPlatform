@@ -1,0 +1,70 @@
+{% extends 'back.html.twig' %}
+
+{% block body %}
+    <h3 style=b2b9bf>Joueur </h1>
+{{ form_start(forms) }}
+
+<div class="form-row align-items-end" >
+ <div class="col">
+   {{ form_row(forms.category) }}
+ </div>
+
+  <div class="col">
+   <div class="form-group">
+   
+      <button type="submit" class="btn btn-success">Rechercher</button>
+    </div>
+ </div>
+</div>
+ {{ form_end(forms) }}
+
+
+
+
+
+    {{ form_start(form) }}
+
+<div class="form-row align-items-end" >
+ <div class="col">
+   {{ form_row(form.nom) }}
+ </div>
+
+  <div class="col">
+   <div class="form-group">
+      <button type="submit" class="btn btn-success">Rechercher</button>
+    </div>
+ </div>
+</div>
+ {{ form_end(form) }}
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>IdJoueur</th>
+                <th>Emplacemment</th>
+                <th>Tournoi</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for joueur in joueurs %}
+            <tr>
+                <td>{{ joueur.idJoueur }}</td>
+                <td>{{ joueur.emplacemment }}</td>
+                <td>{{ joueur.idTournoi.idTournoi }}</td>
+
+                <td>
+                    <a href="{{ path('app_joueur_show', {'idJoueur': joueur.idJoueur}) }}">show</a>
+                    <a href="{{ path('app_joueur_edit', {'idJoueur': joueur.idJoueur}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="3">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_joueur_new') }}">Create new</a>
+{% endblock %}

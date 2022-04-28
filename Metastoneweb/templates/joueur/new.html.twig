@@ -1,0 +1,11 @@
+{% extends 'base_front.html.twig' %}
+
+{% block title %}New Joueur{% endblock %}
+
+{% block body %}
+    <h1>Create new Joueur</h1>
+     {{ form_start(form, {'attr': {'novalidate': 'novalidate'}}) }}
+     {{ include('joueur/_form.html.twig') }}
+ 
+    <a  class="btn" href="{{ path('app_joueur_index') }}">Retour</a>
+{% endblock %}

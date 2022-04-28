@@ -1,0 +1,36 @@
+{% extends 'base_front.html.twig' %}
+
+{% block title %}Evenement index{% endblock %}
+
+{% block body %}
+     <h3 style=b2b9bf>Events</h1>
+
+     <div class="cards">
+          {% for evenement in evenements%}
+        
+           <div class="card">
+           <img class="card-img-top" src="{{ asset('Frontend/images/news-img-1.jpg')}}" alt="Card image">
+            <div class="card-body text-center">
+            <h4 class="card-title">{{ evenement.date ? evenement.date|date('Y-m-d') : '' }}</h4>
+            <h6>{{ evenement.lieu }}</h6>
+            <h6>{{ evenement.duree }}</h6>
+            <h6>{{ evenement.sponsore }}</h6>
+       
+
+                 <td>
+                    <a href="{{ path('app_evenement_show', {'idEvenement': evenement.idEvenement}) }}">show</a>
+                    <a href="{{ path('app_evenement_edit', {'idEvenement': evenement.idEvenement}) }}">edit</a>
+                </td>
+          </div>
+        </div>
+         
+           {% else %}
+            <tr>
+                <td colspan="4">no records found</td>
+            </tr>
+        {% endfor %}
+
+    
+
+    <a href="{{ path('app_evenement_new') }}">Create new</a>
+{% endblock %}

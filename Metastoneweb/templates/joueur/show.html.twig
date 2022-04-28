@@ -1,0 +1,26 @@
+{% extends 'back.html.twig' %}
+
+{% block title %}Joueur{% endblock %}
+
+{% block body %}
+    <h1>Joueur</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>IdJoueur</th>
+                <td>{{ joueur.idJoueur }}</td>
+            </tr>
+            <tr>
+                <th>Emplacemment</th>
+                <td>{{ joueur.emplacemment }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_joueur_index') }}">back to list</a>
+
+    <a href="{{ path('app_joueur_edit', {'idJoueur': joueur.idJoueur}) }}">edit</a>
+
+    {{ include('joueur/_delete_form.html.twig') }}
+{% endblock %}

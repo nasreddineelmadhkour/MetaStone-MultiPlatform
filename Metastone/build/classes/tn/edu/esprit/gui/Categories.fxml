@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane id="AnchorPane" maxHeight="1238.0" maxWidth="1460.0" prefHeight="439.0" prefWidth="633.0" styleClass="btn_kbira" stylesheets="@src/Style.css" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="tn.edu.esprit.gui.CategoriesController">
+   <children>
+      <Button mnemonicParsing="false" prefHeight="622.0" prefWidth="720.0">
+         <stylesheets>
+            <URL value="@src/Style.css" />
+            <URL value="@src/Style.css" />
+         </stylesheets>
+         <styleClass>
+            <String fx:value="btn_kbira" />
+            <String fx:value="btn_x" />
+            <String fx:value="btn_kbira" />
+         </styleClass>
+      </Button>
+      <Button layoutX="14.0" layoutY="128.0" mnemonicParsing="false" onAction="#poste1" prefHeight="413.0" prefWidth="234.0" stylesheets="@src/Style.css">
+         <styleClass>
+            <String fx:value="btn_community" />
+            <String fx:value="btn_community1" />
+         </styleClass>
+      </Button>
+      <Button layoutX="246.0" layoutY="128.0" mnemonicParsing="false" onAction="#poste2" prefHeight="413.0" prefWidth="241.0" stylesheets="@src/Style.css">
+         <styleClass>
+            <String fx:value="btn_soutientechnique" />
+            <String fx:value="btn_soutientechnique1" />
+         </styleClass>
+      </Button>
+      <Button layoutX="478.0" layoutY="128.0" mnemonicParsing="false" onAction="#poste3" prefHeight="413.0" prefWidth="228.0" stylesheets="@src/Style.css">
+         <styleClass>
+            <String fx:value="btn_evaluate" />
+            <String fx:value="btn_evcaluate1" />
+         </styleClass>
+      </Button>
+      <Label layoutX="113.0" layoutY="30.0" prefHeight="42.0" prefWidth="164.0" text="Tous les catégories" />
+   </children>
+</AnchorPane>

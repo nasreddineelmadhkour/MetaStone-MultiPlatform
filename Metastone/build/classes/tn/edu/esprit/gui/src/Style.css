@@ -1,0 +1,111 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 1 mars 2022, 22:37:12
+    Author     : ASUS
+*/
+.btn_x{
+    
+    -fx-background-image: url("0.png");
+    
+}
+.btn_community{
+    
+    -fx-background-image: url("unnamed.png");
+}
+.btn_community1:hover{
+    
+    -fx-background-image: url("unnamed1.png");
+}
+
+.btn_soutientechnique{
+    
+    -fx-background-image: url("unnamed2.png");
+}
+.btn_soutientechnique1:hover{
+    
+    -fx-background-image: url("unnamed3.png");
+}
+
+
+.btn_evaluate{
+    
+    -fx-background-image: url("unnamed4.png");
+}
+.btn_evcaluate1:hover{
+    
+    -fx-background-image: url("unnamed5.png");
+}
+.bg_final{
+    
+    -fx-background-image: url("BG_final.png");
+}
+.btn_publie{
+    
+    -fx-background-image: url("1.png");
+}
+.btn_publie1:hover{
+    
+    -fx-background-image: url("2.png");
+}
+.btn_fichier{
+    
+    -fx-background-image: url("5.png");
+}
+.btn_fichier1:hover{
+    
+    -fx-background-image: url("6.png");
+}
+
+
+
+.btn_annuler{
+    
+    -fx-background-image: url("3.png");
+}
+.btn_annuler1:hover{
+    
+    -fx-background-image: url("4.png");
+}
+
+
+.btn_jomjom{
+    -fx-background-image: url("jom.png");
+}
+.btn_jomjom1:hover{
+    -fx-background-image: url("jomjom.png");
+}
+
+.btn_se{
+    
+    -fx-background-image: url("BG_Publication_Com.png");
+}
+
+.btn_ajouter{
+    
+    -fx-background-image: url("10.png");
+}
+.btn_ajouter1:hover{
+    
+    -fx-background-image: url("11.png");
+}
+.btn_quitter{
+    
+    -fx-background-image: url("7.png");
+}
+.btn_quitter1:hover{
+    
+    -fx-background-image: url("8.png");}
+.transparen{
+    -fx-background-color: rgba(0,0,0,0);}
+
+
+
+
+
+.y{
+    -fx-background-color: #3c3c3c;
+}

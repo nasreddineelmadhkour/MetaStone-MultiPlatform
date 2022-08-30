@@ -1,0 +1,19 @@
+<html>
+<div class="card">
+    {{ carte.nom }}<br/>
+    <img src="../../../uploads/{{ carte.image }}" class="card-image" draggable="false"><br/>
+    {{ carte.mana }}<br/>
+    {{ carte.type }}<br/>
+    {{ carte.vie }}<br/>
+    {{ carte.prix }}<br/>
+    {{ carte.attaque }}<br/>
+    {{ carte.defence }}<br/>
+    {{ carte.rarete }}<br/>
+    {{ carte.description }}<br/>
+
+    <script src="{{ asset('Frontend/js/card.js') }}"></script>
+    <link href="{{ asset('Frontend/css/card.css') }}" rel="stylesheet">
+</div>
+</html>
+
+

@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Collection List{% endblock %}
+
+{% block body %}
+    <h1>Collection List</h1>
+
+<div class="card-body">
+    <table class="table">
+        <tr>
+                <th>IdCollection</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for collection in collections %}
+            <tr>
+                <td>{{ collection.idCollection }}</td>
+                <td>
+                    <a href="{{ path('app_collection_show', {'idCollection': collection.idCollection}) }}">show</a>
+                    <a href="{{ path('app_collection_edit', {'idCollection': collection.idCollection}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="2">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_collection_new') }}">Create new</a>
+{% endblock %}

@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+
+    {% block title %}Edit Carte{% endblock %}
+
+                            <p style="background-image: url('assets/images/top-fon-bg.jpg');">
+                            <h1>Create new Carte</h1>
+
+                            {{ include('carte/_form.html.twig') }}
+
+                            <a href="{{ path('app_carte_index') }}">back to list</a>
+
+{% endblock %}
+
+
+
+
+
+
+
+
+
+

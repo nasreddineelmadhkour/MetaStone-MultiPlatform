@@ -1,0 +1,115 @@
+{% extends 'base_front.html.twig' %}
+
+{% block title %}Metastone{% endblock %}
+
+{% block body %}
+
+    <svg viewBox="0 0 960 300">
+        <symbol id="s-text">
+            <text text-anchor="middle" x="50%" y="80%">- CARDS -</text>
+        </symbol>
+
+        <g class = "g-ants">
+            <use xlink:href="#s-text" class="text-copy"></use>
+            <use xlink:href="#s-text" class="text-copy"></use>
+            <use xlink:href="#s-text" class="text-copy"></use>
+            <use xlink:href="#s-text" class="text-copy"></use>
+            <use xlink:href="#s-text" class="text-copy"></use>
+        </g>
+    </svg>
+
+    </br>
+    </br>
+
+    <div class="search">
+        <input type="text" id="searchInput" class="search__input">
+        <ul id="searchResults" class="search__results"></ul>
+    </div>
+
+    <div class="preview">
+        <img id="resultCard">
+    </div>
+    <script src="{{ asset('Frontend/js/search.js') }}"></script>
+    <link href="{{ asset('Frontend/css/search.css') }}" rel="stylesheet">
+
+    </br>
+    </br>
+
+
+
+
+    <div class="card-body">
+        <table class="table">
+            <tr>
+                <th>Image</th>
+                <th>Nom</th>
+                <th>Mana</th>
+                <th>Type</th>
+                <th>Vie</th>
+                <th>Prix</th>
+                <th>Attaque</th>
+                <th>Defence</th>
+                <th>Rarete</th>
+                <th>Description</th>
+                <th>Actions</th>
+            </tr>
+
+            <ta>
+            {% for carte in cartes %}
+                <tr>
+                    <td><img src="../../../uploads/{{ carte.image }}" style="width: 100px;height: 160px;"/></td>
+
+                    <td>{{ carte.nom }}</td>
+
+                    <td>{{ carte.mana }}</td>
+
+                    <td>{{ carte.type }}</td>
+
+                    <td>{{ carte.vie }}</td>
+
+                    <td>{{ carte.prix }}</td>
+
+                    <td>{{ carte.attaque }}</td>
+
+                    <td>{{ carte.defence }}</td>
+
+                    <td>{{ carte.rarete }}</td>
+
+                    <td>{{ carte.description }}</td>
+
+
+
+                    <!-- HearthStone Gold Button -->
+                    <td><div class="hs-wrapper gold">
+                <a class="hs-button gold" href="{{ path('app_carte_show', {'idCarte': carte.idCarte}) }}">
+                    <span class="hs-border gold">
+                    <span class="hs-text gold">Details</span></span>
+                </a>
+        </div>
+                        <div class="hs-wrapper green mt-2">
+                            <a class="hs-button green" href="{{ path('app_carte_buy', {'idCarte': carte.idCarte}) }}">
+			<span class="hs-border green">
+			<span class="hs-text green">
+			Buy card
+			</span>
+			</span>
+                            </a>
+                        </div>
+                    </td></tr>
+
+
+            <meta charset="UTF-8">
+            <title>Feature Content</title>
+            <link rel="stylesheet" type="text/css" href="{{ asset('Frontend/css/main.css') }}">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link href="{{ asset('https://fonts.googleapis.com/css?family=Fondamento:400,400italic') }}" rel='stylesheet' type='text/css'>
+
+    {% endfor %}
+            </ta></table></div>
+
+
+
+
+
+    </br>
+{% endblock %}

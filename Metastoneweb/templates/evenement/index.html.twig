@@ -1,0 +1,42 @@
+{% extends 'back.html.twig' %}
+
+{% block title %}Evenement index{% endblock %}
+
+{% block body %}
+    
+    <h3> Evenement index<small class="badge badge-pill">{{numbers|number_format}}</small></h3>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>IdEvenement</th>
+                <th>Date</th>
+                <th>Lieu</th>
+                <th>Duree</th>
+                <th>Sponsore</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for evenement in evenements %}
+            <tr>
+                <td>{{ evenement.idEvenement }}</td>
+                <td>{{ evenement.date ? evenement.date|date('Y-m-d') : '' }}</td>
+                <td>{{ evenement.lieu }}</td>
+                <td>{{ evenement.duree }}</td>
+                <td>{{ evenement.sponsore }}</td>
+                <td>
+                    <a href="{{ path('app_evenement_show', {'idEvenement': evenement.idEvenement}) }}">show</a>
+                    <a href="{{ path('app_evenement_edit', {'idEvenement': evenement.idEvenement}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="6">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_evenement_new') }}">Create new</a>
+{% endblock %}

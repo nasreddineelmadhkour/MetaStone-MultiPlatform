@@ -1,0 +1,58 @@
+{% extends 'back.html.twig' %}
+
+{% block title %}Tournoi {% endblock %}
+
+{% block body %}
+    <h1>Tournois</h1>
+{{ form_start(form) }}
+
+<div class="form-row align-items-end" >
+ <div class="col">
+   {{ form_row(form.minPrice) }}
+ </div>
+ <div class="col">
+   {{ form_row(form.maxPrice) }}
+ </div>
+
+  <div class="col">
+   <div class="form-group">
+      <button type="submit" class="btn btn-success">Rechercher</button>
+    </div>
+ </div>
+</div>
+ {{ form_end(form) }}
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Date</th>
+                <th>Description</th>
+                <th>Createur</th>
+                <th>NbrJoueur</th>
+                <th>Recompence</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+           {% for tournoi in tournois %}
+            <tr>
+               
+                <td>{{tournoi.date ? tournoi.date|date('Y-m-d') : '' }}</td>
+                <td>{{tournoi.description}}</td>
+                <td>{{tournoi.createur }}</td>
+                <td>{{tournoi.nbrJoueur }}</td>
+                <td>{{tournoi.recompence}}</td>
+                <td>
+                    <a href="{{ path('app_tournoi_show', {'idTournoi': tournoi.idTournoi}) }}">show</a>
+                    <a href="{{ path('app_tournoi_edit', {'idTournoi': tournoi.idTournoi}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="6">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_tournoi_new') }}">Create new</a>
+{% endblock %}

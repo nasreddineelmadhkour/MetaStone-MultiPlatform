@@ -1,0 +1,10 @@
+{% extends 'back.html.twig' %}
+
+{% block title %}style=b2b9bf>Ajouter Evenement{% endblock %}
+
+{% block body %}
+  
+    {{ include('evenement/_form.html.twig') }}
+
+    <a href="{{ path('app_evenement_index') }}">back to list</a>
+{% endblock %}

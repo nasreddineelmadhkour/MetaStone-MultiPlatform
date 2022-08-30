@@ -1,0 +1,15 @@
+#index:
+#    path: /
+#    controller: App\Controller\DefaultController::index
+
+
+tournois:
+    path: /tournoi/front
+    defaults:
+        _controller: FrameworkBundle:Template:template
+        template: indexfront.html.twig
+events:
+    path: /evenement/front
+    defaults:
+        _controller: FrameworkBundle:Template:template
+        template: indexfront.html.twig
